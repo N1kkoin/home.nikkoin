@@ -3,7 +3,6 @@
 :root {
     --header-height: 60px;
   }
-
 body{
     margin: 0;
     padding: 0;
@@ -45,7 +44,6 @@ nav a:hover{
 .links {
     padding-right: 10%;
 }
-
 h1{
     font-family: 'Lato', sans-serif;
     font-weight: 800;
@@ -64,7 +62,6 @@ h1{
     flex-direction: column;
     width: 100%;
     background: #29907F;
-
 }
 /* Redes Sociais*/ 
     .social-icons {
@@ -114,13 +111,11 @@ h1{
     .social-icons a:last-child {
         margin-right: 0;
     }
-
 #typewriter::after{
     content: "|";
     margin-left: 5px;
     animation: blink-caret .5s step-end infinite alternate;
 }
-
 @keyframes blink-caret{
     from,
     to {
@@ -130,23 +125,20 @@ h1{
     color: white;
     }
 }
-
 .escrevendo{
 font-weight: 400;
 font-size: 20px;
 font-family: 'Baloo 2';
 }
-
 .active-link {
     background-color: white; /* Ou qualquer cor que você quiser */
     color: #29907F;
   }
-  
+
 @media only screen and (max-width: 500px) {
 
     .social-icons a:hover::after{
         display: none;
     }
-
 }
     
