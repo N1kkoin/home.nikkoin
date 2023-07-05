@@ -4,7 +4,7 @@ body{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #29907F;
+
 }
 nav{
     top: 0;
@@ -50,7 +50,7 @@ h1{
     margin: 10px;
 }
 .hero{
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,6 +60,7 @@ h1{
     text-align: center;
     flex-direction: column;
     width: 100%;
+    background-color: #29907F;
 }
 /* Redes Sociais*/ 
     .social-icons {
