@@ -28,10 +28,11 @@ nav a{
     padding: 5px 15px 5px 15px;
     color: rgb(255, 255, 255);
     border-radius: 5px;
+    transition: 0.3s;
 }
 nav a:hover{
     color: #73C382;
-
+    transition: 0.3s;
 }
 .nav-scrolled{
     background-color: #73C382;
@@ -43,12 +44,12 @@ nav a:hover{
 }
 svg{
     fill: #fff;
-    transition: fill 0.5s;
+    transition: fill 0.3s;
 }
 
 svg:hover{
     fill: #FFF200;
-    transition: fill 0.5s;
+    transition: fill 0.3s;
 }
 .links {
     padding-right: 10%;
