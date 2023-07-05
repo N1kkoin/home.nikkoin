@@ -40,11 +40,15 @@ nav a:hover{
     width: 36px;
     height: 36px;
     padding-left: 10%;
+}
+svg{
     fill: #fff;
     transition: fill 0.5s;
 }
-.logo:hover {
-    fill: red;
+
+svg:hover{
+    fill: #FFF200;
+    transition: fill 0.5s;
 }
 .links {
     padding-right: 10%;
