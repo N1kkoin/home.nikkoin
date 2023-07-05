@@ -1,5 +1,9 @@
 
 @import url(https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
+:root {
+    --header-height: 60px;
+  }
+
 body{
     margin: 0;
     padding: 0;
@@ -7,8 +11,8 @@ body{
 }
 nav{
     top: 0;
-    height: 60px;
-    background-color: none;
+    height: var(--header-height);
+    background-color: #29907F;
     position: sticky;
     text-align: center;
     display: flex;
@@ -49,8 +53,7 @@ h1{
     margin: 10px;
 }
 .hero{
-    min-height: 100dvh;
-    min-height: 100vh;
+    height: calc(100vh - var(--header-height));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +63,8 @@ h1{
     text-align: center;
     flex-direction: column;
     width: 100%;
-    background-color: #29907F;
+    background: #29907F;
+
 }
 /* Redes Sociais*/ 
     .social-icons {
