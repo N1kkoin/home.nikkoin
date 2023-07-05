@@ -40,6 +40,11 @@ nav a:hover{
     width: 36px;
     height: 36px;
     padding-left: 10%;
+    fill: #fff;
+    transition: fill 0.5s;
+}
+.logo:hover {
+    fill: red;
 }
 .links {
     padding-right: 10%;
