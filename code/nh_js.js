@@ -47,21 +47,5 @@ window.onscroll = function() {
   }
 };
 
-$(document).ready(function() {
-    // Verifica se estamos em um dispositivo móvel
-    if (window.matchMedia("(max-width: 767px)").matches) {
-        // Em dispositivos móveis, mostra o título da imagem quando clicado
-        $('.kodfun-gallery > div').on('click', function(e) {
-            e.preventDefault();
-            $('.image-title.visible').removeClass('visible');
-            $(this).find('.image-title').addClass('visible');
-        });
-        $(document).on('click', function(e) {
-            if (!$(e.target).closest('.kodfun-gallery > div').length) {
-                $('.image-title.visible').removeClass('visible');
-            }
-        });
-    }
-});
 
 
