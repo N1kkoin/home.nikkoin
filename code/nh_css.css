@@ -193,6 +193,10 @@ font-family: var(--fonte-resto);
     opacity: 1;
 }
 
+.kodfun-gallery > div .image-title.visible {
+    opacity: 1;
+}
+
 .kodfun-gallery > div a:hover .image-title {
     color: #fff;
     background-color: #29907F;
