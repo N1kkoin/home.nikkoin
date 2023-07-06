@@ -48,23 +48,20 @@ window.onscroll = function() {
 };
 
 $(document).ready(function() {
-    // Selecionamos todas as divs dentro de .kodfun-gallery que possuem a classe .image-title
-    $('.kodfun-gallery > div').on('click', function(e) {
-        // Previne o comportamento padrão do clique (neste caso, seguindo o link)
-        e.preventDefault();
-
-        // Remove a classe 'visible' de qualquer .image-title que a possua
-        $('.image-title.visible').removeClass('visible');
-
-        // Adiciona a classe 'visible' ao .image-title desta div
-        $(this).find('.image-title').addClass('visible');
-    });
-
-    // Quando o usuário clica fora da div, removemos a classe 'visible'
-    $(document).on('click', function(e) {
-        if (!$(e.target).closest('.kodfun-gallery > div').length) {
+    // Verifica se estamos em um dispositivo móvel
+    if (window.matchMedia("(max-width: 767px)").matches) {
+        // Em dispositivos móveis, mostra o título da imagem quando clicado
+        $('.kodfun-gallery > div').on('click', function(e) {
+            e.preventDefault();
             $('.image-title.visible').removeClass('visible');
-        }
-    });
+            $(this).find('.image-title').addClass('visible');
+        });
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('.kodfun-gallery > div').length) {
+                $('.image-title.visible').removeClass('visible');
+            }
+        });
+    }
 });
+
 
