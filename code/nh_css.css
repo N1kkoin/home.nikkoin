@@ -196,7 +196,6 @@ font-family: var(--fonte-resto);
 .image-title{
     position: relative;
     display: inline-block;
-
 }
 
 .image-title::after {
@@ -209,12 +208,10 @@ font-family: var(--fonte-resto);
     bottom: 10px;
     width: 15%;
     height: 2px;
-    background-color: #29907F; /* Cor da linha */
+    background-color: #29907F; 
     transform-origin: center;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
-    display: none;
-    transition: display 0.5s;
   }
   
   .image-title:hover::after {
