@@ -39,7 +39,7 @@ function escrevendoNaHome() {
 }
 function hoverproblemamobile() {
     var isMobile = false; // Variável para verificar se é um dispositivo móvel
-    var clickCount = 0; // Contador de cliques
+    var isFirstClick = true; // Variável para rastrear o primeiro clique
 
     // Verificar se o dispositivo é um dispositivo móvel
     function checkMobileDevice() {
@@ -48,21 +48,17 @@ function hoverproblemamobile() {
 
     // Lidar com o clique no elemento
     function handleClick() {
-        clickCount++;
+        if (isMobile && isFirstClick) {
+            isFirstClick = false; // Marcar o primeiro clique como concluído
 
-        // Verificar se é um dispositivo móvel e se é o segundo clique
-        if (isMobile && clickCount === 2) {
             var imageContainer = document.getElementById('image-container');
+            var imageLink = document.getElementById('image-link');
             var imageTitle = document.querySelector('#image-container .image-title');
             var opacity = getComputedStyle(imageTitle).getPropertyValue('opacity');
 
             if (opacity === '1') {
-                // Ativar o href após um atraso de 300 milissegundos (ou o valor desejado)
-                setTimeout(function() {
-                    var link = document.querySelector('#image-container a');
-                    link.setAttribute('href', 'ilustrações/');
-                    link.click();
-                }, 300);
+                // Ativar o href
+                imageLink.setAttribute('href', 'ilustrações/');
             }
         }
     }
