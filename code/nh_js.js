@@ -38,33 +38,27 @@ let typeTimeoutId = null;
 type();
 
 
-window.onscroll = function() {
-  var nav = document.querySelector('nav');
-  if (window.pageYOffset > 1) { // Altere este valor para o ponto de rolagem desejado
-      nav.classList.add('nav-scrolled');
-  } else {
-      nav.classList.remove('nav-scrolled');
+var meuElemento = document.getElementById("meu-elemento");
+var isHovered = false;
+
+// Adicionar evento de hover apenas quando ativado
+meuElemento.addEventListener("mouseover", function () {
+  isHovered = true;
+  this.style.display = "block";
+});
+
+meuElemento.addEventListener("mouseout", function () {
+  isHovered = false;
+  this.style.display = "none";
+});
+
+// Ocultar o elemento inicialmente
+meuElemento.style.display = "none";
+
+// Mostrar o elemento se o hover estiver ativado
+window.addEventListener("mousemove", function () {
+  if (!isHovered) {
+    meuElemento.style.display = "none";
   }
-};
-
-  var meuElemento = document.getElementById("meu-elemento");
-
-  // Verificar se é um dispositivo móvel
-  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  );
-
-  if (!isMobile) {
-    // Adicionar evento de hover apenas se não for um dispositivo móvel
-    meuElemento.addEventListener("mouseover", function () {
-      this.style.opacity = 1;
-    });
-
-    meuElemento.addEventListener("mouseout", function () {
-      this.style.opacity = 0;
-    });
-  } else {
-    // Remover o elemento se for um dispositivo móvel
-    meuElemento.remove();
-  }
+});
 

@@ -196,6 +196,7 @@ font-family: var(--fonte-resto);
 .image-title{
     position: relative;
     display: inline-block;
+
 }
 
 .image-title::after {
@@ -212,6 +213,8 @@ font-family: var(--fonte-resto);
     transform-origin: center;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
+    display: none;
+    transition: display 0.5s;
   }
   
   .image-title:hover::after {
