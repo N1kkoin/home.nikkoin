@@ -193,11 +193,30 @@ font-family: var(--fonte-resto);
     opacity: 1;
 }
 
-.kodfun-gallery > div a:hover .image-title {
-    color: #fff;
-    background-color: #29907F;
+.image-title{
+    position: relative;
+    display: inline-block;
 }
 
+.image-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 10px;
+    width: 15%;
+    height: 2px;
+    background-color: #29907F; /* Cor da linha */
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-title:hover::after {
+    transform: scaleX(1);
+  }
 
 @media only screen and (max-width: 500px) {
 
