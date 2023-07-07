@@ -47,5 +47,24 @@ window.onscroll = function() {
   }
 };
 
+  var meuElemento = document.getElementById("meu-elemento");
 
+  // Verificar se é um dispositivo móvel
+  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+
+  if (!isMobile) {
+    // Adicionar evento de hover apenas se não for um dispositivo móvel
+    meuElemento.addEventListener("mouseover", function () {
+      this.style.opacity = 1;
+    });
+
+    meuElemento.addEventListener("mouseout", function () {
+      this.style.opacity = 0;
+    });
+  } else {
+    // Remover o elemento se for um dispositivo móvel
+    meuElemento.remove();
+  }
 
