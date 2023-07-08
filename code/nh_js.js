@@ -38,33 +38,18 @@ function escrevendoNaHome() {
     type();
 }
 function hoverproblemamobile() {
-    var isMobile = false; // Variável para verificar se é um dispositivo móvel
-    var isFirstClick = true; // Variável para rastrear o primeiro clique
-
-    // Verificar se o dispositivo é um dispositivo móvel
-    function checkMobileDevice() {
-        isMobile = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-    }
-
-    // Lidar com o clique no elemento
-    function handleClick() {
-        if (isMobile && isFirstClick) {
-            isFirstClick = false; // Marcar o primeiro clique como concluído
-
-            var imageContainer = document.getElementById('image-container');
-            var imageLink = document.getElementById('image-link');
-            var imageTitle = document.querySelector('#image-container .image-title');
-            var opacity = getComputedStyle(imageTitle).getPropertyValue('opacity');
-
-            if (opacity === '1') {
-                // Ativar o href
-                imageLink.setAttribute('href', 'ilustrações/');
-            }
-        }
-    }
-
-    // Chamar a função para verificar o dispositivo móvel ao carregar a página
-    window.addEventListener('load', checkMobileDevice);
+    var myLink1 = document.getElementById("myLink1");
+    var myLink2 = document.getElementById("myLink2");
+  
+    myLink1.addEventListener("dblclick", function(event) {
+      event.preventDefault();
+      window.location.href = "ilustrações/"; // Substitua pelo seu URL desejado
+    });
+  
+    myLink2.addEventListener("dblclick", function(event) {
+      event.preventDefault();
+      window.location.href = "design_gráfico/"; // Substitua pelo seu URL desejado
+    });
 }
 
 
