@@ -199,25 +199,11 @@ font-family: var(--fonte-resto);
     display: inline-block;
 }
 
-.image-title::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90px;
-    bottom: 10px;
-    height: 2px;
-    background-color: #dcdcdc; 
-    transform-origin: center;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
+.kodfun-gallery > div .image-title:hover {
+    color: #73C382;
+    transition: 0.3s;
   }
-  
-  .image-title:hover::after {
-    transform: scaleX(1);
-  }
+
 
 @media only screen and (max-width: 500px) {
     .social-icons a:hover::after{
@@ -229,9 +215,6 @@ font-family: var(--fonte-resto);
         padding-left: 27px;
         padding-right: 15px;
     }
-    .image-title::after {
-        display: none;
-      }
     .arrow {
         position: absolute;
         top: 50%;
