@@ -155,6 +155,7 @@ font-family: var(--fonte-resto);
     width: calc(100% - 40px);
     margin: 20px;
     justify-content: center;
+    z-index: 1;
 }
 
 .kodfun-gallery > div{
@@ -219,11 +220,9 @@ font-family: var(--fonte-resto);
   }
 
 @media only screen and (max-width: 500px) {
-
     .social-icons a:hover::after{
         display: none;
-    }
-    
+    }    
 }
     
 @media only screen and (max-width: 900px) {
@@ -232,3 +231,9 @@ font-family: var(--fonte-resto);
 
     }
 }
+
+
+
+
+  
+  

@@ -38,18 +38,7 @@ function escrevendoNaHome() {
     type();
 }
 function hoverproblemamobile() {
-    var myLink1 = document.getElementById("myLink1");
-    var myLink2 = document.getElementById("myLink2");
-  
-    myLink1.addEventListener("dblclick", function(event) {
-      event.preventDefault();
-      window.location.href = "ilustrações/"; // Substitua pelo seu URL desejado
-    });
-  
-    myLink2.addEventListener("dblclick", function(event) {
-      event.preventDefault();
-      window.location.href = "design_gráfico/"; // Substitua pelo seu URL desejado
-    });
+
 }
 
 
