@@ -223,13 +223,21 @@ font-family: var(--fonte-resto);
     .social-icons a:hover::after{
         display: none;
     }    
+    .kodfun-gallery > div .image-title {
+        text-align: left; 
+        width: fit-content;
+    }
+    .image-title::after {
+        display: none;
+      }
+    
 }
     
 @media only screen and (max-width: 900px) {
     .kodfun-gallery{
         flex-direction: column; 
-
     }
+
 }
 
 
