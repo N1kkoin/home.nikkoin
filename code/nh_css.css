@@ -226,11 +226,37 @@ font-family: var(--fonte-resto);
     .kodfun-gallery > div .image-title {
         text-align: left; 
         width: fit-content;
+        padding-left: 27px;
+        padding-right: 15px;
     }
     .image-title::after {
         display: none;
       }
+    .arrow {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid #dcdcdc;
+        animation: blink .5s ease-in-out infinite alternate;
+    }
     
+    @keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        40% {
+          opacity: 1;
+        }
+        0% {
+          opacity: 0;
+        }
+      }  
+
 }
     
 @media only screen and (max-width: 900px) {
