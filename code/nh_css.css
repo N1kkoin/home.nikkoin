@@ -5,10 +5,13 @@
     --fonte-titulos: 'Lato', sans-serif;
     --fonte-resto: 'Baloo 2', sans-serif;
   }
+
 body{
     margin: 0;
     padding: 0;
     overflow: hidden;
+    position: relative;
+    min-height: 100vh;
 }
 nav{
     top: 0;
@@ -352,5 +355,12 @@ font-family: var(--fonte-resto);
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
   }
-  
-  
+
+  #footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+  }
