@@ -249,7 +249,7 @@ font-family: var(--fonte-resto);
 }
 
 #content-wrapper {
-    overflow: auto;
+    overflow-y: auto;
     height: calc(100vh - var(--header-height));
   }
 
@@ -261,7 +261,7 @@ font-family: var(--fonte-resto);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px;
-    overflow: auto;
+    overflow-y: auto;
   }
 
   .galleria img {
@@ -302,11 +302,16 @@ font-family: var(--fonte-resto);
 
   .close-button {
     position: absolute;
+    display: flex;
+    justify-content: center;
     top: 20px;
     right: 20px;
-    color: #FFF200;
+    color: #29907F;
     cursor: pointer;
     font-size: 24px;
+    background-color: #fff;
+    width: 30px;
+    border-radius: 0 5px 0 5px;
   }
 
 
@@ -322,7 +327,7 @@ font-family: var(--fonte-resto);
   
   /* Estilizando o fundo da barra de rolagem */
   ::-webkit-scrollbar-track {
-    background-color: #f2f2f2; /* Cor do fundo da barra de rolagem */
+    background-color: #dcdcdc; /* Cor do fundo da barra de rolagem */
   }
   
   /* Estilizando a barra de rolagem quando estiver sendo arrastada */
@@ -334,8 +339,18 @@ font-family: var(--fonte-resto);
   ::-webkit-scrollbar-thumb:active {
     background-color: #29907F; /* Cor do indicador de rolagem ao clicar */
   }
+
   
-
-
+  @media (max-width: 600px) {
+    .galleria {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .galleria {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
   
   
