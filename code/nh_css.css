@@ -330,7 +330,7 @@ font-family: var(--fonte-resto);
   
   /* Estilizando o fundo da barra de rolagem */
   ::-webkit-scrollbar-track {
-    background-color: #dcdcdc; /* Cor do fundo da barra de rolagem */
+    background-color: #f2f2f2; /* Cor do fundo da barra de rolagem */
   }
   
   /* Estilizando a barra de rolagem quando estiver sendo arrastada */
@@ -362,5 +362,4 @@ font-family: var(--fonte-resto);
     text-align: center;
     font-family: Arial, sans-serif;
     font-size: 14px;
-
   }
