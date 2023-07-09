@@ -308,14 +308,15 @@ font-family: var(--fonte-resto);
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 20px;
-    right: 20px;
+    top: 0;
+    right: 0;
     color: #29907F;
     cursor: pointer;
     font-size: 24px;
     background-color: #fff;
     width: 30px;
-    border-radius: 0 5px 0 5px;
+    height: 30px;
+    border-radius: 0 0 0 5px;
   }
 
 /* Estilizando a barra de rolagem */
