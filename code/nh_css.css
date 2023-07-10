@@ -53,7 +53,7 @@ svg{
 }
 
 svg:hover{
-    fill: #FFF200;
+    fill: white;
     transition: fill 0.3s;
 }
 .links {
@@ -359,9 +359,6 @@ font-family: var(--fonte-resto);
   ::-webkit-scrollbar-thumb:active {
     background-color: #29907F; /* Cor do indicador de rolagem ao clicar */
   }
-
-  
-
 
   #footer {
     background-color: white;
