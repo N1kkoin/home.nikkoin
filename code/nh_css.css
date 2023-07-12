@@ -291,11 +291,12 @@ font-family: var(--fonte-resto);
     height: auto;
     cursor: pointer;
     border-radius: 5px;
+    transition: filter 0.3s ease;
 
   }
 
   .galleria img:hover{
-    border-color: #FFF200;
+    filter: brightness(50%);
   }
 
   /* Estilos da visualização em outra página */
@@ -380,6 +381,9 @@ font-family: var(--fonte-resto);
 
 
   @media only screen and (max-width: 500px) {
+    .galleria img:hover{
+      filter: none;
+    }
     .social-icons a:hover::after{
         display: none;
     }    
