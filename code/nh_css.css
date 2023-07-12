@@ -65,21 +65,22 @@ svg{
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #29907F;
-    min-width: 180px;
+    background-color: #fff ;
+    width: 170px;
     z-index: 3;
     border-radius: 5px; 
-    border: 1px solid white;  
-    left: 50%; /* Adiciona o deslocamento de 50% para centralizar horizontalmente */
-    transform: translate(-50%); 
+    border: 1px solid #fff;  
+    right: 0;
+    top: 69px;
+
   }
   
   .dropdown-content a {
-    color: white;
+    color: #000;
     padding: 10px 16px;
     text-decoration: none;
     display: block;
-    text-align: center;
+    text-align: right;
   }
   
   .dropdown:hover .dropdown-content {
@@ -90,7 +91,7 @@ svg{
     content: "";
     position: absolute;
     top: -10px;
-    left: 50%;
+    left: 74%;
     transform: translateX(-50%);
     width: 0;
     height: 0;
@@ -109,10 +110,18 @@ svg{
     color: #29907F;
   }
 
+  .dropdown-content .active-link:first-child  {
+    margin-top: 10px;
+  }
+  .dropdown-content .active-link:last-child  {
+    margin-bottom: 10px;
+  }
+
 .dropdown-content .active-link  {
-  background-color: #fff; 
-  color: #29907F;
-  margin: 10px;
+  background-color: #29907F; 
+  color: #fff;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 
@@ -427,3 +436,4 @@ font-family: var(--fonte-resto);
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
   }
+
