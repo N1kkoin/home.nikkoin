@@ -109,6 +109,9 @@ svg{
     background-color: white; 
     color: #29907F;
   }
+  .active-link:hover {
+    color: #000;
+  }
 
   .dropdown-content .active-link:first-child  {
     margin-top: 10px;
@@ -122,6 +125,10 @@ svg{
   color: #fff;
   margin-right: 10px;
   margin-left: 10px;
+}
+
+.dropdown-content  .active-link:hover {
+  color: #FFF200;
 }
 
 
