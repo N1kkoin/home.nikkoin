@@ -466,3 +466,9 @@ font-family: var(--fonte-resto);
   .iframe-wrapper {
     flex: 1;
   }
+
+@media screen and (max-width: 600px) {
+  .iframe-container {
+    grid-template-columns: 1fr;
+  }
+}
