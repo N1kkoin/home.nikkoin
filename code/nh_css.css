@@ -221,62 +221,10 @@ font-size: 20px;
 font-family: var(--fonte-resto);
 }
 
-.kodfun-gallery{
-    display: flex;
-    height: calc(100vh - var(--header-height) - 40px);
-    gap: 20px;
-    width: calc(100% - 40px);
-    margin: 20px;
-    justify-content: center;
-}
-
-.kodfun-gallery > div{
-    flex: 1;
-    border-radius: 5px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
-    width: 100%;
-    transition: all .8s cubic-bezier(.25, .4, 0.45, 1.4);
-    position: relative; 
-    overflow: hidden;
-}
-.kodfun-gallery > div:hover{
-    flex: 4;
-}
-
-.kodfun-gallery > div .image-title {
-    position: absolute; 
-    bottom: 12px; 
-    left: 12px; 
-    right: 12px; 
-    background: rgb(255, 255, 255);
-    color: #29907F; 
-    padding: 10px; 
-    font-family: var(--fonte-resto);
-    font-weight: 400;
-    font-size: 18px;
-    border-radius: 5px;
-    opacity: 0; 
-    transition: opacity .5s;
-    text-align: center; 
-}
-
-.kodfun-gallery > div:hover .image-title {
-    opacity: 1;
-}
-
 .image-title{
     position: relative;
     display: inline-block;
 }
-
-.kodfun-gallery > div .image-title:hover {
-    color: #73C382;
-    transition: 0.3s;
-  }
-
-
 
 #content-wrapper {
     overflow-y: auto;
