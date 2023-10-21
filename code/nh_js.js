@@ -36,10 +36,33 @@ function type() {
 type();
 
 
+// PORTIFOLIO HOVER CLICK --------------------------------------------------------------
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const portfolioLink = document.getElementById("Portifólio");
+  const dropdownContent = document.querySelector(".dropdown-content");
 
+  // Adicione um ouvinte de clique e um ouvinte de hover ao link "Portifólio"
+  portfolioLink.addEventListener("click", function(e) {
+    e.preventDefault(); // Evita que o link seja seguido
 
+    // Alternar a visibilidade do submenu
+    if (dropdownContent.style.display === "none" || dropdownContent.style.display === "") {
+      dropdownContent.style.display = "block";
+    } else {
+      dropdownContent.style.display = "none";
+    }
+  });
 
+  portfolioLink.addEventListener("mouseenter", function() {
+    dropdownContent.style.display = "block";
+  });
 
+  portfolioLink.addEventListener("mouseleave", function() {
+    dropdownContent.style.display = "none";
+  });
+});
+</script>
 
 
 

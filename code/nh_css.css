@@ -421,3 +421,8 @@ font-family: var(--fonte-resto);
     grid-template-columns: 1fr;
   }
 }
+
+
+#Portifólio{
+  cursor: pointer;
+}
