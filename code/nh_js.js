@@ -37,7 +37,7 @@ type();
 
 
 // PORTIFOLIO HOVER CLICK --------------------------------------------------------------
-<script>
+
 document.addEventListener("DOMContentLoaded", function() {
   const portfolioLink = document.getElementById("Portifólio");
   const dropdownContent = document.querySelector(".dropdown-content");
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
     dropdownContent.style.display = "none";
   });
 });
-</script>
+
 
 
 
