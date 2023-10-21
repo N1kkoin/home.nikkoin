@@ -337,12 +337,6 @@ font-family: var(--fonte-resto);
     .social-icons a:hover::after{
         display: none;
     }    
-    .kodfun-gallery > div .image-title {
-        text-align: left; 
-        width: fit-content;
-        padding-left: 27px;
-        padding-right: 15px;
-    }
     .arrow {
         position: absolute;
         top: 50%;
@@ -373,16 +367,19 @@ font-family: var(--fonte-resto);
 
 }
     
-@media only screen and (max-width: 900px) {
-    .kodfun-gallery{
-        flex-direction: column; 
-    }
-  }
 
   @media (max-width: 600px) {
     .galleria {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+
+    .hero .social-icons, .hero h1{
+      transform: scale(0.8);
+    }
+    .hero .social-icons{
+      margin-bottom: -14px;
+    }
+
 
   }
   
@@ -426,3 +423,4 @@ font-family: var(--fonte-resto);
 #Portifólio{
   cursor: pointer;
 }
+
