@@ -39,50 +39,27 @@ type();
 // PORTIFOLIO HOVER CLICK --------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function() {
-    const portfolioLink = document.getElementById("Portifólio");
-    const dropdownContent = document.querySelector(".dropdown-content");
-  
-    let dropdownVisible = false;
-  
-    // Adicione um ouvinte de clique ao link "Portifólio"
-    portfolioLink.addEventListener("click", function(e) {
-      e.preventDefault(); // Evita que o link seja seguido
-  
-      // Alternar a visibilidade do submenu
-      if (!dropdownVisible) {
-        dropdownContent.style.display = "block";
-        dropdownVisible = true;
-      } else {
-        dropdownContent.style.display = "none";
-        dropdownVisible = false;
-      }
-    });
-  
-    // Adicione ouvintes de hover para mostrar e ocultar o submenu
-    portfolioLink.addEventListener("mouseenter", function() {
-      if (!dropdownVisible) {
-        dropdownContent.style.display = "block";
-      }
-    });
-  
-    portfolioLink.addEventListener("mouseleave", function() {
-      if (!dropdownVisible) {
-        dropdownContent.style.display = "none";
-      }
-    });
-  
-    // Adicione ouvintes de clique aos links do submenu
-    const subLinks = document.querySelectorAll(".dropdown-content a");
-    subLinks.forEach(function(link) {
-      link.addEventListener("click", function() {
-        // Ocultar o submenu quando um link do submenu for clicado
-        dropdownContent.style.display = "none";
-        dropdownVisible = false;
-      });
-    });
+  const portfolioLink = document.getElementById("Portifólio");
+  const dropdownContent = document.querySelector(".dropdown-content");
+  const submenuLinks = document.querySelectorAll(".submenu-link");
+
+  // Adicione um ouvinte de clique ao link "Portifólio"
+  portfolioLink.addEventListener("click", function(e) {
+    e.preventDefault(); // Evita que o link seja seguido
+
+    // Alternar a visibilidade do submenu
+    if (dropdownContent.style.display === "none" || dropdownContent.style.display === "") {
+      dropdownContent.style.display = "block";
+    } else {
+      dropdownContent.style.display = "none";
+    }
   });
 
-
-
-
-
+  // Adicione um ouvinte de clique para cada link do submenu
+  submenuLinks.forEach(function(submenuLink) {
+    submenuLink.addEventListener("click", function() {
+      // Ocultar o submenu quando um link do submenu for clicado
+      dropdownContent.style.display = "none";
+    });
+  });
+});
