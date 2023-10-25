@@ -73,15 +73,18 @@ svg{
     border: 1px solid #fff;  
     right: 0;
     top: 69px;
-
+    padding-right: 10px;
+    padding-left: 10px;
   }
+
   .dropdown-content a {
     color: #000;
     padding: 10px 16px;
     text-decoration: none;
     display: block;
-    text-align: center;
+    text-align: left;
     margin-top: 10px;
+    background-color: #eef1f9;
 
   }
   .dropdown-content a:last-child {
@@ -122,8 +125,7 @@ svg{
 .dropdown-content .active-link  {
   background-color: #29907F; 
   color: #fff;
-  margin-right: 10px;
-  margin-left: 10px;
+
 }
 
 .dropdown-content  .active-link:hover {
