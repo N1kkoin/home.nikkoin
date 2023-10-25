@@ -66,7 +66,7 @@ svg{
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #fff ;
+    background-color: white;
     width: 170px;
     z-index: 3;
     border-radius: 5px; 
@@ -75,13 +75,17 @@ svg{
     top: 69px;
 
   }
-  
   .dropdown-content a {
     color: #000;
     padding: 10px 16px;
     text-decoration: none;
     display: block;
-    text-align: right;
+    text-align: center;
+    margin-top: 10px;
+
+  }
+  .dropdown-content a:last-child {
+    margin-bottom: 10px;
   }
   
   .dropdown:hover .dropdown-content {
@@ -98,7 +102,7 @@ svg{
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid white;     
+    border-bottom: 10px solid white;   
   }
   
   .hoverparadropdown{
@@ -114,12 +118,6 @@ svg{
     color: #000;
   }
 
-  .dropdown-content .active-link:first-child  {
-    margin-top: 10px;
-  }
-  .dropdown-content .active-link:last-child  {
-    margin-bottom: 10px;
-  }
 
 .dropdown-content .active-link  {
   background-color: #29907F; 
