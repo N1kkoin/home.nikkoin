@@ -25,6 +25,7 @@ nav{
     align-items: center;
     display: flex;
     justify-content: space-between;
+    z-index: 1;
 }
 nav a{
     font-family: var(--fonte-resto);
@@ -60,7 +61,6 @@ svg{
   .dropdown {
     position: relative;
     display: inline-block;  
-
   }
   
   .dropdown-content {
