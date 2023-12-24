@@ -15,50 +15,51 @@
 
 <body>
     <div id="Navbar"></div>
-    <div class="containerlol">
-        <div class="tamanhodasparadas">
-            <a href="#" class="open-overlay" onclick="showOverlay(1)">
-                <div class="container">
-                    <img src="/images/dg/dg1.png" alt="Imagem">
-                </div>
-            </a>
-        </div>
-        <div class="tamanhodasparadas">
-            <a href="">
-                <div class="container">
-                    <img src="/images/dg/dg2.png" alt="Imagem">
-                </div>
-            </a>
-        </div>
-        <div class="tamanhodasparadas">
-            <a href="">
-                <div class="container">
-                    <img src="/images/dg/dg3.png" alt="Imagem">
-                </div>
-            </a>
-        </div>
-        <div class="tamanhodasparadas">
-            <a href="">
-                <div class="container">
-                    <img src="/images/dg/dg4.png" alt="Imagem">
-                </div>
-            </a>
-        </div>
-        <div class="tamanhodasparadas">
-            <a href="">
-                <div class="container">
-                    <img src="/images/dg/dg5.png" alt="Imagem">
-                </div>
-            </a>
+    <div class="conteinerdololpraoverflow">
+        <div class="containerlol">
+            <div class="tamanhodasparadas">
+                <a href="#" class="open-overlay" onclick="showOverlay(1)">
+                    <div class="container">
+                        <img src="/images/dg/dg1.png" alt="Imagem">
+                    </div>
+                </a>
+            </div>
+            <div class="tamanhodasparadas">
+                <a href="">
+                    <div class="container">
+                        <img src="/images/dg/dg2.png" alt="Imagem">
+                    </div>
+                </a>
+            </div>
+            <div class="tamanhodasparadas">
+                <a href="">
+                    <div class="container">
+                        <img src="/images/dg/dg3.png" alt="Imagem">
+                    </div>
+                </a>
+            </div>
+            <div class="tamanhodasparadas">
+                <a href="">
+                    <div class="container">
+                        <img src="/images/dg/dg4.png" alt="Imagem">
+                    </div>
+                </a>
+            </div>
+            <div class="tamanhodasparadas">
+                <a href="">
+                    <div class="container">
+                        <img src="/images/dg/dg5.png" alt="Imagem">
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
-
-<!-- Overlay -->
-<div class="overlay" id="overlay">
-    <div class="overlay-content" id="overlay-content">
-        <!-- O conteúdo do overlay será inserido aqui dinamicamente -->
+    <!-- Overlay -->
+    <div class="overlay" id="overlay">
+        <div class="conteudodooverlay" id="conteudodooverlay">
+            <!-- O conteúdo do overlay será inserido aqui dinamicamente -->
+        </div>
     </div>
-</div>
 
     <div id="footer">
         Nikkon Kamui | Nicole Heguy
@@ -73,7 +74,7 @@
 
         function showOverlay(contentType) {
             var overlay = document.getElementById('overlay');
-            var overlayContent = document.getElementById('overlay-content');
+            var overlayContent = document.getElementById('conteudodooverlay');
             var body = document.body;
 
             // Limpa qualquer conteúdo anterior
@@ -83,20 +84,24 @@
             if (contentType === 1) {
                 // Exemplo para o primeiro link
                 overlayContent.innerHTML = `
+                <div class="tamanhodoconteudo">
                     <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
-                    <h2>Imagem 1</h2>
-                    <img src='/images/dg/dg1.png' alt='Imagem 1'>
+                    <h2>Coworking Shopping Park City 2023</h2>
+                        <img src="/images/dg/coworkingfam.png" alt="Image 1">
                     <p>Texto ou código aqui.</p>
                     <!-- Adicione mais elementos conforme necessário -->
+                </div>
                 `;
             } else if (contentType === 2) {
                 // Exemplo para o segundo link
                 overlayContent.innerHTML = `
+                <div class="tamanhodoconteudo">
                     <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
                     <h2>Imagem 2</h2>
                     <img src='/images/dg/dg2.png' alt='Imagem 2'>
                     <p>Outro texto ou código aqui.</p>
                     <!-- Adicione mais elementos conforme necessário -->
+                </div>
                 `;
             }
 
@@ -126,7 +131,7 @@
                 }
             });
 
-            var overlayContent = document.getElementById('overlay-content');
+            var overlayContent = document.getElementById('conteudodooverlay');
 
             overlayContent.addEventListener('click', function (event) {
                 event.stopPropagation();

@@ -32,6 +32,7 @@ body {
     padding: 0;
     font-family: var(--fonte-resto);
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body.overlay-open {
@@ -110,6 +111,13 @@ body.overlay-open {
     width: 100%;
 }
 
+.conteinerdololpraoverflow{
+    height: calc(100dvh - 79px);
+    width: 100%;
+    overflow-y: auto;
+
+}
+
 .containerlol {
     max-width: 960px;
     margin: 0 auto;
@@ -171,7 +179,7 @@ body.overlay-open {
     z-index: 999;
 }
 
-.overlay-content {
+.conteudodooverlay {
     background: #fff;
     padding: 20px;
     width: 100%;
@@ -181,6 +189,21 @@ body.overlay-open {
     position: relative;
     box-sizing: border-box;
 }
+
+.conteudodooverlay img {
+    width:100%;
+    border-radius: 10px;
+}
+
+
+.conteudodooverlay h2{
+    text-align: center;
+}
+.tamanhodoconteudo{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
 
 .close-btn {
     position: absolute;
