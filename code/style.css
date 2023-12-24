@@ -189,24 +189,26 @@ body.overlay-open {
     border-radius: 10px;
 }
 
-
-.conteudodooverlay h2 {
+.conteudodooverlay h1 {
     text-align: center;
 }
 
 .tamanhodoconteudo {
     max-width: 960px;
     margin: 0 auto;
-
+    background-color: white;
+    position: relative;
 }
 
 .close-btn {
     position: fixed;
     top: 0;
-    right: 10px;
+    right: 12px;
     cursor: pointer;
     font-size: 30px;
     padding: 10px 20px 5px 20px;
+    z-index: 10;
+    background-color: white;
 }
 
 .close-btn:hover {
@@ -228,11 +230,14 @@ body.overlay-open {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
         "img-principal img-principal"
+        "quinta quinta"
         "segunda terceira"
         "segunda quarta"
-        "quinta quinta";
+    ;
     gap: 10px;
     height: 80vh;
+    position: relative;
+    z-index: 2;
 }
 
 .img-principal {
@@ -241,6 +246,7 @@ body.overlay-open {
 
 .segunda {
     grid-area: segunda;
+
 }
 
 .terceira {
@@ -249,6 +255,7 @@ body.overlay-open {
 
 .quarta {
     grid-area: quarta;
+
 }
 
 .quinta {
@@ -257,6 +264,9 @@ body.overlay-open {
 
 .quinta p {
     margin-top: 6px;
+    line-height: 1.3;
+    font-size: large;
+    text-indent: 20px;
 }
 
 /* Adicionando a propriedade background-size: cover às imagens */
@@ -265,3 +275,125 @@ body.overlay-open {
     height: 100%;
     object-fit: cover;
 }
+
+.coworkingstyle a {
+    color: #45B7E5;
+    font-weight: 500;
+}
+
+.elementoinvisivel {
+    height: 10px;
+    width: 100%;
+}
+
+/*bolinhas -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.containercircle {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+
+.circle {
+    width: 300px;
+    height: 300px;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle.small {
+    width: 150px;
+    height: 150px;
+    border: 3px dotted #45B7E5;
+}
+
+.circle.normal {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #f9e20f;
+}
+
+.circle.medium {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #1b3556;
+}
+
+.circle.full {
+    width: 50px;
+    height: 50px;
+    background-color:  #1b3556;
+}
+
+.circle.fullrosa {
+    width: 30px;
+    height: 30px;
+    background-color: #e53888;
+}
+
+.circle.large {
+    width: 400px;
+    height: 400px;
+    border: 3px dotted #e53888;
+}
+
+/* Posicionamento nos cantos */
+.top-left {
+    top: 150px;
+    left: -100px;
+}
+
+.top-right {
+    top: 0;
+    right: -250px;
+}
+
+.bottom-left {
+    bottom: -100px;
+    left: -400px;
+}
+
+.bottom-right {
+    bottom: -300px;
+    right: -300px;
+}
+
+.bottom-right-2{
+    bottom: -300px;
+    right: -180px;
+}
+
+
+/*overlay de img --------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Adicione isso ao seu CSS */
+.overlaydeimg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay-img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .fechar-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  

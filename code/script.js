@@ -35,4 +35,3 @@ function type() {
 }
 type();
 
-
