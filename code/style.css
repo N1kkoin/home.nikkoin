@@ -206,9 +206,9 @@ body.overlay-open {
 
 
 .close-btn {
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
+    right: 10px;
     cursor: pointer;
     font-size: 30px;
     padding: 10px 20px 5px 20px;
