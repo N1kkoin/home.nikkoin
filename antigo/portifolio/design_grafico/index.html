@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" type="image/svg+xml" href="/images/icone.svg">
+    <link rel="alternate icon" href="/images/icone.ico">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <link rel="stylesheet" type="text/css" href="/code/nh_css.css">
+    <title>Design Gráfico</title>
+    
+    <!-- Hotjar Tracking Code for https://nikkoin.art -->
+    <script>
+      (function (h, o, t, j, a, r) {
+          h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+          h._hjSettings = { hjid: 3716180, hjsv: 6 };
+          a = o.getElementsByTagName('head')[0];
+          r = o.createElement('script'); r.async = 1;
+          r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-23BZZMMJMP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-23BZZMMJMP');
+</script>
+
+<body>
+  <nav>
+    <div class="logo">
+        <a href="https://nikkoin.art"><img style="filter: invert(100%);" src="/images/nh_logo.svg" alt="NH"></a>
+
+    </div>
+    <div class="links">
+        <a href="https://nikkoin.art/" id="Home">Home</a>
+        <div class="dropdown">
+            <div class="hoverparadropdown">
+                <a id="Portifólio">Portifólio</a>
+            </div>
+            <div class="dropdown-content">
+                <a href="/portifolio/ilustracoes/" class="submenu-link"  id="Ilustrações">Ilustrações</a>
+                <a href="/portifolio/design_grafico/" class="submenu-link" id="Design Gráfico">Design Gráfico</a>
+                <a href="/portifolio/front-end/" class="submenu-link" id="Front-End">Front-End</a>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+
+  <div id="content-wrapper">
+    <section>
+      <div class="galleria">
+        <img src="\images\dg\dg1.png" alt="Miniatura 1" data-src="\images\dg\dg1.5.png">
+        <img src="\images\dg\dg2.png" alt="Miniatura 2" data-src="\images\dg\dg2.5.png">
+        <img src="\images\dg\dg3.png" alt="Miniatura 3" data-src="\images\dg\dg3.5.png">
+        <img src="\images\dg\dg4.png" alt="Miniatura 4" data-src="\images\dg\dg4.5.png">
+        <img src="\images\dg\dg5.png" alt="Miniatura 4" data-src="\images\dg\dg5.5.png">
+      </div>
+    </section>
+
+    <div id="footer">
+      Nikkon Kamui | Nicole Heguy
+    </div>
+
+  </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img id="modalImage" src="" alt="">
+      </div>
+    </div>
+
+<script src="/code/nh_js.js"></script>
+<script>document.getElementById("Design Gráfico").classList.add("active-link");</script>
+<script>
+    
+// JavaScript para a visualização em outra página
+
+// Obtém os elementos relevantes
+var modal = document.getElementById("myModal");
+var modalImage = document.getElementById("modalImage");
+var closeBtn = document.getElementsByClassName("close-button")[0];
+
+// Adiciona o evento de clique às miniaturas da galeria
+var galleryImages = document.querySelectorAll(".galleria img");
+galleryImages.forEach(function(image) {
+  image.addEventListener("click", function() {
+    var imageSrc = this.getAttribute("data-src");
+    modal.style.display = "block";
+    modalImage.src = imageSrc;
+  });
+});
+
+// Fecha o modal quando o botão de fechar é clicado
+closeBtn.addEventListener("click", function() {
+  modal.style.display = "none";
+  modalImage.src = "";
+});
+
+// Fecha o modal quando o usuário clica fora da imagem
+window.addEventListener("click", function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    modalImage.src = "";
+  }
+});
+
+
+</script>
+</body>
+</html>

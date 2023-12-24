@@ -1,0 +1,130 @@
+<nav>
+    <div class="tamanho">
+        <div class="logo">
+            <a href="https://nikkoin.art"><img style="filter: invert(100%);" src="/images/nh_logo.svg" alt="NH"></a>
+
+        </div>
+        <div class="links">
+            <a href="https://nikkoin.art/" id="Home">Home</a>
+            <div class="dropdown">
+                <div class="hoverparadropdown">
+                    <a id="Portifólio">Portifólio</a>
+                </div>
+                <div class="dropdown-content">
+                    <div class=" teste">
+                        <a href=""  id="Ilustrações">Ilustrações</a>
+                        <a href="/portifolio/design-grafico/index.html" id="Design Gráfico">Design Gráfico</a>
+                        <a href=""  id="Front-End">Front-End</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+    nav {
+        position: relative;
+        z-index: 99;
+        width: 100dvw;
+        border-bottom: 1px solid #73C382;
+        background-color: #29907F;
+    }
+
+    nav .tamanho{
+        max-width: 960px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    nav .dropdown a, #Home {
+        font-family: var(--fonte-resto);
+        font-weight: 400;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 5px 15px 5px 15px;
+        color: rgb(255, 255, 255);
+        border-radius: 5px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    nav a:hover {
+        color: #FFF200;
+        transition: 0.3s;
+    }
+
+    nav .logo {
+        width: 36px;
+        height: auto;
+    }
+
+    nav svg {
+        fill: #fff;
+    }
+
+    /* Estilos para o dropdown */
+    nav .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    nav .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        width: 170px;
+        z-index: 3;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        right: 0;
+        top: 70px;
+    }
+
+    nav .teste {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    nav .dropdown-content a {
+        color: #000;
+        padding: 5px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        background-color: #eef1f9;
+    }
+
+    nav .dropdown-content a:hover {
+        color: #73C382;
+    }
+
+    nav .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    nav .dropdown-content::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 74%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid white;
+    }
+
+    nav .hoverparadropdown {
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
+</style>
