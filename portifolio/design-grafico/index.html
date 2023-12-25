@@ -25,28 +25,28 @@
                 </a>
             </div>
             <div class="tamanhodasparadas">
-                <a href="">
+                <a href="#" class="open-overlay" onclick="showOverlay(2)">
                     <div class="container">
-                        <img src="/images/dg/dg2.png" alt="Imagem">
+                        <img src="/images/dg/trunfomeme/dg2.png" alt="Imagem">
                     </div>
                 </a>
             </div>
             <div class="tamanhodasparadas">
-                <a href="">
+                <a href="#" class="open-overlay" onclick="showOverlay(3)">
                     <div class="container">
                         <img src="/images/dg/dg3.png" alt="Imagem">
                     </div>
                 </a>
             </div>
             <div class="tamanhodasparadas">
-                <a href="">
+                <a href="#" class="open-overlay" onclick="showOverlay(4)">
                     <div class="container">
                         <img src="/images/dg/dg4.png" alt="Imagem">
                     </div>
                 </a>
             </div>
             <div class="tamanhodasparadas">
-                <a href="">
+                <a href="#" class="open-overlay" onclick="showOverlay(5)">
                     <div class="container">
                         <img src="/images/dg/dg5.png" alt="Imagem">
                     </div>
@@ -75,18 +75,17 @@
         });
 
         function showOverlay(contentType) {
-            var overlay = document.getElementById('overlay');
-            var overlayContent = document.getElementById('conteudodooverlay');
-            var body = document.body;
+    var overlay = document.getElementById('overlay');
+    var overlayContent = document.getElementById('conteudodooverlay');
+    var body = document.body;
 
-            // Limpa qualquer conteúdo anterior
-            overlayContent.innerHTML = '';
+    // Limpa qualquer conteúdo anterior
+    overlayContent.innerHTML = '';
 
-            // Adiciona conteúdo ao overlay com base no tipo
-            if (contentType === 1) {
-                // Exemplo para o primeiro link
-                overlayContent.innerHTML = `
-                <div class="tamanhodoconteudo">
+    // Mapeamento de tipos de conteúdo para configurações
+    var contentConfig = {
+        1: {
+            html: `<div class="tamanhodoconteudo">
                     <div class="containercircle">
                         <div class="circle medium top-left"></div>
                         <div class="circle normal top-right"></div>
@@ -135,27 +134,63 @@
                         </div>
                         <div class="elementoinvisivel"></div>
                     </div>
-                </div>
-                `;
-            } else if (contentType === 2) {
-                // Exemplo para o segundo link
-                overlayContent.innerHTML = `
-                <div class="tamanhodoconteudo">
+                </div>`,
+        },
+        2: {
+            html: `<div class="tamanhodoconteudo">
                     <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
-                    <h2>Imagem 2</h2>
-                    <img src='/images/dg/dg2.png' alt='Imagem 2'>
-                    <p>Outro texto ou código aqui.</p>
-                    <!-- Adicione mais elementos conforme necessário -->
-                </div>
-                `;
-            }
+                    <div class="trunfomemestyle">
+                        <div class="img-principal"><img src="/images/dg/trunfomeme/meme_1.png"></div>
+                        <div class="segunda"><img src="/images/dg/trunfomeme/meme_2.png" ></div>
+                        <div class="terceira">
+                            <h1>Super Trunfo de Memes <span style="color: #C82D36;">2022</span></h1>
+                            <p>Destaco o Super Trunfo, entre um dos projetos acadêmicos que mais aprecio, desenvolvido durante o curso de Design Gráfico. 
+                                Tínhamos que criar um super trunfo comemorativo, e depois de um brainstorm, escolhemos o tema de memes. Em 2022 fez 101 anos que o primeiro meme (que temos conhecimento) foi criado. </p>
 
-            // Adiciona a classe ao corpo para ocultar o overflow
-            body.classList.add('overlay-open');
+                            <p>Posteriormente, em diversos eventos da faculdade, nossos trabalhos, incluindo este baralho, foram apresentados ao público geral. Nos que participei, pude observar de perto 
+                                a reação positiva do público em relação do baralho, principalmente entre o público juvenil. 
 
-            // Exibe o overlay
-            overlay.style.display = 'flex';
-        }
+                            </br></br>
+                            <a target="blank_" href="https://www.instagram.com/murderesstired/">Ana</a> — Pesquisa das datas de Surgimento.
+                        </br><a target="blank_" href="https://www.behance.net/levy-laduig-cabral">Levy</a> — Informações e design da embalagem (função primária).
+                    </br><a target="blank_" href="https://nikkoin.art/">Nicole</a>  — Diagramação, design das cartas e design da embalagem (função secundária).<p>
+                        </div>
+                        <div class="elementoinvisivel"></div>
+                    </div>
+                </div>`,
+        },
+        3: {
+            html: `<div class="tamanhodoconteudo">
+                <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
+                <img src="">
+                </div>`,
+        },
+        4: {
+            html: `<div class="tamanhodoconteudo">
+                <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
+                <img src="/images/dg/NH_marca.png">
+                </div>`,
+        },
+        5: {
+            html: `<div class="tamanhodoconteudo">
+                <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
+                <img src="">
+                </div>`,
+        },
+    };
+
+    // Verifica se o tipo de conteúdo existe no mapeamento
+    if (contentConfig[contentType]) {
+        // Adiciona o HTML correspondente ao tipo de conteúdo
+        overlayContent.innerHTML = contentConfig[contentType].html;
+
+        // Adiciona a classe ao corpo para ocultar o overflow
+        body.classList.add('overlay-open');
+
+        // Exibe o overlay
+        overlay.style.display = 'flex';
+    }
+}
 
         function closeOverlay() {
             var overlay = document.getElementById('overlay');
@@ -167,21 +202,6 @@
             overlay.style.display = 'none';
         }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            var overlay = document.getElementById('overlay');
-
-            overlay.addEventListener('click', function (event) {
-                if (event.target === overlay) {
-                    closeOverlay();
-                }
-            });
-
-            var overlayContent = document.getElementById('conteudodooverlay');
-
-            overlayContent.addEventListener('click', function (event) {
-                event.stopPropagation();
-            });
-        });
 
         
     </script>
