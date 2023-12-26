@@ -1,4 +1,4 @@
-const phrases = ["Designer.", "Ilustradora.", "Web Designer.", "Criativa.", "Front-end.", "Nikkoin Design", "Nicole H"];
+const phrases = ["Designer,", "Ilustradora,", "Web Designer,", "Criativa,", "Front-end,", "Nikkoin Design,", "Nicole H."];
 const typeDelay = 100; // delay between typing each character in ms
 const deleteDelay = 50; // delay before deleting each character in ms
 const nextPhraseDelay = 2000; // delay before starting to type the next phrase in ms
