@@ -75,17 +75,17 @@
         });
 
         function showOverlay(contentType) {
-    var overlay = document.getElementById('overlay');
-    var overlayContent = document.getElementById('conteudodooverlay');
-    var body = document.body;
+            var overlay = document.getElementById('overlay');
+            var overlayContent = document.getElementById('conteudodooverlay');
+            var body = document.body;
 
-    // Limpa qualquer conteúdo anterior
-    overlayContent.innerHTML = '';
+            // Limpa qualquer conteúdo anterior
+            overlayContent.innerHTML = '';
 
-    // Mapeamento de tipos de conteúdo para configurações
-    var contentConfig = {
-        1: {
-            html: `<div class="tamanhodoconteudo">
+            // Mapeamento de tipos de conteúdo para configurações
+            var contentConfig = {
+                1: {
+                    html: `<div class="tamanhodoconteudo">
                     <div class="containercircle">
                         <div class="circle medium top-left"></div>
                         <div class="circle normal top-right"></div>
@@ -135,9 +135,9 @@
                         <div class="elementoinvisivel"></div>
                     </div>
                 </div>`,
-        },
-        2: {
-            html: `<div class="tamanhodoconteudo">
+                },
+                2: {
+                    html: `<div class="tamanhodoconteudo">
                     <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
                     <div class="trunfomemestyle">
                         <div class="img-principal"><img src="/images/dg/trunfomeme/meme_1.png"></div>
@@ -158,39 +158,43 @@
                         <div class="elementoinvisivel"></div>
                     </div>
                 </div>`,
-        },
-        3: {
-            html: `<div class="tamanhodoconteudo">
+                },
+                3: {
+                    html: `<div class="tamanhodoconteudo">
                 <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
                 <img src="">
                 </div>`,
-        },
-        4: {
-            html: `<div class="tamanhodoconteudo">
+                },
+                4: {
+                    html: `<div class="tamanhodoconteudo">
                 <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
                 <img src="/images/dg/NH_marca.png">
                 </div>`,
-        },
-        5: {
-            html: `<div class="tamanhodoconteudo">
+                },
+                5: {
+                    html: `<div class="tamanhodoconteudo">
                 <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
-                <img src="">
+                <img src="/images/dg/MapaFAM_1.png">
+                <iframe frameborder="0" class="juxtapose" width="960" height="580px" 
+                src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=83c85d7c-49a1-11ed-b5bd-6595d9b17862" 
+                sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms"></iframe>
+                <img src="/images/dg/MapaFAM_2.png">
                 </div>`,
-        },
-    };
+                },
+            };
 
-    // Verifica se o tipo de conteúdo existe no mapeamento
-    if (contentConfig[contentType]) {
-        // Adiciona o HTML correspondente ao tipo de conteúdo
-        overlayContent.innerHTML = contentConfig[contentType].html;
+            // Verifica se o tipo de conteúdo existe no mapeamento
+            if (contentConfig[contentType]) {
+                // Adiciona o HTML correspondente ao tipo de conteúdo
+                overlayContent.innerHTML = contentConfig[contentType].html;
 
-        // Adiciona a classe ao corpo para ocultar o overflow
-        body.classList.add('overlay-open');
+                // Adiciona a classe ao corpo para ocultar o overflow
+                body.classList.add('overlay-open');
 
-        // Exibe o overlay
-        overlay.style.display = 'flex';
-    }
-}
+                // Exibe o overlay
+                overlay.style.display = 'flex';
+            }
+        }
 
         function closeOverlay() {
             var overlay = document.getElementById('overlay');
@@ -203,7 +207,7 @@
         }
 
 
-        
+
     </script>
 </body>
 

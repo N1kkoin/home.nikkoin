@@ -200,6 +200,11 @@ body.overlay-open {
     position: relative;
 }
 
+.tamanhodoconteudo iframe{
+    width: 100%;
+    padding-top: 50px;
+}
+
 .close-btn {
     position: fixed;
     display: flex;
@@ -227,6 +232,15 @@ body.overlay-open {
     }
 
 }
+
+@media (max-width: 960px) {
+
+    .tamanhodoconteudo iframe{
+        display: none;
+    }
+
+}
+
 
 
 
