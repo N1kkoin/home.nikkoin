@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/code/style.css">
+    <title>NH Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="alternate icon" href="/images/icone.ico">
+
+</head>
+
+<body>
+    <div id="Navbar"></div>
+    <div class="conteinerdololpraoverflow">
+        <div class="containerlol">
+            <div class="tamanhodasparadas">
+                <a href="#" class="open-overlay" onclick="showOverlay(1)">
+                    <div class="container">
+                        <img src="/images/i/i1.png" alt="Imagem">
+                    </div>
+                </a>
+            </div>
+            <div class="tamanhodasparadas">
+                <a href="#" class="open-overlay" onclick="showOverlay(3)">
+                    <div class="container">
+                        <img src="/images/i/i3.png" alt="Imagem">
+                    </div>
+                </a>
+            </div>
+            <div class="tamanhodasparadas">
+                <a href="#" class="open-overlay" onclick="showOverlay(4)">
+                    <div class="container">
+                        <img src="/images/i/i4.png" alt="Imagem">
+                    </div>
+                </a>
+            </div>
+            <div class="tamanhodasparadas">
+                <a href="#" class="open-overlay" onclick="showOverlay(5)">
+                    <div class="container">
+                        <img src="/images/i/i5.png" alt="Imagem">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="footer">
+            Nikkon Kamui | Nicole Heguy
+        </div>
+
+    </div>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay">
+        <div class="conteudodooverlay" id="conteudodooverlay">
+            <!-- O conteúdo do overlay será inserido aqui dinamicamente -->
+        </div>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/code/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#Navbar").load("/code/navbar.html");
+        });
+
+        function showOverlay(contentType) {
+            var overlay = document.getElementById('overlay');
+            var overlayContent = document.getElementById('conteudodooverlay');
+            var body = document.body;
+
+            // Limpa qualquer conteúdo anterior
+            overlayContent.innerHTML = '';
+
+            // Mapeamento de tipos de conteúdo para configurações
+            var contentConfig = {
+                1: {
+                    html: `<div class="tamanhodoconteudo">
+                <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
+                <img src="/images/i/i1.5.png">
+                </div>`,
+                },
+                3: {
+                    html: `<div class="tamanhodoconteudo">
+                <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
+                <img src="/images/i/i3.5.png">
+                </div>`,
+                },
+                4: {
+                    html:`<div class="tamanhodoconteudo">
+                <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
+                <img src="/images/i/i4.5.png">
+                </div>`,
+                },
+                5: {
+                    html: `<div class="tamanhodoconteudo">
+                <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
+                <img src="/images/i/i5.5.png">
+                </div>`,
+                },
+            };
+
+            // Verifica se o tipo de conteúdo existe no mapeamento
+            if (contentConfig[contentType]) {
+                // Adiciona o HTML correspondente ao tipo de conteúdo
+                overlayContent.innerHTML = contentConfig[contentType].html;
+
+                // Adiciona a classe ao corpo para ocultar o overflow
+                body.classList.add('overlay-open');
+
+                // Exibe o overlay
+                overlay.style.display = 'flex';
+            }
+        }
+
+        function closeOverlay() {
+            var overlay = document.getElementById('overlay');
+            var body = document.body;
+
+            // Remove a classe do corpo para mostrar o overflow
+            body.classList.remove('overlay-open');
+
+            overlay.style.display = 'none';
+        }
+
+
+
+    </script>
+</body>
+
+</html>
