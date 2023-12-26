@@ -20,26 +20,26 @@
             <div class="tamanhodasparadas">
                 <a href="#" class="open-overlay" onclick="showOverlay(1)">
                     <div class="container">
-                        <img src="/images/i/i1.png" alt="Imagem">
+                        <img src="/images/fe/infofamimg.png" alt="Imagem">
+                    </div>
+                </a>
+            </div>
+            <div style=" border-radius: 5px; box-shadow: 0 0 1px #007BFF;" class="tamanhodasparadas">
+                <a href="#" class="open-overlay" onclick="showOverlay(2)">
+                    <div class="container">
+                        <img src="/images/fe/seja_veloz/sejavelozimg.png" alt="Imagem">
                     </div>
                 </a>
             </div>
             <div class="tamanhodasparadas">
                 <a href="#" class="open-overlay" onclick="showOverlay(3)">
                     <div class="container">
-                        <img src="/images/i/i3.png" alt="Imagem">
+                        <img src="/images/fe/templeteemail.png" alt="Imagem">
                     </div>
                 </a>
             </div>
             <div class="tamanhodasparadas">
                 <a href="#" class="open-overlay" onclick="showOverlay(4)">
-                    <div class="container">
-                        <img src="/images/i/i4.png" alt="Imagem">
-                    </div>
-                </a>
-            </div>
-            <div class="tamanhodasparadas">
-                <a href="#" class="open-overlay" onclick="showOverlay(5)">
                     <div class="container">
                         <img src="/images/i/i5.png" alt="Imagem">
                     </div>
@@ -76,36 +76,58 @@
             overlayContent.innerHTML = '';
 
             // Mapeamento de tipos de conteúdo para configurações
-            var contentConfig = {
-                1: {
-                    html: `<div class="tamanhodoconteudofrontend">
+                    var contentConfig = {
+        1: {
+        html: `<div class="tamanhodoconteudofrontend">
+            <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
+            <iframe src="//jsfiddle.net/Nikkoin/kf9up7Lo/99/embedded/result/?accentColor=73C382"
+                allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+        </div>
+        `,
+        },
+        2: {
+            html: `
+            <div class="tamanhodoconteudofrontend_sv">
                 <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
-                <iframe src="//jsfiddle.net/Nikkoin/kf9up7Lo/99/embedded/result/?accentColor=73C382"
-            allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-            </div>
-                `,
-                },
-                3: {
-                    html: `<div class="tamanhodoconteudofrontend">
+                <div class="sejavelozstyle">
+                    <div class="comecosv">
+                        <img class="sejavelozlogo" src="https://nikkoin.art/seja-veloz/logo_seja_veloz.svg" alt="Imagem">
+                        <a href="https://www.nikkoin.art/seja-veloz/" target="_blank">
+                            <button>
+                                Um joguinho que fiz em JS HTML e CSS
+                            </button>
+                        </a>
+                        <p class="textopequeno">
+                            patrocinado pelo ChatGPT (na parte de js)
+                        </p>
+                    </div>
+                    <div class="meioefimsv">
+                        fff
+                    </div>
+                </div>    
+            </div>`,
+            },
+            3: {
+            html: `<div class="tamanhodoconteudofrontend">
                 <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
-                <iframe src="//jsfiddle.net/Nikkoin/Lmpnjywa/82/embedded/result/light/?accentColor=73C382"
-            allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                </div>`,
-                },
-                4: {
-                    html: `<div class="tamanhodoconteudofrontend">
-                <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
+                <h1>Templete de E-mail - Comunicado interno e Assinatura</h1>
+
                 <iframe src="//jsfiddle.net/Nikkoin/u2ys4omn/32/embedded/result,html/light/?accentColor=73C382"
-            allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                </div>`,
-                },
-                5: {
-                    html: `<div class="tamanhodoconteudofrontend">
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                <div class="elementoinvisivel"></div>
+                <div class="iframemenor">
+                    <iframe src="//jsfiddle.net/Nikkoin/uLze7wgs/33/embedded/result,html/light/?accentColor=73C382"
+                        allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                </div>
+            </div>`,
+            },
+            4: {
+            html: `<div class="tamanhodoconteudofrontend">
                 <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
-                <iframe src="//jsfiddle.net/Nikkoin/uLze7wgs/33/embedded/result,html/light/?accentColor=73C382"
-            allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                </div>`,
-                },
+                <iframe src="//jsfiddle.net/Nikkoin/u7L30tmw/45/embedded//result,html,js,css/light/?accentColor=73C382"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            </div>`,
+            },
             };
 
             // Verifica se o tipo de conteúdo existe no mapeamento
