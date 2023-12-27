@@ -231,6 +231,17 @@ body.overlay-open {
         height: 200px;
     }
 
+    .containerlol {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+}
+
+@media (max-width: 860px) {
+    .containerlol {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
 }
 
 @media (max-width: 960px) {
@@ -493,6 +504,8 @@ body.overlay-open {
     background-color: #F2F3F8;
     border-radius: 5px;
     padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 
   }
 
@@ -504,6 +517,7 @@ body.overlay-open {
   font-size: 14px;
   color: #868686;
   text-align: center;
+  margin-bottom: -5px;
 }
 
 .sejavelozlogo {
@@ -513,4 +527,96 @@ body.overlay-open {
 
 .sejavelozlogo img{
     width: 100%;
+}
+
+.sejavelozstyle p {
+    margin-top: 6px;
+    line-height: 1.3;
+    font-size: large;
+    text-indent: 20px;
+}
+
+
+.sejavelozstylegrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "textointrodução textointrodução textointrodução textointrodução"
+        "img-principal img-principal img-principal2 img-principal2"
+        "textofinal textofinal textofinal textofinal"
+        "img-segundaria1 img-segundaria1 img-segundaria3 img-segundaria3"
+        "img-segundaria2 img-segundaria4 img-segundaria3 img-segundaria3"
+        "img-segundaria5 img-segundaria6 img-segundaria6 videosv"
+        "elementoinvisivel elementoinvisivel elementoinvisivel elementoinvisivel"
+    ;
+    gap: 10px;
+    height: 80vh;
+    position: relative;
+    z-index: 2;
+}
+
+.sejavelozstylegrid .img-principal {
+    grid-area: img-principal;
+    box-shadow: 0 0 1px #007BFF;
+    border-radius: 5px;
+}
+
+.sejavelozstylegrid .img-principal2 {
+    grid-area: img-principal2;
+    border-radius: 5px;
+}
+
+.sejavelozstylegrid .textointrodução {
+    grid-area: textointrodução;
+}
+
+.sejavelozstylegrid .img-segundaria1 {
+    grid-area: img-segundaria1;
+}
+
+.sejavelozstylegrid .img-segundaria2 {
+    grid-area: img-segundaria2;
+}
+
+.sejavelozstylegrid .img-segundaria3 {
+    grid-area: img-segundaria3;
+    object-fit: cover;
+}
+
+.sejavelozstylegrid .img-segundaria4 {
+    grid-area: img-segundaria4;
+}
+
+.sejavelozstylegrid .img-segundaria5 {
+    grid-area: img-segundaria5;
+}
+
+.sejavelozstylegrid .img-segundaria6 {
+    grid-area: img-segundaria6;
+}
+
+.sejavelozstylegrid .videosv {
+    grid-area: videosv;
+}
+.sejavelozstylegrid .textofinal {
+    grid-area: textofinal;
+}
+
+.sejavelozstylegrid .elementoinvisivel {
+    grid-area: elementoinvisivel;
+}
+
+
+.sejavelozstylegrid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sejavelozstylegrid video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
 }
