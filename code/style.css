@@ -620,3 +620,8 @@ body.overlay-open {
     border-radius: 10px;
 
 }
+
+.sejavelozstylegrid a {
+    color: #d71822;
+    font-weight: 500;
+}
