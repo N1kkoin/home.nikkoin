@@ -1,133 +1,217 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 
 <head>
-  <link rel="icon" type="image/svg+xml" href="/images/icone.svg">
-  <link rel="alternate icon" href="/images/icone.ico">
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" type="text/css" href="/code/nh_css.css">
-  <title>Front-End</title>
-
-  <!-- Hotjar Tracking Code for https://nikkoin.art -->
-  <script>
-    (function (h, o, t, j, a, r) {
-      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-      h._hjSettings = { hjid: 3716180, hjsv: 6 };
-      a = o.getElementsByTagName('head')[0];
-      r = o.createElement('script'); r.async = 1;
-      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/code/style.css">
+    <title>NH Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="alternate icon" href="/images/icone.ico">
 
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-23BZZMMJMP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'G-23BZZMMJMP');
-</script>
-
 <body>
-  <nav>
-    <div class="logo">
-      <a href="https://nikkoin.art"><img style="filter: invert(100%);" src="/images/nh_logo.svg" alt="NH"></a>
+    <div id="Navbar"></div>
+    <div class="conteinerdololpraoverflow">
+        <div class="containerlol">
+            <div class="tamanhodasparadas">
+                <a href="#" class="open-overlay" onclick="showOverlay(1)">
+                    <div class="container">
+                        <img src="/images/fe/infofamimg.png" alt="Imagem">
+                    </div>
+                </a>
+            </div>
+            <div style=" border-radius: 5px; box-shadow: 0 0 1px #007BFF;" class="tamanhodasparadas">
+                <a href="#" class="open-overlay" onclick="showOverlay(2)">
+                    <div class="container">
+                        <img src="/images/fe/seja_veloz/sejavelozimg.png" alt="Imagem">
+                    </div>
+                </a>
+            </div>
+            <div class="tamanhodasparadas">
+                <a href="#" class="open-overlay" onclick="showOverlay(3)">
+                    <div class="container">
+                        <img src="/images/fe/templeteemail.png" alt="Imagem">
+                    </div>
+                </a>
+            </div>
+            <div class="tamanhodasparadas">
+                <a href="#" class="open-overlay" onclick="showOverlay(4)">
+                    <div class="container">
+                        <img src="/images/fe/posfam.jpg" alt="Imagem">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="footer">
+            Nikkon Kamui | Nicole Heguy
+        </div>
 
     </div>
-    <div class="links">
-      <a href="https://nikkoin.art/" id="Home">Home</a>
-      <div class="dropdown">
-        <div class="hoverparadropdown">
-          <a id="Portifólio">Portifólio</a>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay">
+        <div class="conteudodooverlay" id="conteudodooverlay">
+            <!-- O conteúdo do overlay será inserido aqui dinamicamente -->
         </div>
-        <div class="dropdown-content">
-          <a href="/portifolio/ilustracoes/" class="submenu-link" id="Ilustrações">Ilustrações</a>
-          <a href="/portifolio/design_grafico/" class="submenu-link" id="Design Gráfico">Design Gráfico</a>
-          <a href="/portifolio/front-end/" class="submenu-link" id="Front-End">Front-End</a>
-        </div>
-      </div>
+
     </div>
-  </nav>
 
-  <div id="content-wrapper">
-    <section>
-      <div class="iframe-container">
-        <div class="iframe-wrapper">
-          <iframe src="//jsfiddle.net/Nikkoin/uLze7wgs/33/embedded/result,html/light/?accentColor=73C382"
-            allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/code/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#Navbar").load("/code/navbar.html");
+        });
+
+        function showOverlay(contentType) {
+            var overlay = document.getElementById('overlay');
+            var overlayContent = document.getElementById('conteudodooverlay');
+            var body = document.body;
+
+            // Limpa qualquer conteúdo anterior
+            overlayContent.innerHTML = '';
+
+            // Mapeamento de tipos de conteúdo para configurações
+                    var contentConfig = {
+        1: {
+        html: `<div class="tamanhodoconteudofrontend">
+            <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
+            <iframe src="//jsfiddle.net/Nikkoin/kf9up7Lo/99/embedded/result/?accentColor=73C382"
+                allowfullscreen="allowfullscreen" frameborder="0"></iframe>
         </div>
-        <div class="iframe-wrapper">
-          <iframe src="//jsfiddle.net/Nikkoin/u2ys4omn/32/embedded/result,html/light/?accentColor=73C382"
-            allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-        </div>
-        <div class="iframe-wrapper">
-          <iframe src="//jsfiddle.net/Nikkoin/Lmpnjywa/82/embedded/result/light/?accentColor=73C382"
-            allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-        </div>
-        <div class="iframe-wrapper">
-          <iframe width="100%" height="300" src="//jsfiddle.net/Nikkoin/kf9up7Lo/99/embedded/result/?accentColor=73C382"
-            allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-        </div>
-      </div>
-    </section>
-    <div id="footer">
-      Nikkon Kamui | Nicole Heguy
-    </div>
-  </div>
+        `,
+        },
+        2: {
+            html: `
+            <div class="tamanhodoconteudofrontend_sv">
+            <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
+            <div class="sejavelozstyle">
+                <div class="sejavelozstylegrid">
+                    <img class="img-principal" src="/images/fe/seja_veloz/gtrhgtryh.png" alt="Imagem">
+                    <img class="img-principal2" src="/images/fe/seja_veloz/grtryhbteyhb.png" alt="Imagem">
+                    <div class="textointrodução">
+                        <div class="comecosv">
+                            <img class="sejavelozlogo" src="https://nikkoin.art/seja-veloz/logo_seja_veloz.svg" alt="Imagem">
+                            <a href="https://www.nikkoin.art/seja-veloz/" target="_blank">
+                                <button>
+                                    Link do joguinho que fiz em HTML, JS e CSS
+                                </button>
+                            </a>
+                            <p class="textopequeno">
+                                Patrocinado pelo ChatGPT
+                            </p>
+                        </div>
+                        <div class="meioefimsv">
+                            <p>Em julho de 2023, tive a expontania ideia de criar um jogo e assim o fiz.
+                            O conceito é simples: digite rapidamente e não deixe o tempo esgotar!</p>
+                            <p>Para quem se interessa pelos bastidores, desenvolvi com HTML e CSS, que são minha zona de conforto e utilizando o ChatGPT para o JavaScript (onde, confesso, não é meu
+                                ponto forte). GitHub Sites para hospedágem (depois tambem coloquei em um site de jogos, <a target="blank_" href="https://nikkoin.itch.io/seja-veloz">Itch.io</a>).
+                                O leaderboard, que foi desafiador, está conectado ao Firebase DB (tudo front-end).
+                            </p>
+                        </div>
+                    </div>
 
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="close-button">&times;</span>
-      <img id="modalImage" src="" alt="">
-    </div>
-  </div>
+                    <img class="img-segundaria1" src="/images/fe/seja_veloz/fe2.jpg" alt="Imagem">
+                    <img class="img-segundaria2" src="/images/fe/seja_veloz/fe4.jpg" alt="Imagem">
+                    <img class="img-segundaria3" src="/images/fe/seja_veloz/fe1.jpg" alt="Imagem">
+                    <img class="img-segundaria4" src="/images/fe/seja_veloz/fe3.jpg" alt="Imagem">
 
-  <script src="/code/nh_js.js"></script>
-  <script>document.getElementById("Front-End").classList.add("active-link");</script>
-  <script>
+                    <div class="textofinal">
+                        <div class="meioefimsv">
+                            <p>Outubro de 2023, durante a Faculdade Aberta na <a target="blank_" href="https://www.instagram.com/famamericana/">@famericana</a>, tive a oportunidade de
+                                apresentar meu jogo como uma das atividades para os jovens do ensino médio.</p>
+                            <p>Eles foram meus beta testers não oficiais, proporcionando uma experiência valiosa.
+                                Observando de perto, percebi
+                                padrões interessantes, o que me levou a implementar melhorias sutis:</p>
+                            <ul>
+                                <li>Agora, ao clicar em "Iniciar Jogo", a digitação começa automaticamente (sem a
+                                    necessidade de clicar na caixa de
+                                    escrita);</li>
+                                <li>Um aviso intuitivo foi adicionado para evitar teclar equivocadamente no "Enter", o que
+                                    poderia prejudicar a entrada
+                                    no leaderboard;</li>
+                                <li>Instruções claras são exibidas no início da página, eliminando a incerteza de como
+                                    começar;</li>
+                                <li>Para tornar o jogo mais equilibrado, palavras com mais de seis caracteres só
+                                    aparecem após os primeiros 25
+                                    segundos.</li>
+                            </ul>
+                            <p>Essas pequenas mudanças, mesmo que aparentemente insignificantes, transformaram a
+                                experiência do jogo, tornando-a
+                                mais intuitiva e divertida. Além disso, observei que jogadores extremamente rápidos
+                                encontravam um novo desafio de
+                                resistência em vez de tempo, o que me inspirou a criar um modo perfeccionista para o
+                                leaderboard - agora, os
+                                jogadores podem exibir suas pontuações sem errar uma única letra.</p>
+                            <p><i style="color: #007bff">Nicole, porque você está colocando o jogo no seu
+                                    portifólio?</i></p>
+                            <p>Fora meu desejo de memorizá-lo, gostaria de demonstrar a forma como penso em um dos meus
+                                projetos pessoais ;) </p>
+                        </div>
+                    </div>
+                    <img class="img-segundaria5" src="/images/fe/seja_veloz/fe5.jpg" alt="Imagem">
+                    <img class="img-segundaria6" src="/images/fe/seja_veloz/fe6.jpg" alt="Imagem">
+                    <video class="videosv" controls>
+                        <source src="/images/fe/seja_veloz/fe7.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                    <div class="elementoinvisivel"></div>
+                </div>
+            </div>`,
+            },
+            3: {
+            html: `<div class="tamanhodoconteudofrontend">
+                <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
+                <h1>Templete de E-mail - Comunicado interno e Assinatura</h1>
 
-    // JavaScript para a visualização em outra página
+                <iframe src="//jsfiddle.net/Nikkoin/u2ys4omn/32/embedded/result,html/light/?accentColor=73C382"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                <div class="elementoinvisivel"></div>
+                <div class="iframemenor">
+                    <iframe src="//jsfiddle.net/Nikkoin/uLze7wgs/33/embedded/result,html/light/?accentColor=73C382"
+                        allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                </div>
+            </div>`,
+            },
+            4: {
+            html: `<div class="tamanhodoconteudofrontend">
+                <span class="close-btn" onclick="closeOverlay()"><i class="fa-solid fa-xmark"></i></span>
+                <iframe src="//jsfiddle.net/Nikkoin/u7L30tmw/45/embedded//result,html,js,css/light/?accentColor=73C382"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            </div>`,
+            },
+            };
 
-    // Obtém os elementos relevantes
-    var modal = document.getElementById("myModal");
-    var modalImage = document.getElementById("modalImage");
-    var closeBtn = document.getElementsByClassName("close-button")[0];
+            // Verifica se o tipo de conteúdo existe no mapeamento
+            if (contentConfig[contentType]) {
+                // Adiciona o HTML correspondente ao tipo de conteúdo
+                overlayContent.innerHTML = contentConfig[contentType].html;
 
-    // Adiciona o evento de clique às miniaturas da galeria
-    var galleryImages = document.querySelectorAll(".galleria img");
-    galleryImages.forEach(function (image) {
-      image.addEventListener("click", function () {
-        var imageSrc = this.getAttribute("data-src");
-        modal.style.display = "block";
-        modalImage.src = imageSrc;
-      });
-    });
+                // Adiciona a classe ao corpo para ocultar o overflow
+                body.classList.add('overlay-open');
 
-    // Fecha o modal quando o botão de fechar é clicado
-    closeBtn.addEventListener("click", function () {
-      modal.style.display = "none";
-      modalImage.src = "";
-    });
+                // Exibe o overlay
+                overlay.style.display = 'flex';
+            }
+        }
 
-    // Fecha o modal quando o usuário clica fora da imagem
-    window.addEventListener("click", function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-        modalImage.src = "";
-      }
-    });
+        function closeOverlay() {
+            var overlay = document.getElementById('overlay');
+            var body = document.body;
+
+            // Remove a classe do corpo para mostrar o overflow
+            body.classList.remove('overlay-open');
+
+            overlay.style.display = 'none';
+        }
 
 
-  </script>
+
+    </script>
 </body>
 
 </html>
