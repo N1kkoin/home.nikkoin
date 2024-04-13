@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1b1c1e3e;
+    border-radius: 10px;
+    border: 3px solid #f4f7fd;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f4f7fd;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff0000;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #ff0000;
+}
+
+body {
+    background-color: #f4f7fd;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    border-top: 2px solid;
+    border-image: linear-gradient(to right, #ff0000, #ffe601, #007bff);
+    border-image-slice: 1;
+    
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 300px;
+}
+
+body::after {
+    content: "";
+    display: block;
+    height: 100px; /* Altura aproximada do footer */
+}
+
+
+header img {
+    width: 400px;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #007bff;
+    gap: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 14px 18px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    color: #ff0000;
+    background-color: white;
+}
+
+main {
+    background-color: white;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: left;
+    padding: 5px 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+
+}
+
+h3 {
+    text-align: center;
+}
+
+footer {
+    background-color: #e4e5ee;
+    color: #77779e;
+    text-align: center;
+    padding: 14px 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/*termos e politica ---------------------------------------------------------------------------------------------*/
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+
+strong {
+    color: #555;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0055a5;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+}
