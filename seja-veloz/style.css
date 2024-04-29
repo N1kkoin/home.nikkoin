@@ -27,10 +27,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
-    border-top: 2px solid;
-    border-image: linear-gradient(to right, #ff0000, #ffe601, #007bff);
-    border-image-slice: 1;
-    
+
 }
 
 
@@ -41,44 +38,15 @@ header {
     align-items: center;
     background-color: white;
     height: 300px;
+    border-top: 2px solid;
+    border-image: linear-gradient(to right, #ff0000, #ffe601, #007bff);
+    border-image-slice: 1;
 }
-
-body::after {
-    content: "";
-    display: block;
-    height: 0; /* Altura aproximada do footer */
-}
-
 
 header img {
     max-width: 400px;
     padding:  0 20px 0  20px;
 
-}
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: #007bff;
-    gap: 10px;
-    padding: 5px 10px;
-    box-sizing: border-box;
-    margin: 0 auto;
-   
-}
-
-.navbar a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 5px 14px;
-    border-radius: 5px;
-}
-
-.navbar a:hover {
-    color: #ff0000;
-    background-color: white;
 }
 
 main {
@@ -92,6 +60,8 @@ main {
     border-radius: 8px;
     box-sizing: border-box;
     margin-bottom: 60px;
+    min-height: 80vh;
+    border-top: 2px solid #007bff;
 }
 
 h3 {
@@ -110,7 +80,11 @@ footer {
 
 footer p {
     margin: 0;
-    font-size: small;
+    font-size: 11px;
+}
+.loguinho{
+    width: 9px;
+    filter:invert(50%);
 }
 
 /*termos e politica ---------------------------------------------------------------------------------------------*/
