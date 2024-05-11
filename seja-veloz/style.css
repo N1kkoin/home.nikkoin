@@ -67,10 +67,6 @@ main {
     box-sizing: border-box;
 }
 
-h3 {
-    text-align: center;
-}
-
 footer {
 
     color: #77779e;
@@ -120,7 +116,7 @@ a:hover {
 
 /* sejavelozstyle --------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-.conteudodooverlay{
+.conteudodooverlay {
     margin-top: 60px;
     border-top: 2px dashed #c8c8d5;
     padding-top: 30px;
@@ -128,7 +124,7 @@ a:hover {
 
 .conteudodooverlay img {
     border-radius: 10px;
-   
+
 }
 
 .sejavelozstyle .meioefimsv {
@@ -136,7 +132,7 @@ a:hover {
     padding: 20px;
     margin-bottom: 10px;
     margin-top: 10px;
-    
+
 }
 
 
@@ -176,7 +172,7 @@ a:hover {
     padding: 10px;
     margin-bottom: 10px;
     font-weight: bold;
-    border-radius: 10px 10px 0 0 ;
+    border-radius: 10px 10px 0 0;
 
 }
 
@@ -187,7 +183,7 @@ a:hover {
     background-color: #f4f7fd;
     padding: 10px;
     margin-bottom: 10px;
-    border-radius: 10px 10px 0 0 ;
+    border-radius: 10px 10px 0 0;
 }
 
 .sejavelozstylegrid .img-principal {
@@ -266,6 +262,68 @@ a:hover {
     font-weight: 500;
 }
 
-.googleplay{
+
+/* ---------------------------------------------------------------------------------------*/
+
+.googleplay {
     max-width: 200px;
+    margin-top: 20px;
+}
+
+.titulojogo {
+    color: white;
+    margin-top: 20px;
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 00px;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*Topicos*/
+.grid-container {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    margin-top: 20px;
+    margin: 0 auto;
+    border: 2px solid #0077cc;
+    gap: 10px;
+}
+
+.grid-item {
+    display: block;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contentdogrid h3 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 960px) {
+
+    .grid-container {
+        grid-template-columns: 1fr;
+
+    }
+
+    .titulojogo {
+        font-size: large;
+    }
+
 }
