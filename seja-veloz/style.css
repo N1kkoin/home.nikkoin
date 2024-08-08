@@ -252,7 +252,7 @@ a:hover {
 
 
 
-.sejavelozstylegrid iframe{
+.sejavelozstylegrid iframe {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -266,7 +266,7 @@ a:hover {
 
 
 /* ---------------------------------------------------------------------------------------*/
- 
+
 a .googleplay {
     width: 100%;
     max-width: 200px;
@@ -287,6 +287,12 @@ a .googleplay {
     text-align: center;
 }
 
+.jogos_container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -329,4 +335,11 @@ a .googleplay {
         font-size: large;
     }
 
+
+}
+
+@media (max-width: 600px) {
+    .jogos_container {
+        flex-direction: column;
+    }
 }
