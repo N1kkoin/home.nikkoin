@@ -40,6 +40,18 @@ document.addEventListener("DOMContentLoaded", function() {
     };
   });
 
+
+// Resize event listener to adjust accordion content height on window resize
+window.addEventListener('resize', () => {
+  accordionBtns.forEach((accordion) => {
+    let content = accordion.nextElementSibling;
+    if (accordion.classList.contains('active')) {
+      // Recalculate and update maxHeight for active accordion
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
+
   // overlay --------------------------------------------------------------------------------------------------~
 
   // Seleciona todas as imagens e o overlay
