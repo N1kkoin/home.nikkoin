@@ -118,30 +118,32 @@ a:hover {
 
 
 .conteudodooverlay img {
-    border-radius: 10px;
+    border-radius: 5px;
 
 }
 
 .sejavelozstyle .meioefimsv {
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 10px;
     margin-top: 10px;
 
 }
-
+ .meioefimsv ul{
+    padding-left: 35px;
+}
 
 .sejavelozstyle p {
     margin-top: 6px;
     line-height: 1.5;
     font-size: large;
-    text-indent: 20px;
+    text-indent: 15px;
 
 }
 
 
 .sejavelozstylegrid {
-    border-top:  2px solid #ffe601;
+    border-top: 2px solid #ffe601;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -171,7 +173,7 @@ a:hover {
     margin-bottom: 10px;
     font-weight: bold;
     border-radius: 10px 10px 0 0;
-    
+
 
 }
 
@@ -203,7 +205,7 @@ a:hover {
 
 .sejavelozstylegrid .textointrodução {
     grid-area: textointrodução;
-    
+
 }
 
 .sejavelozstylegrid .img-segundaria1 {
@@ -345,11 +347,12 @@ a .googleplay {
 /* tab -------------------------------------------------------------------------------------------------------------------*/
 
 .accordion-content {
-
     margin: 0 auto;
-  }
-  
-  .accordion-content .accordion-item {
+    margin-top: 50px;
+
+}
+
+.accordion-content .accordion-item {
     display: flex;
     flex-direction: column;
     padding: 0 1rem;
@@ -358,15 +361,15 @@ a .googleplay {
     cursor: pointer;
     background: white;
     margin-bottom: 0.5em;
-  }
-  
-  .accordion-content .item-header {
+}
+
+.accordion-content .item-header {
     display: flex;
     justify-content: space-between;
     column-gap: 0.2em;
-  }
-  
-  .accordion-content .item-icon {
+}
+
+.accordion-content .item-icon {
     margin-top: 25px;
     flex: 0 0 25px;
     display: grid;
@@ -376,27 +379,73 @@ a .googleplay {
     width: 25px;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .accordion-content .item-icon i {
+}
+
+.accordion-content .item-icon i {
     transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
-  }
-  
-  .accordion-content .item-question {
+}
+
+.accordion-content .item-question {
     font-size: 20px;
     font-weight: 700;
-  }
-  
-  .accordion-content .active .item-icon i {
+}
+
+.accordion-content .active .item-icon i {
     transform: rotate(180deg);
-  }
-    
-  .accordion-content .item-content {
+}
+
+.accordion-content .item-content {
     max-height: 0;
     height: 100%;
     overflow: hidden;
     transition: all 300ms ease;
+    cursor: auto;
+}
+
+/*overlay ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Classe para desativar o scroll no body */
+.no-scroll {
+    overflow: hidden;
   }
   
- 
+/* Imagens no estado normal */
+.imgs-paraovelay {
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .imgs-paraovelay:hover {
+    filter: brightness(.8);
+  }
+  
+  /* Estilos do overlay */
+  .overlay {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .overlay-content {
+    border-radius: 5px;
+    width: calc(100% - 40px);
+    max-height: calc(100% - 40px);
+    object-fit: contain;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+  }
   
