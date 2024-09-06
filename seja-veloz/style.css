@@ -436,7 +436,6 @@ a .googleplay {
 }
 
 .overlay-content{
- 
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -445,8 +444,6 @@ a .googleplay {
 }
 
 .overlay-content img {
-
-
     display: block;
 }
 
