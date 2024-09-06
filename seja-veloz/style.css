@@ -356,7 +356,7 @@ a .googleplay {
     display: flex;
     flex-direction: column;
     padding: 0 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 2px solid #007bff;
     cursor: pointer;
     background: white;
