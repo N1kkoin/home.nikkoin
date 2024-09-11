@@ -127,24 +127,25 @@ a:hover {
     padding: 5px;
     margin-bottom: 10px;
     margin-top: 10px;
-
 }
 
 .meioefimsv ul {
     padding-left: 35px;
 }
 
+.sejavelozstyle{
+    border-top: 2px solid #ffe601;
+}
+
 .sejavelozstyle p {
     margin-top: 6px;
     line-height: 1.5;
-    font-size: large;
     text-indent: 15px;
-
 }
 
 
 .sejavelozstylegrid {
-    border-top: 2px solid #ffe601;
+
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -174,7 +175,7 @@ a:hover {
     margin-bottom: 10px;
     font-weight: bold;
     border-radius: 10px 10px 0 0;
-
+    margin-top: 8px;
 
 }
 
@@ -186,6 +187,7 @@ a:hover {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px 10px 0 0;
+    margin-top: 8px;
 }
 
 .sejavelozstylegrid .img-principal {
@@ -258,11 +260,6 @@ a:hover {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-}
-
-.sejavelozstylegrid a {
-    color: #d71822;
-    font-weight: 500;
 }
 
 
@@ -349,8 +346,10 @@ a .googleplay {
 
 .accordion-content {
     margin: 0 auto;
-    margin-top: 50px;
+}
 
+.accordion-content:first-child {
+    margin-top: 50px;
 }
 
 .accordion-content .accordion-item {
@@ -435,7 +434,7 @@ a .googleplay {
     z-index: 100;
 }
 
-.overlay-content{
+.overlay-content {
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -459,4 +458,3 @@ a .googleplay {
     border-radius: 50px;
     border: 2px solid #0055a5;
 }
-
