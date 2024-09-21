@@ -1,4 +1,4 @@
-const phrases = ["Web Designer,", "Ilustradora,", "Front-end,", "Criativa,", "Designer,", "Nikkoin Design,", "Nicole H."];
+const phrases = ["Web Designer,", "Ilustradora,", "Front-end,", "Criativa,", "Designer,", "Nikkoin Design,"];
 const typeDelay = 100; // delay between typing each character in ms
 const deleteDelay = 50; // delay before deleting each character in ms
 const nextPhraseDelay = 2000; // delay before starting to type the next phrase in ms
@@ -38,11 +38,18 @@ type();
 
 // NAVBAR //////////////////////////////////////////////////////////////////
 
-window.addEventListener('scroll', function () {
+// Função que verifica o scroll
+function checkScrollPosition() {
     const nav = document.querySelector('nav');
     if (window.scrollY > 600) {
         nav.classList.add('scrolled-past-600');
     } else {
         nav.classList.remove('scrolled-past-600');
     }
-});
+}
+
+// Verifica o scroll ao carregar a página
+window.addEventListener('load', checkScrollPosition);
+
+// Verifica o scroll enquanto o usuário navega na página
+window.addEventListener('scroll', checkScrollPosition);

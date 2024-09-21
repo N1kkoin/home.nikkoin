@@ -35,7 +35,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--fonte-resto);
-    height: 2000px;
+    background-color: #f5f9fa;
 }
 
 /* NAVBAR //////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -108,9 +108,7 @@ nav {
 
 header {
     height: 600px;
-    border-bottom: 2px solid;
-    border-image: linear-gradient(to right, var(--roxo), var(--verde-principal), var(--verde-claro));
-    border-image-slice: 1;
+
 }
 
 header img {
@@ -195,31 +193,28 @@ header img {
 
 /* MAIN ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-.fundodiferenciado-main {
-    --s: 50px;
-    --c: var(--verde-principal);
-    --_s: calc(2*var(--s)) calc(2*var(--s));
-    --_g: 35.36% 35.36% at;
-    --_c: #00000000 66%, #2c9685 68% 70%, #00000000 72%;
-    background:
-        radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
-        radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
-        radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
-        radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
-        repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
-        radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 main {
-    border: 2px dashed black;
+    border: 2px solid var(--verde-claro);
     max-width: 1000px;
     box-sizing: border-box;
     width: 100%;
     padding: 20px;
     margin: 0 auto;
+    border-radius: 6px;
+    background-color: white;
+    margin-top: -20px;
+}
+
+main p{
+    text-align: justify;
+    line-height: 1.4;
+}
+
+/* FOOTER ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+footer{
+    margin-top: 80px;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, var(--roxo), var(--verde-principal), var(--verde-claro));
+    border-image-slice: 1;
 }
