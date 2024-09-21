@@ -12,25 +12,25 @@ let typeTimeoutId = null;
 function type() {
     const currentPhrase = phrases[currentPhraseIndex];
     currentText = isDeleting
-    ? currentPhrase.substring(0, currentText.length - 1)
-    : currentPhrase.substring(0, currentText.length + 1);
+        ? currentPhrase.substring(0, currentText.length - 1)
+        : currentPhrase.substring(0, currentText.length + 1);
     document.getElementById("typewriter").textContent = currentText;
 
     if (!isDeleting && currentText === currentPhrase) {
-    isDeleting = true;
-    typeTimeoutId = setTimeout(() => {
-        type();
-    }, nextPhraseDelay);
+        isDeleting = true;
+        typeTimeoutId = setTimeout(() => {
+            type();
+        }, nextPhraseDelay);
     } else if (isDeleting && currentText === "") {
-    isDeleting = false;
-    currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-    typeTimeoutId = setTimeout(() => {
-        type();
-    }, loopDelay);
+        isDeleting = false;
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        typeTimeoutId = setTimeout(() => {
+            type();
+        }, loopDelay);
     } else {
-    typeTimeoutId = setTimeout(() => {
-        type();
-    }, isDeleting ? deleteDelay : typeDelay);
+        typeTimeoutId = setTimeout(() => {
+            type();
+        }, isDeleting ? deleteDelay : typeDelay);
     }
 }
 type();
@@ -38,7 +38,7 @@ type();
 
 // NAVBAR //////////////////////////////////////////////////////////////////
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const nav = document.querySelector('nav');
     if (window.scrollY > 600) {
         nav.classList.add('scrolled-past-600');
