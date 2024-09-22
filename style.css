@@ -8,11 +8,11 @@
 ::-webkit-scrollbar-thumb {
     background-color: #1b1c1e3e;
     border-radius: 10px;
-    border: 3px solid white;
+    border: 3px solid #f5f9fa;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: white;
+    background-color: #f5f9fa;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -347,4 +347,6 @@ footer {
     border-bottom: 2px solid;
     border-image: linear-gradient(to right, var(--roxo), var(--verde-principal), var(--verde-claro));
     border-image-slice: 1;
+     height: 60px;
+     background-color: var(--verde-principal);
 }
