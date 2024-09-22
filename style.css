@@ -194,7 +194,7 @@ header img {
 /* MAIN ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 main {
-    border: 2px solid var(--verde-claro);
+    border-top: 2px solid var(--verde-claro);
     max-width: 1000px;
     box-sizing: border-box;
     width: 100%;
