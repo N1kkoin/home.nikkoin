@@ -205,14 +205,144 @@ main {
     margin-top: -20px;
 }
 
-main p{
+main p {
     text-align: justify;
     line-height: 1.4;
+    text-indent: 10px;
+}
+
+.frase {
+    font-size: 30px;
+    font-family: var(--fonte-titulos);
+    background: linear-gradient(90deg, var(--roxo), var(--verde-principal), var(--verde-claro));
+    -webkit-background-clip: text;
+    color: transparent; /* Faz o gradiente aparecer no texto */
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.frase i{
+    color: #c2d7dd;
+}
+
+.citacao{
+    text-align: center;
+    margin-top: -20px;
+}
+
+
+/* graficos ---------------------------------------------------------------------------------------------*/
+.clearfix,
+.clearfix:before,
+.clearfix:after {
+    display: block;
+    content: " ";
+    clear: both;
+    zoom: 1;
+}
+
+.wrap {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Bar Graph Class */
+.barGraph {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.graph {
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.graph-barBack {
+    border-radius: 6px;
+    background: #f5f9fa;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.graph-bar {
+    background: linear-gradient(90deg, var(--roxo), var(--verde-principal), var(--verde-claro));
+   
+    border-radius: 6px;
+     /* cursor: pointer;*/
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 9999;
+    display: flex;
+    width: 0%;
+
+}
+
+
+.graph-bar:last-child {
+    margin-bottom: 0;
+}
+
+/*
+
+.graph-bar:hover {
+    background: var(--roxo);
+}
+
+.graph-bar:after {
+    position: absolute;
+    content: attr(data-value);
+    display: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    color: black;
+    height: 25px;
+    padding: 0 10px;
+    left: 100%;
+    top: 0;
+    align-content: center;
+}*/
+
+.graph-bar:hover:after {
+    display: block;
+}
+
+.graph-legend {
+    margin-left: 10px;
+    color: white;
+    white-space: nowrap;
+}
+
+.graph-legend i{
+   font-size: 12px;
+   margin-right: 3px;
+}
+
+.graficos {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.graficos div {
+    width: 100%;
+}
+
+.graficos h2 i {
+    font-size: 16px;
+    color: var(--roxo);
 }
 
 /* FOOTER ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-footer{
+footer {
     margin-top: 80px;
     border-bottom: 2px solid;
     border-image: linear-gradient(to right, var(--roxo), var(--verde-principal), var(--verde-claro));

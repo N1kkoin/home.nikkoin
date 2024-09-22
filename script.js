@@ -53,3 +53,41 @@ window.addEventListener('load', checkScrollPosition);
 
 // Verifica o scroll enquanto o usuário navega na página
 window.addEventListener('scroll', checkScrollPosition);
+
+
+
+// MAIN /////////////////////////////////////////////////////////////////////////////////////////////////
+
+// BARRAS GRAPH https://codepen.io/zaimus/pen/qBdwbXN -----------------------------------------------------------------
+
+$(document).ready(function () {
+    // Função para animar a largura da barra e adicionar a transição
+    function animateBarChart(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {  // Se a barra estiver visível na tela
+                const bar = $(entry.target);
+                var dataWidth = bar.data("value");
+                
+                // Adiciona a transição dinamicamente
+                bar.css("transition", "width 1s ease-out");
+                
+                // Ajusta a largura da barra conforme o valor
+                bar.css("width", dataWidth + "%");
+                
+                observer.unobserve(entry.target); // Para de observar depois de animar
+            }
+        });
+    }
+
+    // Configura o IntersectionObserver
+    let observer = new IntersectionObserver(animateBarChart, {
+        root: null, // Usa a janela como viewport
+        rootMargin: '-50px',
+        threshold: 1 // Quando 10% da barra estiver visível
+    });
+
+    // Observa cada barra
+    $(".graph-bar").each(function () {
+        observer.observe(this);
+    });
+});
