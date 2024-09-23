@@ -33,7 +33,7 @@
         </div>-->
         <main>
             <div class="frase">
-                <i class="fa-solid fa-quote-left"></i> Tudo o que nos rodeia reflete a visão criativa de um designer.  <i class="fa-solid fa-quote-right"></i>
+                <i class="fa-solid fa-quote-left"></i> Tudo o que nos rodeia reflete a visão de um designer.  <i class="fa-solid fa-quote-right"></i>
             </div>
             <div class="citacao"><i class="fa-solid fa-minus"></i> Nicole Heguy <span style=" color: #c2d7dd;">(eu
                     :)</span>
@@ -130,7 +130,7 @@
                 Jogos
                 Arte
                 Aprender
-
+                Gatos
 
             </section>
 
