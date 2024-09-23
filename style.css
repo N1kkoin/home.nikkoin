@@ -38,6 +38,10 @@ body {
     background-color: #f5f9fa;
 }
 
+.index_nh{
+    min-height: 800px;
+}
+
 /* NAVBAR //////////////////////////////////////////////////////////////////////////////////////////////*/
 
 nav {
@@ -460,4 +464,35 @@ footer p {
     width: 11px;
     filter: invert(72%) sepia(16%) saturate(284%) hue-rotate(144deg) brightness(86%) contrast(88%);
 
+}
+
+/* 404 ERROR ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.fundodiferenciado_quatrozeroquatro {
+    --s: 50px;
+    --c: var(--verde-principal);
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #00000000 66%, #2c9685  68% 70%, #00000000 72%;
+    background:
+        radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
+        radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
+        radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
+        radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
+        repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
+        radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+    background-attachment: fixed;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.erro{
+    font-family: var(--fonte-titulos);
+    font-size: 50px;
+    font-weight: 800;
+    color: white;
 }
