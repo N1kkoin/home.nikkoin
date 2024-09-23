@@ -17,7 +17,7 @@
     <div class="index_nh">
     
             <div class="fundodiferenciado_quatrozeroquatro">
-                <div class="erro"> 404 ERROR </div>
+                <p class="quatrozeroquatro_er"> 404 ERROR </p>
             </div>
  
         <?php include 'code/footer.php'; ?>
