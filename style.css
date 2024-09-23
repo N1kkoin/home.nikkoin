@@ -38,8 +38,13 @@ body {
     background-color: #f5f9fa;
 }
 
-.index_nh{
+.index_nh {
     min-height: 800px;
+}
+
+h2{
+    font-family: var(--fonte-titulos);
+    font-weight: 900;
 }
 
 /* NAVBAR //////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -247,7 +252,7 @@ main p {
 }
 
 .imagem-texto-sobre img {
-    border-radius: 0 6px 0  6px;
+    border-radius: 0 6px 0 6px;
     width: 270px;
     height: 280px;
     object-fit: cover;
@@ -269,8 +274,56 @@ main p {
     text-align: center;
     padding: 5px;
     font-size: 13px;
-    border-radius: 0 6px 0  6px; 
+    border-radius: 0 6px 0 6px;
 }
+
+.section_interesses h2{
+text-align: center;
+margin-top: 0;
+}
+
+.section_interesses{
+    margin-bottom: 50px;
+}
+
+.interesses {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+
+.interesses .img_container {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    border-radius: 100%;
+    background-color: #f5f9fa;
+    box-sizing: border-box;
+}
+
+.interesses div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.interesses img {
+    max-width: 100px;
+    max-height: 70px;
+    width: 100%;
+    filter: invert(13%) sepia(53%) saturate(3356%) hue-rotate(262deg) brightness(92%) contrast(89%);
+}
+
+
+.interesses span {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 
 /*confira meus trabalhos ---------------------------------------------------*/
 
@@ -306,15 +359,17 @@ main p {
 .work-item a {
     text-decoration: none;
     color: inherit;
-    display: block; /* Para garantir que o link envolva toda a div */
+    display: block;
+    /* Para garantir que o link envolva toda a div */
 }
 
 .work-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 0 6px 0  6px;    
-    height: 220px; /* Defina uma altura fixa para a imagem */
+    border-radius: 0 6px 0 6px;
+    height: 220px;
+    /* Defina uma altura fixa para a imagem */
 }
 
 .work-item h3 {
@@ -434,7 +489,7 @@ main p {
 }
 
 .graficos h2 i {
-    font-size: 16px;
+    font-size: 20px;
     color: var(--roxo);
 }
 
@@ -453,7 +508,7 @@ footer {
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
-   
+
 }
 
 footer p {
@@ -474,7 +529,7 @@ footer p {
     --c: var(--verde-principal);
     --_s: calc(2*var(--s)) calc(2*var(--s));
     --_g: 35.36% 35.36% at;
-    --_c: #00000000 66%, #2c9685  68% 70%, #00000000 72%;
+    --_c: #00000000 66%, #2c9685 68% 70%, #00000000 72%;
     background:
         radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
         radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
@@ -490,7 +545,7 @@ footer p {
     flex-direction: column;
 }
 
-.quatrozeroquatro_er{
+.quatrozeroquatro_er {
     font-family: var(--fonte-titulos);
     font-size: 50px;
     font-weight: 800;
