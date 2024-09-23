@@ -259,13 +259,71 @@ main p {
     bottom: 12px;
     left: 10px;
     right: 10px;
-    background-color: white; /* Fundo semitransparente */
+    background-color: white;
     color: black;
     text-align: center;
     padding: 5px;
     font-size: 13px;
     border-radius: 0 6px 0  6px; 
 }
+
+/*confira meus trabalhos ---------------------------------------------------*/
+
+.depoisdo_main {
+    text-align: center;
+    padding: 40px;
+}
+
+.depoisdo_main p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.work-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.work-item {
+    padding: 10px;
+    padding-bottom: 25px;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.work-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Para garantir que o link envolva toda a div */
+}
+
+.work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 6px 0  6px;    
+    height: 220px; /* Defina uma altura fixa para a imagem */
+}
+
+.work-item h3 {
+    padding: 5px 0;
+    font-size: 1.2rem;
+
+    margin: 0;
+}
+
+.work-item:hover {
+    transform: scale(1.05);
+    border: 2px solid var(--verde-claro);
+}
+
 
 /* graficos ---------------------------------------------------------------------------------------------*/
 .clearfix,
@@ -377,7 +435,7 @@ main p {
 /* FOOTER ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 footer {
-    margin: 80px 20px 0 20px;
+    margin: 80px 20px 20px 20px;
     color: var(--verde-principal);
     text-align: center;
 }
@@ -389,7 +447,7 @@ footer {
     padding: 20px;
     box-sizing: border-box;
     background-color: white;
-    border-radius: 6px 6px 0 0;
+    border-radius: 6px;
 }
 
 footer p {

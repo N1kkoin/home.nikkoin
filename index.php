@@ -125,7 +125,7 @@
                 </div>
             </section>
 
-            <section>
+            <section style="margin-top: -50px;">
                 <h2>Interesses</h2>
                 Jogos
                 Arte
@@ -137,21 +137,29 @@
 
         </main>
         <section class="depoisdo_main">
-            <p>
-                Conheça um pouco do meu trabalho
-            </p>
-            <div>
-                <div>
-                    Design Gráfico
-                </div>
-                <div>
-                    Web Design | Front-end
-                </div>
-                <div>
-                    Ilustração
-                </div>
-            </div>
-        </section>
+    <h2>Conheça um pouco do meu trabalho</h2>
+    <div class="work-grid">
+        <div class="work-item">
+            <a href="#design-grafico">
+                <img src="images/dg/coworking/coworkingfam_3.png" alt="Design Gráfico">
+                <h3>Design Gráfico</h3>
+            </a>
+        </div>
+        <div class="work-item">
+            <a href="#web-design">
+                <img src="images/fe/infofamimg.png" alt="Web Design | Front-end">
+                <h3>Web Design | Front-end</h3>
+            </a>
+        </div>
+        <div class="work-item">
+            <a href="#ilustracao">
+                <img src="images\i\i2.png" alt="Ilustração">
+                <h3>Ilustração</h3>
+            </a>
+        </div>
+    </div>
+</section>
+
         <?php include 'code/footer.php'; ?>
      
     </div>
