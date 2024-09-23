@@ -12,16 +12,8 @@
 </head>
 
 <body>
-    <nav>
-        <div class="nav_container">
-            <a target="_blank" href="#" class="logo"><img src="images/nh_logo.svg"></a>
-            <div class="nav_links">
-                <a href="">Inicio</a>
-                <a href="">Portifólio</a>
-                <a target="_blank" href="/seja-veloz">Seja Veloz</a>
-            </div>
-        </div>
-    </nav>
+    <?php include 'code/navbar.php'; ?>
+
     <div class="index_nh">
         <header>
             <div class="fundodiferenciado">
@@ -160,14 +152,8 @@
                 </div>
             </div>
         </section>
-        <footer>
-            <div class="footer_container">
-
-                <p>2024 &copy; <img class="loguinho" src="/images/nh_logo.svg"> Nikkoin Design - Todos os direitos
-                    reservados</p>
-
-            </div>
-        </footer>
+        <?php include 'code/footer.php'; ?>
+     
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
