@@ -42,7 +42,7 @@ body {
     min-height: 800px;
 }
 
-h2{
+h2 {
     font-family: var(--fonte-titulos);
     font-weight: 900;
 }
@@ -232,12 +232,26 @@ main p {
     text-transform: uppercase;
     text-align: center;
     margin: 30px 0;
-
+    padding: 0 30px;
+    margin-top: 40px;
 }
+
+
 
 .frase i {
     color: #c2d7dd;
+    font-size: 20px;
+    padding: 5px;
 }
+
+.frase i:first-of-type {
+    vertical-align: super;
+}
+
+.frase i:nth-of-type(2) {
+    vertical-align: baseline;
+}
+
 
 .citacao {
     text-align: center;
@@ -277,12 +291,12 @@ main p {
     border-radius: 0 6px 0 6px;
 }
 
-.section_interesses h2{
-text-align: center;
-margin-top: 0;
+.section_interesses h2 {
+    text-align: center;
+    margin-top: 0;
 }
 
-.section_interesses{
+.section_interesses {
     margin-bottom: 50px;
 }
 
@@ -547,7 +561,7 @@ footer p {
     height: 100vh;
 }
 
-.fundodiferenciado_quatrozeroquatro h2{
+.fundodiferenciado_quatrozeroquatro h2 {
     margin-top: -40px;
     color: var(--verde-claro);
     background-color: white;
@@ -555,7 +569,7 @@ footer p {
     border-radius: 6px;
 }
 
-.fundodiferenciado_quatrozeroquatro p{
+.fundodiferenciado_quatrozeroquatro p {
     margin-top: 0;
     color: white;
 }
@@ -565,4 +579,13 @@ footer p {
     font-size: 50px;
     font-weight: 800;
     color: white;
+}
+
+/* INDEX MEDIA //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media (max-width: 850px) {
+    .frase {
+        padding: 0;
+    }
 }
