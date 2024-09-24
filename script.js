@@ -67,13 +67,13 @@ $(document).ready(function () {
             if (entry.isIntersecting) {  // Se a barra estiver visível na tela
                 const bar = $(entry.target);
                 var dataWidth = bar.data("value");
-                
+
                 // Adiciona a transição dinamicamente
                 bar.css("transition", "width 1s ease-out");
-                
+
                 // Ajusta a largura da barra conforme o valor
                 bar.css("width", dataWidth + "%");
-                
+
                 observer.unobserve(entry.target); // Para de observar depois de animar
             }
         });
@@ -91,3 +91,5 @@ $(document).ready(function () {
         observer.observe(this);
     });
 });
+
+

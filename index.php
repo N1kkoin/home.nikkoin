@@ -137,7 +137,7 @@
     <div>
         <div class="img_container"><img style="width: 55px;" src="images/icons/arte.svg"> </div>
 
-        <span>Arte</span>
+        <span>Desenhar</span>
     </div>
     <div>
         <div class="img_container"> <img src="images/icons/book.svg"> </div>
@@ -149,7 +149,7 @@
         <div class="img_container"> <img src="images/icons/cat.svg">
         </div>
 
-        <span>Gatos</span>
+        <span>Gatos :3</span>
     </div>
 
 </div>
