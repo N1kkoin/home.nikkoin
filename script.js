@@ -68,13 +68,16 @@ $(document).ready(function () {
                 const bar = $(entry.target);
                 var dataWidth = bar.data("value");
 
-                // Adiciona a transição dinamicamente
-                bar.css("transition", "width 1s ease-out");
+                // Adiciona um pequeno delay antes de iniciar a animação
+                setTimeout(() => {
+                    // Adiciona a transição dinamicamente
+                    bar.css("transition", "width 2s ease-out");
 
-                // Ajusta a largura da barra conforme o valor
-                bar.css("width", dataWidth + "%");
+                    // Ajusta a largura da barra conforme o valor
+                    bar.css("width", dataWidth + "%");
 
-                observer.unobserve(entry.target); // Para de observar depois de animar
+                    observer.unobserve(entry.target); // Para de observar depois de animar
+                }, 200); // Delay de 300ms antes de animar
             }
         });
     }
@@ -82,8 +85,8 @@ $(document).ready(function () {
     // Configura o IntersectionObserver
     let observer = new IntersectionObserver(animateBarChart, {
         root: null, // Usa a janela como viewport
-        rootMargin: '-50px',
-        threshold: 1 // Quando 10% da barra estiver visível
+        rootMargin: '0px 0px 50px 0px', // Margem positiva no final da página
+        threshold: [0.1, 0.3, 0.5, 0.7, 1.0] // Vários thresholds para uma animação mais suave
     });
 
     // Observa cada barra

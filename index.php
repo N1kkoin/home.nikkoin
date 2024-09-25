@@ -74,58 +74,56 @@
             </div>
 
             <section class="graficos">
-                <div>
-                    <h2><i class="fa-solid fa-code"></i> Desenvolvimento</h2>
-                    <div class="wrap">
-                        <div class="barGraph">
-                            <ul class="graph">
-                                <span class="graph-barBack">
-                                    <li class="graph-bar" data-value="70">
-                                        <span class="graph-legend"><i class="fa-brands fa-html5"></i> HTML5</span>
-                                    </li>
-                                </span>
-                                <span class="graph-barBack">
-                                    <li class="graph-bar" data-value="80">
-                                        <span class="graph-legend"><i class="fa-brands fa-css3"></i> CSS3</span>
-                                    </li>
-                                </span>
-                                <span class="graph-barBack">
-                                    <li class="graph-bar" data-value="50">
-                                        <span class="graph-legend"><i class="fa-brands fa-js"></i> JavaScript</span>
-                                    </li>
-                                </span>
-
-                            </ul>
-                        </div>
+    <div>
+        <h2><i class="fa-solid fa-code"></i> Desenvolvimento</h2>
+        <div class="wrap">
+            <div class="barGraph">
+                <ul class="graph">
+                    <div class="graph-barBack">
+                        <li class="graph-bar" data-value="70">
+                            <span class="graph-legend"><i class="fa-brands fa-html5"></i> HTML5</span>
+                        </li>
                     </div>
-                </div>
-                <div>
-                    <h2><i class="fa-solid fa-paintbrush"></i> Design</h2>
-                    <div class="wrap">
-                        <div class="barGraph">
-                            <ul class="graph">
-                                <span class="graph-barBack">
-                                    <li class="graph-bar" data-value="75">
-                                        <span class="graph-legend">UI/UX Design</span>
-                                    </li>
-                                </span>
-                                <span class="graph-barBack">
-                                    <li class="graph-bar" data-value="85">
-                                        <span class="graph-legend">Affinity Designer</span>
-                                    </li>
-                                </span>
-                                <span class="graph-barBack">
-                                    <li class="graph-bar" data-value="90">
-                                        <span class="graph-legend">Adobe Photoshop</span>
-                                    </li>
-                                </span>
-
-
-                            </ul>
-                        </div>
+                    <div class="graph-barBack">
+                        <li class="graph-bar" data-value="80">
+                            <span class="graph-legend"><i class="fa-brands fa-css3"></i> CSS3</span>
+                        </li>
                     </div>
-                </div>
-            </section>
+                    <div class="graph-barBack">
+                        <li class="graph-bar" data-value="50">
+                            <span class="graph-legend"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2><i class="fa-solid fa-paintbrush"></i> Design</h2>
+        <div class="wrap">
+            <div class="barGraph">
+                <ul class="graph">
+                    <div class="graph-barBack">
+                        <li class="graph-bar" data-value="75">
+                            <span class="graph-legend">UI/UX Design</span>
+                        </li>
+                    </div>
+                    <div class="graph-barBack">
+                        <li class="graph-bar" data-value="85">
+                            <span class="graph-legend">Affinity Designer</span>
+                        </li>
+                    </div>
+                    <div class="graph-barBack">
+                        <li class="graph-bar" data-value="90">
+                            <span class="graph-legend">Adobe Photoshop</span>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
 
             <section class="section_interesses">
 

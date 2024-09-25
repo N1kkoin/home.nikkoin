@@ -174,6 +174,7 @@ header img {
 }
 
 .contatos {
+    margin-top: 40px;
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
@@ -205,16 +206,17 @@ main {
     max-width: 1000px;
     box-sizing: border-box;
     width: 100%;
-    padding: 20px;
+
     margin: 0 auto;
     border-radius: 6px;
     background-color: white;
     margin-top: -20px;
+    padding: 20px 40px;
 }
 
 main p {
     text-align: justify;
-    line-height: 1.4;
+    line-height: 1.5;
     text-indent: 10px;
     margin-top: 0;
 }
@@ -258,7 +260,7 @@ main p {
 }
 
 .imagem-texto-sobre {
-     margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .imagem-texto-sobre img {
@@ -266,13 +268,16 @@ main p {
     width: 270px;
     height: 100%;
     object-fit: cover;
- 
+
 }
 
 .imagem-container {
-    position: relative; /* Agora a legenda se posiciona em relação a este container */
-    width: 270px; /* Define a largura da imagem */
-    height: 280px; /* Define a altura da imagem */
+    position: relative;
+    /* Agora a legenda se posiciona em relação a este container */
+    width: 270px;
+    /* Define a largura da imagem */
+    height: 280px;
+    /* Define a altura da imagem */
     float: right;
     margin-left: 20px;
 }
@@ -526,6 +531,7 @@ footer {
 
 footer p {
     margin: 0;
+    margin-bottom: 30px;
 }
 
 .loguinho {
@@ -580,7 +586,7 @@ footer p {
     color: var(--roxo);
 }
 
-#countdown{
+#countdown {
     font-weight: 800;
     color: #29907F;
 }
@@ -597,7 +603,7 @@ footer p {
 @media (max-width: 700px) {
     .imagem-texto-sobre {
         display: flex;
-       flex-direction: column-reverse;
+        flex-direction: column-reverse;
     }
 
     .imagem-container {
@@ -608,12 +614,12 @@ footer p {
     }
 
     .imagem-texto-sobre img {
-      
+
         width: 100%;
         height: 100%;
     }
 
-    .graficos{
+    .graficos {
         flex-direction: column;
     }
 
@@ -621,8 +627,14 @@ footer p {
         flex-wrap: wrap;
     }
 
-    .work-grid{
+    .work-grid {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .work-item {
+
+        width: 100%;
+
     }
 }
-
