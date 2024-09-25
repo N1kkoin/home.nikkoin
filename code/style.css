@@ -5,15 +5,26 @@
     width: 14px;
 }
 
-::-webkit-scrollbar-thumb {
+.body_index::-webkit-scrollbar-thumb {
     background-color: #1b1c1e3e;
     border-radius: 10px;
     border: 3px solid #f5f9fa;
 }
 
-::-webkit-scrollbar-track {
+.body_index::-webkit-scrollbar-track {
     background-color: #f5f9fa;
 }
+
+.body_portifolio::-webkit-scrollbar-thumb {
+    background-color: #1b1c1e3e;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.body_portifolio::-webkit-scrollbar-track {
+    background-color: white;
+}
+
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #29907F;
@@ -57,7 +68,8 @@ h2 {
 
 /* Estilo para o nav em todas as outras páginas (padrão) */
 nav {
-    background-color: rgba(255, 255, 255, 1); /* Fundo opaco por padrão */
+    background-color: rgba(255, 255, 255, 1);
+    /* Fundo opaco por padrão */
     position: fixed;
     width: 100%;
     backdrop-filter: blur(10px);
@@ -615,9 +627,9 @@ footer p {
 
     .main_index {
 
-        padding: 20px ;
+        padding: 20px;
     }
-    
+
     .imagem-texto-sobre {
         display: flex;
         flex-direction: column-reverse;
@@ -654,6 +666,11 @@ footer p {
 
     }
 
+    .body_portifolio .button-container {
+
+        flex-direction: column;
+    }
+
 }
 
 /* PORTIFOLIO //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -662,7 +679,7 @@ footer p {
     background-color: white;
 }
 
-.body_portifolio  .header_portifolio {
+.body_portifolio .header_portifolio {
     height: 300px;
     padding-top: 40px;
     display: flex;
@@ -670,17 +687,27 @@ footer p {
     align-items: center;
     flex-direction: column;
     background-color: var(--verde-principal);
-    background-image: url('/images/i/i2.png'); /* Adiciona a imagem de fundo */
-    background-size: cover; /* Faz com que a imagem cubra todo o header */
-    background-position: center; /* Centraliza a imagem */
-    position: relative; /* Garante que os elementos internos fiquem posicionados corretamente */
-    color: white; /* Ajuste a cor do texto para garantir que ele seja visível */
-    text-align: center; /* Centraliza o texto */
-
+    background-image: url('/images/i/i2.png');
+    /* Adiciona a imagem de fundo */
+    background-size: cover;
+    /* Faz com que a imagem cubra todo o header */
+    background-position: center;
+    /* Centraliza a imagem */
+    position: relative;
+    /* Garante que os elementos internos fiquem posicionados corretamente */
+    color: white;
+    /* Ajuste a cor do texto para garantir que ele seja visível */
+    text-align: center;
+    /* Centraliza o texto */
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    border-radius: 0 0 6px 6px;
 }
 
-.body_portifolio  .header_portifolio h1, .header_portifolio p {
-    z-index: 1; /* Garante que o texto fique acima da imagem */
+.body_portifolio .header_portifolio h1,
+.header_portifolio p {
+    z-index: 1;
+    /* Garante que o texto fique acima da imagem */
 }
 
 .body_portifolio .header_portifolio::before {
@@ -690,30 +717,33 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adiciona um overlay escuro para melhorar a legibilidade do texto */
-    z-index: 0; /* O overlay fica entre a imagem e o texto */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adiciona um overlay escuro para melhorar a legibilidade do texto */
+    z-index: 0;
+    /* O overlay fica entre a imagem e o texto */
+    border-radius: 6px;
 }
 
 
-.body_portifolio h1{
+.body_portifolio h1 {
     font-family: var(--fonte-titulos);
     font-weight: 800;
 }
 
-.body_portifolio  .header_portifolio p{
+.body_portifolio .header_portifolio p {
     margin-top: -20px;
 }
 
-.body_portifolio  .main_portifolio {
+.body_portifolio .main_portifolio {
     z-index: 100;
-    min-height: 800px;
+
     max-width: 1000px;
     box-sizing: border-box;
     width: 100%;
     margin: 0 auto;
- 
+
     border-radius: 6px;
-  
+
 }
 
 
@@ -740,15 +770,15 @@ footer p {
 }
 
 .body_portifolio .section {
-    height: 800px; /* Altura para simular conteúdo */
-    padding-top: 80px; /* Espaçamento para o conteúdo não ficar atrás do navbar */
+    padding-top: 60px;
+    /* Espaçamento para o conteúdo não ficar atrás do navbar */
 }
 
-.body_portifolio .section h2{
+.body_portifolio .section h2 {
     text-align: center;
     font-family: var(--fonte-titulos);
     cursor: pointer;
-   position: relative;
+    position: relative;
 }
 
 /* Esconder os ícones inicialmente */
@@ -767,4 +797,110 @@ footer p {
 /* Mostrar o ícone quando o h2 for hoverado */
 .body_portifolio h2:hover i {
     opacity: 1;
+}
+
+/* Container de portfólio */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas de igual tamanho */
+    gap: 10px;
+    padding: 20px;
+
+}
+
+/* Estilo dos itens do portfólio */
+.portfolio-item {
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    /* Garantir que padding e border sejam incluídos na largura total */
+    margin-bottom: -6px;
+}
+
+/* Estilo das imagens */
+.portfolio-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 0 6px 0 6px;
+    transition: transform 0.3s ease;
+    transition: filter 0.3s ease;
+
+}
+
+.portfolio-item:hover .portfolio-image {
+    filter: brightness(60%);
+    transition: filter 0.3s ease;
+}
+
+/* Overlay estilos */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+}
+
+.overlay-content {
+    text-align: center;
+}
+
+.overlay-content h2 {
+    margin-bottom: 10px;
+}
+
+.overlay-content p {
+    margin-bottom: 20px;
+}
+
+.close-overlay {
+    background-color: #f44336;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* Exibir overlay ao clicar */
+.overlay.show {
+    display: flex;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 880px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas em telas médias */
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        /* 1 coluna em telas pequenas */
+    }
+
+    button,
+    textarea,
+    input,
+    select,
+    a {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+    }
 }

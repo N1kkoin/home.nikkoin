@@ -98,3 +98,57 @@ $(document).ready(function () {
 });
 
 
+// links quando clicar nos titulos /////////////////////////////////////////////////////////////////////
+
+
+    // Selecionar todos os h2
+    document.querySelectorAll('h2').forEach(h2 => {
+        h2.addEventListener('click', function () {
+            // Obter o link do atributo data-link
+            const link = window.location.origin + this.getAttribute('data-link');
+
+            // Criar um elemento temporário para copiar o link
+            const tempInput = document.createElement('input');
+            tempInput.value = link;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            // Selecionar o ícone dentro do h2
+            const icon = this.querySelector('i');
+            const originalClass = icon.className; // Salvar a classe original do ícone
+
+            // Mudar para o ícone de confirmação (usando um ícone diferente, por exemplo, um ícone de check)
+            icon.className = 'fa-solid fa-check';
+
+            // Após 1 segundo (1000 ms), voltar ao ícone original
+            setTimeout(() => {
+                icon.className = originalClass;
+            }, 1000); // Tempo em milissegundos (1 segundo)
+        });
+    });
+
+    // portifólio imagens e overlay /////////////////////////////////////////////////////////////////////////////////////////////
+
+    // Selecionar todos os itens do portfólio
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+        item.addEventListener('click', function () {
+            // Obter o ID do overlay a ser exibido
+            const overlayId = this.getAttribute('data-overlay');
+            const overlay = document.getElementById(overlayId);
+
+            // Exibir o overlay
+            overlay.classList.add('show');
+        });
+    });
+
+    // Selecionar todos os botões de fechar
+    document.querySelectorAll('.close-overlay').forEach(button => {
+        button.addEventListener('click', function () {
+            // Fechar o overlay
+            this.closest('.overlay').classList.remove('show');
+        });
+    });
+
+    console.log('O script foi carregado corretamente.');
