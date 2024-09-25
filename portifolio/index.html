@@ -28,9 +28,15 @@
         </header>
 
         <main class="main_portifolio">
-            <div id="design-grafico" class="section"><h2>Design Gráfico</h2></div>
-            <div id="front-end" class="section">Web Design | Front-end</div>
-            <div id="ilustracoes" class="section">Ilustrações</div>
+            <div id="design-grafico" class="section">
+                <h2 data-link="#design-grafico"><i class="fa-solid fa-link"></i> Design Gráfico</h2>
+            </div>
+            <div id="front-end" class="section">
+                <h2 data-link="#front-end"><i class="fa-solid fa-link"></i> Web Design | Front-end</h2>
+            </div>
+            <div id="ilustracoes" class="section">
+                <h2 data-link="#ilustracoes"><i class="fa-solid fa-link"></i> Ilustrações</h2>
+            </div>
         </main>
 
         <?php include('../code/footer.php'); ?>
@@ -38,7 +44,40 @@
 
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../code/script.js"></script> <!-- Use ../ para voltar um nível -->
+    <script src="/code/script.js"></script> <!-- Use ../ para voltar um nível -->
+    <script>
+// links quando clicar nos titulos /////////////////////////////////////////////////////////////////////
+
+// Selecionar todos os h2
+document.querySelectorAll('h2').forEach(h2 => {
+    h2.addEventListener('click', function() {
+        // Obter o link do atributo data-link
+        const link = window.location.origin + this.getAttribute('data-link');
+        
+        // Criar um elemento temporário para copiar o link
+        const tempInput = document.createElement('input');
+        tempInput.value = link;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        
+        // Selecionar o ícone dentro do h2
+        const icon = this.querySelector('i');
+        const originalClass = icon.className; // Salvar a classe original do ícone
+
+        // Mudar para o ícone de confirmação (usando um ícone diferente, por exemplo, um ícone de check)
+        icon.className = 'fa-solid fa-check';
+
+        // Após 1 segundo (1000 ms), voltar ao ícone original
+        setTimeout(() => {
+            icon.className = originalClass;
+        }, 1000); // Tempo em milissegundos (1 segundo)
+    });
+});
+
+
+    </script>
 </body>
 
 </html>
