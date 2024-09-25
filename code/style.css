@@ -29,6 +29,7 @@
     --verde-principal: #29907F;
     --verde-claro: #73C382;
     --roxo: #512572;
+    --amarelo: #FFF200;
 }
 
 html {
@@ -689,9 +690,13 @@ footer p {
 }
 
 
+.body_portifolio h1{
+    font-family: var(--fonte-titulos);
+    font-weight: 800;
+}
 
 .body_portifolio  .header_portifolio p{
-    margin-top: -30px;
+    margin-top: -20px;
 }
 
 .body_portifolio  .main_portifolio {
@@ -715,15 +720,13 @@ footer p {
 }
 
 .body_portifolio .button {
-    background-color: var(--verde-claro);
+    background-color: var(--amarelo);
     color: black;
-    padding: 10px 20px;
-   
+    padding: 5px 15px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: large;
-    border-radius: 5px;
+    border-radius: 6px;
     transition: background-color 0.3s;
 }
 
@@ -734,4 +737,9 @@ footer p {
 .body_portifolio .section {
     height: 800px; /* Altura para simular conteúdo */
     padding-top: 80px; /* Espaçamento para o conteúdo não ficar atrás do navbar */
+}
+
+.body_portifolio .section h2{
+    text-align: center;
+    font-family: var(--fonte-titulos);
 }
