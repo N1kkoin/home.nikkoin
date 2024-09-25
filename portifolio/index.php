@@ -21,14 +21,14 @@
             <p>Qual é o portifólio que deseja ver?</p>
             <div class="button-container">
                 <a href="#design-grafico" class="button">Design Gráfico</a>
-                <a href="#front-end" class="button">Web Design | Front-end</a>
+                <a href="#web-design" class="button">Web Design | Front-end</a>
                 <a href="#ilustracoes" class="button">Ilustrações</a>
             </div>
         </header>
 
         <main class="main_portifolio">
             <div id="design-grafico" class="section">
-                <h2 data-link="#design-grafico"><i class="fa-solid fa-link"></i> Design Gráfico</h2>
+                <h2 data-link="/portifolio#design-grafico"><i class="fa-solid fa-link"></i> Design Gráfico</h2>
 
 
             </div>
@@ -85,7 +85,7 @@
             </div>
 
             <div id="front-end" class="section">
-                <h2 data-link="#front-end"><i class="fa-solid fa-link"></i> Web Design | Front-end</h2>
+                <h2 data-link="/portifolio#web-design"><i class="fa-solid fa-link"></i> Web Design | Front-end</h2>
             </div>
 
             <div class="portfolio-container">
@@ -133,7 +133,7 @@
             </div>
 
             <div id="ilustracoes" class="section">
-                <h2 data-link="#ilustracoes"><i class="fa-solid fa-link"></i> Ilustrações</h2>
+                <h2 data-link="/portifolio#ilustracoes"><i class="fa-solid fa-link"></i> Ilustrações</h2>
             </div>
 
             <div class="portfolio-container">

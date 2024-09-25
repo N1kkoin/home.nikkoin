@@ -160,19 +160,19 @@
             <h2>Conheça um pouco do meu trabalho</h2>
             <div class="work-grid">
                 <div class="work-item">
-                    <a href="#design-grafico">
+                    <a href="/portifolio#design-grafico">
                         <img src="images/dg/coworking/coworkingfam_3.png" alt="Design Gráfico">
                         <h3>Design Gráfico</h3>
                     </a>
                 </div>
                 <div class="work-item">
-                    <a href="#web-design">
+                    <a href="/portifolio#web-design">
                         <img src="images/fe/infofamimg.png" alt="Web Design | Front-end">
                         <h3>Web Design | Front-end</h3>
                     </a>
                 </div>
                 <div class="work-item">
-                    <a href="#ilustracao">
+                    <a href="/portifolio#ilustracao">
                         <img src="images\i\luz.jpg" alt="Ilustração">
                         <h3>Ilustrações</h3>
                     </a>
