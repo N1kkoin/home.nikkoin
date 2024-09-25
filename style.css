@@ -38,9 +38,7 @@ body {
     background-color: #f5f9fa;
 }
 
-.index_nh {
-    min-height: 800px;
-}
+
 
 h2 {
     font-family: var(--fonte-titulos);
@@ -260,22 +258,23 @@ main p {
 }
 
 .imagem-texto-sobre {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 40px;
+     margin-bottom: 40px;
 }
 
 .imagem-texto-sobre img {
     border-radius: 0 6px 0 6px;
     width: 270px;
-    height: 280px;
+    height: 100%;
     object-fit: cover;
+ 
 }
 
 .imagem-container {
-    position: relative;
-    width: 270px;
-    height: 280px;
+    position: relative; /* Agora a legenda se posiciona em relação a este container */
+    width: 270px; /* Define a largura da imagem */
+    height: 280px; /* Define a altura da imagem */
+    float: right;
+    margin-left: 20px;
 }
 
 .legenda {
@@ -331,7 +330,6 @@ main p {
     width: 100%;
     filter: brightness(0) saturate(100%) invert(46%) sepia(80%) saturate(344%) hue-rotate(120deg) brightness(87%) contrast(92%);
 }
-
 
 .interesses span {
     font-weight: 700;
@@ -541,10 +539,10 @@ footer p {
 
 .fundodiferenciado_quatrozeroquatro {
     --s: 50px;
-    --c: var(--verde-principal);
+    --c: white;
     --_s: calc(2*var(--s)) calc(2*var(--s));
     --_g: 35.36% 35.36% at;
-    --_c: #00000000 66%, #2c9685 68% 70%, #00000000 72%;
+    --_c: #00000000 66%, #f5f9fa 68% 70%, #00000000 72%;
     background:
         radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
         radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
@@ -558,11 +556,11 @@ footer p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: calc(80vh + 50px);
 }
 
 .fundodiferenciado_quatrozeroquatro h2 {
-    margin-top: -40px;
+    margin-top: -50px;
     color: var(--verde-claro);
     background-color: white;
     padding: 5px 15px;
@@ -570,15 +568,21 @@ footer p {
 }
 
 .fundodiferenciado_quatrozeroquatro p {
-    margin-top: 0;
-    color: white;
+    margin-top: 20px;
+
+    color: black;
 }
 
 .quatrozeroquatro_er {
     font-family: var(--fonte-titulos);
     font-size: 50px;
     font-weight: 800;
-    color: white;
+    color: var(--roxo);
+}
+
+#countdown{
+    font-weight: 800;
+    color: #29907F;
 }
 
 /* INDEX MEDIA //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -589,3 +593,36 @@ footer p {
         padding: 0;
     }
 }
+
+@media (max-width: 700px) {
+    .imagem-texto-sobre {
+        display: flex;
+       flex-direction: column-reverse;
+    }
+
+    .imagem-container {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+        height: 350px;
+    }
+
+    .imagem-texto-sobre img {
+      
+        width: 100%;
+        height: 100%;
+    }
+
+    .graficos{
+        flex-direction: column;
+    }
+
+    .interesses {
+        flex-wrap: wrap;
+    }
+
+    .work-grid{
+        flex-direction: column;
+    }
+}
+

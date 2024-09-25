@@ -33,7 +33,8 @@
         </div>-->
         <main>
             <div class="frase">
-                <i class="fa-solid fa-quote-left"></i> <span>Tudo o que nos rodeia reflete a visão de um designer.</span> <i class="fa-solid fa-quote-right"></i>
+                <i class="fa-solid fa-quote-left"></i> <span>Tudo o que nos rodeia reflete a visão de um
+                    designer.</span> <i class="fa-solid fa-quote-right"></i>
             </div>
             <div class="citacao"><i class="fa-solid fa-minus"></i> Nicole Heguy <span style=" color: #c2d7dd;">(eu
                     :)</span>
@@ -41,32 +42,33 @@
 
             </br>
             <div class="imagem-texto-sobre">
-                <div>
-                    <p>
-                        Me chamo Nicole Heguy. Iniciei minha carreira como Designer Gráfico e, atualmente,
-                        também trabalho como Web Designer e Dev Front-end (HTML, CSS e JS). Amo resolver problemas, um
-                        dos
-                        motivos que me levaram a me interessar por UI/UX Design.
-                    </p>
-                    <p>
-                        Em todos os meus trabalhos, tento pensar em como o usuário receberá as informações. Mesmo
-                        acompanhando
-                        as tendências do mercado, minha intenção é criar interfaces e artes <b>atemporais</b>, que
-                        permaneçam
-                        relevantes e funcionais, até que o cliente deseje renovar o design por uma nova visão, e não por
-                        obsolescência.
-                    </p>
-                    <p>
-                        Atualmente, como freelancer, realizo diversos tipos de projetos, com foco em desenvolver sites
-                        responsivos personalizados em HTML, CSS e JS. Também ofereço serviços de hospedagem e manutenção
-                        para os
-                        sites que desenvolvo. Estou aberta a outros tipos de trabalho conforme a necessidade dos
-                        clientes.
-                    </p>
-                </div>
                 <div class="imagem-container ">
                     <img src="images/eu.jpg">
                     <div class="legenda">Foto não está editada - RD Summit 2023</div>
+                </div>
+                <div>
+                <p>
+                    Me chamo Nicole Heguy. Iniciei minha carreira como Designer Gráfico e, atualmente,
+                    também trabalho como Web Designer e Dev Front-end (HTML, CSS e JS). Amo resolver problemas, um
+                    dos
+                    motivos que me levaram a me interessar por UI/UX Design.
+                </p>
+                <p>
+                    Em todos os meus trabalhos, tento pensar em como o usuário receberá as informações. Mesmo
+                    acompanhando
+                    as tendências do mercado, minha intenção é criar interfaces e artes <b>atemporais</b>, que
+                    permaneçam
+                    relevantes e funcionais, até que o cliente deseje renovar o design por uma nova visão, e não por
+                    obsolescência.
+                </p>
+                <p>
+                    Atualmente, como freelancer, realizo diversos tipos de projetos, com foco em desenvolver sites
+                    responsivos personalizados em HTML, CSS e JS. Também ofereço serviços de hospedagem e manutenção
+                    para os
+                    sites que desenvolvo. Estou aberta a outros tipos de trabalho conforme a necessidade dos
+                    clientes.
+                </p>
+
                 </div>
 
             </div>
@@ -127,62 +129,62 @@
 
             <section class="section_interesses">
 
-<h2>Interesses</h2>
-<div class="interesses">
-    <div>
-        <div class="img_container"><img src="images/icons/games.svg"> </div>
+                <h2>Interesses</h2>
+                <div class="interesses">
+                    <div>
+                        <div class="img_container"><img src="images/icons/games.svg"> </div>
 
-        <span>Jogos</span>
-    </div>
-    <div>
-        <div class="img_container"><img style="width: 55px;" src="images/icons/arte.svg"> </div>
+                        <span>Jogos</span>
+                    </div>
+                    <div>
+                        <div class="img_container"><img style="width: 55px;" src="images/icons/arte.svg"> </div>
 
-        <span>Desenhar</span>
-    </div>
-    <div>
-        <div class="img_container"> <img src="images/icons/book.svg"> </div>
+                        <span>Desenhar</span>
+                    </div>
+                    <div>
+                        <div class="img_container"> <img src="images/icons/book.svg"> </div>
 
 
-        <span>Aprender</span>
-    </div>
-    <div>
-        <div class="img_container"> <img src="images/icons/cat.svg">
-        </div>
+                        <span>Aprender</span>
+                    </div>
+                    <div>
+                        <div class="img_container"> <img src="images/icons/cat.svg">
+                        </div>
 
-        <span>Gatos :3</span>
-    </div>
+                        <span>Gatos :3</span>
+                    </div>
 
-</div>
-</section>
+                </div>
+            </section>
 
 
         </main>
         <section class="depoisdo_main">
-    <h2>Conheça um pouco do meu trabalho</h2>
-    <div class="work-grid">
-        <div class="work-item">
-            <a href="#design-grafico">
-                <img src="images/dg/coworking/coworkingfam_3.png" alt="Design Gráfico">
-                <h3>Design Gráfico</h3>
-            </a>
-        </div>
-        <div class="work-item">
-            <a href="#web-design">
-                <img src="images/fe/infofamimg.png" alt="Web Design | Front-end">
-                <h3>Web Design | Front-end</h3>
-            </a>
-        </div>
-        <div class="work-item">
-            <a href="#ilustracao">
-                <img src="images\i\i2.png" alt="Ilustração">
-                <h3>Ilustração</h3>
-            </a>
-        </div>
-    </div>
-</section>
+            <h2>Conheça um pouco do meu trabalho</h2>
+            <div class="work-grid">
+                <div class="work-item">
+                    <a href="#design-grafico">
+                        <img src="images/dg/coworking/coworkingfam_3.png" alt="Design Gráfico">
+                        <h3>Design Gráfico</h3>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="#web-design">
+                        <img src="images/fe/infofamimg.png" alt="Web Design | Front-end">
+                        <h3>Web Design | Front-end</h3>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="#ilustracao">
+                        <img src="images\i\luz.jpg" alt="Ilustração">
+                        <h3>Ilustrações</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <?php include 'code/footer.php'; ?>
-     
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

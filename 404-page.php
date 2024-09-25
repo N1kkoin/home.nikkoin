@@ -45,7 +45,7 @@
             }
         }, 1000);
     });
-    </script> 
+    </script>
 </body>
 
 </html>
