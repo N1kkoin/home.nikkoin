@@ -44,28 +44,24 @@ switch ($error_code) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $error_code; ?> - Erro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="alternate icon" href="images/icone.ico">
     <link rel="icon" href="images/icone.svg">
 </head>
 
 <body>
-    <?php include 'code/navbar.php'; ?>
+    <?php include('code/navbar.php'); ?>
 
     <div class="index_nh">
-
         <div class="fundodiferenciado_quatrozeroquatro">
             <p class="quatrozeroquatro_er"><?php echo $error_message; ?></p>
             <h2>Essa página não existe :/</h2>
             <p>Redirecionando para a página inicial em <span id="countdown">5</span> segundos!</p>
         </div>
-
-        <?php include 'code/footer.php'; ?>
-
+        <?php include('code/footer.php'); ?>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="code/script.js"></script>
     <script>
     // COUNTDRON 404 PAGE ---------------------------///////////////////////
 

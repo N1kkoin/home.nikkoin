@@ -1,6 +1,7 @@
+<link rel="stylesheet" href="/code/style.css">
 <nav>
     <div class="nav_container">
-        <a target="_blank" href="#" class="logo"><img src="images/nh_logo.svg"></a>
+        <a target="_blank" href="#" class="logo"><img src="/images/nh_logo.svg"></a>
         <div class="nav_links">
             <a href="/">Inicio</a>
             <a href="/portifolio">Portifólio</a>
