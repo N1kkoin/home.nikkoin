@@ -31,12 +31,14 @@
     --roxo: #512572;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: var(--fonte-resto);
-    scroll-behavior: smooth; /* Rolagem suave ao usar links */
-
 }
 
 
@@ -47,13 +49,20 @@ h2 {
 
 /* NAVBAR //////////////////////////////////////////////////////////////////////////////////////////////*/
 
+/* Estilo apenas para a página .body_index */
+.body_index nav {
+    background-color: rgba(255, 255, 255, 0.713);
+}
+
+/* Estilo para o nav em todas as outras páginas (padrão) */
 nav {
+    background-color: rgba(255, 255, 255, 1); /* Fundo opaco por padrão */
     position: fixed;
     width: 100%;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 2;
-    background-color: rgba(255, 255, 255, 0.713);
+    transition: background-color 0.3s ease;
 }
 
 .nav_container {
@@ -94,7 +103,7 @@ nav {
 
 /*--------------------------------------------------------------------------*/
 
-.scrolled-past-600 {
+nav.scrolled-past-600 {
     background-color: var(--verde-principal);
 }
 
@@ -647,28 +656,82 @@ footer p {
     background-color: white;
 }
 
-.header_portifolio {
+.body_portifolio  .header_portifolio {
     height: 300px;
+    padding-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: var(--verde-principal);
+    background-image: url('/images/i/i2.png'); /* Adiciona a imagem de fundo */
+    background-size: cover; /* Faz com que a imagem cubra todo o header */
+    background-position: center; /* Centraliza a imagem */
+    position: relative; /* Garante que os elementos internos fiquem posicionados corretamente */
+    color: white; /* Ajuste a cor do texto para garantir que ele seja visível */
+    text-align: center; /* Centraliza o texto */
+
 }
 
-.header_portifolio p{
+.body_portifolio  .header_portifolio h1, .header_portifolio p {
+    z-index: 1; /* Garante que o texto fique acima da imagem */
+}
+
+.body_portifolio .header_portifolio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adiciona um overlay escuro para melhorar a legibilidade do texto */
+    z-index: 0; /* O overlay fica entre a imagem e o texto */
+}
+
+
+
+.body_portifolio  .header_portifolio p{
     margin-top: -30px;
 }
 
-.main_portifolio {
+.body_portifolio  .main_portifolio {
     z-index: 100;
     min-height: 800px;
     max-width: 1000px;
     box-sizing: border-box;
     width: 100%;
     margin: 0 auto;
-    margin-top: -20px;
+ 
     border-radius: 6px;
     background-color: #f5f9fa;
 }
 
+
+.body_portifolio .button-container {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    gap: 10px;
+}
+
+.body_portifolio .button {
+    background-color: var(--verde-claro);
+    color: black;
+    padding: 10px 20px;
+   
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: large;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.body_portifolio .button:hover {
+    background-color: white;
+}
+
+.body_portifolio .section {
+    height: 800px; /* Altura para simular conteúdo */
+    padding-top: 80px; /* Espaçamento para o conteúdo não ficar atrás do navbar */
+}

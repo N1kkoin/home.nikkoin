@@ -38,9 +38,11 @@ type();
 
 // NAVBAR //////////////////////////////////////////////////////////////////
 
-// Função que verifica o scroll
+// Função que verifica o scroll e aplica/remova a classe com base na rolagem
 function checkScrollPosition() {
     const nav = document.querySelector('nav');
+
+    // Adiciona ou remove a classe 'scrolled-past-600' se o scrollY for maior que 600
     if (window.scrollY > 600) {
         nav.classList.add('scrolled-past-600');
     } else {
@@ -94,7 +96,3 @@ $(document).ready(function () {
         observer.observe(this);
     });
 });
-
-
-//PORTIFOLIO SMOOTH SCROLL - ///////////////////////////////////////////////////////////////////////////////////////////////
-
