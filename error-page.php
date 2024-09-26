@@ -48,6 +48,16 @@ switch ($error_code) {
     <link rel="icon" href="images/icone.svg">
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-23BZZMMJMP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-23BZZMMJMP');
+</script>
+
 <body>
     <?php include('code/navbar.php'); ?>
 

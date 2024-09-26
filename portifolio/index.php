@@ -9,7 +9,15 @@
     <link rel="alternate icon" href="../images/icone.ico"> <!-- Ajuste o caminho -->
     <link rel="icon" href="../images/icone.svg"> <!-- Ajuste o caminho -->
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-23BZZMMJMP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-23BZZMMJMP');
+</script>
 
 <body class="body_portifolio">
     <?php include('../code/navbar.php'); ?>
@@ -36,6 +44,10 @@
                 <!-- Imagem 1 -->
                 <div class="portfolio-item" data-overlay="overlay1">
                     <img src="/images/dg/coworking/coworkingfam.png" alt="Imagem 1" class="portfolio-image">
+                </div>
+                <!-- Imagem 5 -->
+                <div class="portfolio-item" data-overlay="overlay5">
+                    <img src="/images/dg/trunfomeme/dg2.png" alt="Imagem 3" class="portfolio-image">
                 </div>
                 <!-- Imagem 2 -->
                 <div class="portfolio-item" data-overlay="overlay2">
@@ -117,6 +129,42 @@
                     </div>
                 </div>
                 <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div id="overlay5" class="overlay">
+                <div class="overlay-content">
+                    <div class="trunfo">
+                        <div class="img-principal"><img src="/images/dg/trunfomeme/meme_1.png"></div>
+                        <div class="trunfomeme ">
+                            <h1>Super Trunfo de Memes <span style="color: #C82D36;">2022</span></h1>
+                            <p>Destaco o Super Trunfo, entre um dos projetos acadêmicos que mais aprecio, desenvolvido
+                                durante o curso de Design Gráfico.
+                                Tínhamos que criar um super trunfo comemorativo, e depois de um brainstorm, escolhemos o
+                                tema de memes. Em 2022 fez 101 anos que o primeiro meme (que temos conhecimento) foi
+                                criado.
+                            </p>
+
+                            <p>Posteriormente, em diversos eventos da faculdade, nossos trabalhos, incluindo este
+                                baralho,
+                                foram apresentados ao público geral. Nos que participei, pude observar de perto
+                                a reação positiva do público em relação do baralho, principalmente entre o público
+                                juvenil.
+
+                                </br></br>
+                                <a target="blank_" href="https://www.instagram.com/murderesstired/">Ana</a> — Pesquisa
+                                das
+                                datas de Surgimento.
+                                </br><a target="blank_" href="https://www.behance.net/levy-laduig-cabral">Levy</a> —
+                                Informações e design da embalagem (função primária).
+                                </br><a target="blank_" href="https://nikkoin.art/">Nicole</a> — Diagramação, design das
+                                cartas e design da embalagem (função secundária).
+                            <p>
+                        </div>
+
+                        <div class="segunda"><img src="/images/dg/trunfomeme/meme_2.png"></div>
+                    </div>
+                    <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
+                </div>
             </div>
 
             <div id="overlay2" class="overlay">
