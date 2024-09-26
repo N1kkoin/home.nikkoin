@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikkoin Portifólio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="alternate icon" href="../images/icone.ico"> <!-- Ajuste o caminho -->
+    <link rel="icon" href="../images/icone.svg"> <!-- Ajuste o caminho -->
+    <link rel="stylesheet" href="../code/style.css">
+
+</head>
+
+
+<body class="body_portifolio">
+    <?php include('../code/navbar.php'); ?>
+    <!-- Use ../ para voltar um nível -->
+
+    <div>
+        <header class="header_portifolio">
+            <h1>Serviços</h1>
+            <p>Qual é o portifólio que deseja ver?</p>
+        </header>
+
+        <main class="main_portifolio">
+            <div id="design-grafico" class="section">
+                <h2 data-link="/servicos#"><i class="fa-solid fa-link"></i> Planos de Hosteamento</h2>
+            </div>
+            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+            <stripe-pricing-table pricing-table-id="prctbl_1Q3MNbP0qQ9dxS0P1wwUrdsJ"
+                publishable-key="pk_live_51Q3LOCP0qQ9dxS0PWiPuJS1FF7O5GxoHvWjVCjymn9wqSqMBcbFHj0jqM004DLoBa27REE8LLEkfXneODnq8n0pZ00jHW2n8uc">
+            </stripe-pricing-table>
+        </main>
+
+        <?php include('../code/footer.php'); ?>
+        <!-- Use ../ para voltar um nível -->
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/jquery-anyimagecomparisonslider-plugin'></script>
+
+    <script src="../code/script.js"></script>
+</body>
+
+
+</html>
