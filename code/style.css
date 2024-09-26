@@ -871,12 +871,19 @@ footer p {
 
 .overlay-content{
     padding-top: 70px;
+    padding-bottom: 50px;
     justify-content: baseline;
     max-width: 1000px;
     width: 100%;
-    background-color: #73C382;
     height: 100%;
+}
 
+.overlay-content p{
+ text-align: justify;
+}
+
+.overlay-content img{
+    border-radius: 6px;
 }
 
 .close-overlay {
@@ -915,3 +922,71 @@ footer p {
         -webkit-tap-highlight-color: transparent;
      }
 }
+
+
+
+/* coworking ----------------------------------------------------------------------------------------------------------------------*/
+
+.coworkingstyle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "img-principal img-principal"
+        "quinta quinta"
+        "segunda terceira"
+        "segunda quarta"
+    ;
+    gap: 10px;
+    height: 80vh;
+    position: relative;
+    z-index: 2;
+
+}
+
+.coworkingstyle .img-principal {
+    grid-area: img-principal;
+}
+
+.coworkingstyle .segunda {
+    grid-area: segunda;
+
+}
+
+.coworkingstyle .terceira {
+    grid-area: terceira;
+}
+
+.coworkingstyle .quarta {
+    grid-area: quarta;
+
+}
+
+.coworkingstyle .quinta {
+    grid-area: quinta;
+}
+
+.coworkingstyle .quinta p {
+    margin-top: 6px;
+    line-height: 1.3;
+    font-size: large;
+    text-indent: 20px;
+}
+
+/* Adicionando a propriedade background-size: cover às imagens */
+.coworkingstyle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coworkingstyle a {
+    color: #45B7E5;
+    font-weight: 500;
+}
+
+.elementoinvisivel {
+    height: 10px;
+    width: 100%;
+}
+
