@@ -1087,3 +1087,13 @@ footer p {
     max-width: 960px;
     padding-bottom: 50px;
 }
+
+/*front end ----------------------------------------------------------------------------------------------------*/
+
+ iframe{
+    display: flex;
+    width: 100%;
+    height: 99dvh;
+
+    margin: auto;
+}
