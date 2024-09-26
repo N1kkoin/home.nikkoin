@@ -37,8 +37,6 @@
         <main class="main_portifolio">
             <div id="design-grafico" class="section">
                 <h2 data-link="/portifolio#design-grafico"><i class="fa-solid fa-link"></i> Design Gráfico</h2>
-
-
             </div>
             <div class="portfolio-container">
                 <!-- Imagem 1 -->
@@ -169,24 +167,35 @@
 
             <div id="overlay2" class="overlay">
                 <div class="overlay-content">
-                    <h2>Título Imagem 2</h2>
-                    <p>Texto descritivo para a Imagem 2.</p>
+                    <div class="calendario"> <img src="/images/dg/dg3.5.png"></div>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
 
             <div id="overlay3" class="overlay">
                 <div class="overlay-content">
-                    <h2>Título Imagem 3</h2>
-                    <p>Texto descritivo para a Imagem 3.</p>
+                    <div class="mapa ">
+                        <img src="/images/dg/MapaFAM_1.png">
+                        <div class="aics-wrapper">
+                            *Passe o mouse para ver a diferença
+                            <div id="aics-autostart">
+                                <div class="images">
+                                    <div class="image-rgt" data-src="/images/dg/mapa/2022.png" data-width="100%"
+                                        data-height="100%"></div>
+                                    <div class="image-lft" data-src="/images/dg/mapa/2020.png" data-width="100%"
+                                        data-height="100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="/images/dg/MapaFAM_2.png">
+                    </div>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
 
             <div id="overlay4" class="overlay">
                 <div class="overlay-content">
-                    <h2>Título Imagem 3</h2>
-                    <p>Texto descritivo para a Imagem 3.</p>
+                    <div class="eu"> <img src="/images/dg/NH_marca.png"></div>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
@@ -197,44 +206,43 @@
 
             <div class="portfolio-container">
                 <!-- Imagem 1 -->
-                <div class="portfolio-item" data-overlay="overlay1">
+                <div class="portfolio-item" data-overlay="info-fam">
                     <img src="/images/fe/infofamimg.png" alt="Imagem 1" class="portfolio-image">
                 </div>
                 <!-- Imagem 2 -->
-                <div class="portfolio-item" data-overlay="overlay2">
-                    <img src="/images/fe/seja_veloz/sejavelozimg.png" alt="Imagem 2" class="portfolio-image">
+                <div class="portfolio-item">
+                    <a target="_blank" href="/seja-veloz/"><img src="/images/fe/seja_veloz/sejavelozimg.png" alt="Imagem 2" class="portfolio-image"></a>
                 </div>
                 <!-- Imagem 3 -->
-                <div class="portfolio-item" data-overlay="overlay3">
-                    <img src="/images/fe/banner_atedimento.png" alt="Imagem 3" class="portfolio-image">
+                <div class="portfolio-item">
+                    <a target="_blank" href="https://hospitalveterinariofam.com.br/"><img src="/images/fe/banner_atedimento.png" alt="Imagem 3" class="portfolio-image"></a>
                 </div>
                 <!-- Imagem 4 -->
-                <div class="portfolio-item" data-overlay="overlay3">
+                <div class="portfolio-item" data-overlay="email">
                     <img src="/images/fe/templeteemail.png" alt="Imagem 3" class="portfolio-image">
                 </div>
             </div>
 
             <!-- Overlays -->
-            <div id="overlay1" class="overlay">
+            <div id="info-fam" class="overlay">
                 <div class="overlay-content">
-                    <h2>Título Imagem 1</h2>
-                    <p>Texto descritivo para a Imagem 1.</p>
+                    <iframe src="//jsfiddle.net/Nikkoin/kf9up7Lo/99/embedded/result/?accentColor=73C382"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
 
-            <div id="overlay2" class="overlay">
+            <div id="email" class="overlay">
                 <div class="overlay-content">
-                    <h2>Título Imagem 2</h2>
-                    <p>Texto descritivo para a Imagem 2.</p>
-                    <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
-                </div>
-            </div>
+                    <h1>Templete de E-mail - Comunicado interno e Assinatura</h1>
 
-            <div id="overlay3" class="overlay">
-                <div class="overlay-content">
-                    <h2>Título Imagem 3</h2>
-                    <p>Texto descritivo para a Imagem 3.</p>
+                    <iframe src="//jsfiddle.net/Nikkoin/u2ys4omn/32/embedded/result,html/light/?accentColor=73C382"
+                        allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <div class="elementoinvisivel"></div>
+                    <div class="iframemenor">
+                        <iframe src="//jsfiddle.net/Nikkoin/uLze7wgs/33/embedded/result,html/light/?accentColor=73C382"
+                            allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    </div>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
@@ -245,48 +253,52 @@
 
             <div class="portfolio-container">
                 <!-- Imagem 1 -->
-                <div class="portfolio-item" data-overlay="overlay1">
+                <div class="portfolio-item" data-overlay="mariana">
                     <img src="/images/i/i3.png" alt="Imagem 1" class="portfolio-image">
                 </div>
                 <!-- Imagem 2 -->
-                <div class="portfolio-item" data-overlay="overlay2">
+                <div class="portfolio-item" data-overlay="varios">
                     <img src="/images/i/i2.png" alt="Imagem 2" class="portfolio-image">
                 </div>
                 <!-- Imagem 3 -->
-                <div class="portfolio-item" data-overlay="overlay3">
+                <div class="portfolio-item" data-overlay="humanoide">
                     <img src="/images/i/i5.png" alt="Imagem 3" class="portfolio-image">
                 </div>
                 <!-- Imagem 4 -->
-                <div class="portfolio-item" data-overlay="overlay4">
+                <div class="portfolio-item" data-overlay="manga">
                     <img src="/images/i/i4.png" alt="Imagem 3" class="portfolio-image">
                 </div>
             </div>
 
             <!-- Overlays -->
-            <div id="overlay1" class="overlay">
+            <div id="mariana" class="overlay">
                 <div class="overlay-content">
-                    <h2>Título Imagem 1</h2>
-                    <p>Texto descritivo para a Imagem 1.</p>
+                    <div class="imgs-design"><img src="/images/i/i3.5.png"></div>
+                    
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
 
-            <div id="overlay2" class="overlay">
+            <div id="varios" class="overlay">
                 <div class="overlay-content">
-                    <h2>Título Imagem 2</h2>
-                    <p>Texto descritivo para a Imagem 2.</p>
+                    <div class="imgs-design"><img src="/images/i/i1.5.png"></div>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
 
-            <div id="overlay3" class="overlay">
+            <div id="humanoide" class="overlay">
                 <div class="overlay-content">
-                    <h2>Título Imagem 3</h2>
-                    <p>Texto descritivo para a Imagem 3.</p>
+                    <div class="imgs-design"><img src="/images/i/i5.5.png"></div>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
 
+            <div id="manga" class="overlay">
+                <div class="overlay-content">
+                    <div class="imgs-design"><img src="/images/i/i4.5.png"></div>
+                    <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
         </main>
 
         <?php include('../code/footer.php'); ?>
