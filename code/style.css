@@ -568,6 +568,8 @@ footer {
 footer p {
     margin: 0;
     margin-bottom: 30px;
+    line-height: 1.3;
+
 }
 
 .loguinho {
@@ -878,7 +880,7 @@ footer p {
     height: 100%;
     padding-left: 20px;
     padding-right: 20px;
-
+    box-sizing: border-box;
 }
 
 .overlay-content p {

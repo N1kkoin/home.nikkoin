@@ -306,7 +306,8 @@
 
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src='https://cdn.jsdelivr.net/npm/jquery-anyimagecomparisonslider-plugin'></script>
+    
     <script src="../code/script.js"></script>
 </body>
 
