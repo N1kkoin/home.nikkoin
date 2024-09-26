@@ -10,11 +10,19 @@ let currentText = "";
 let typeTimeoutId = null;
 
 function type() {
+    const typewriterElement = document.getElementById("typewriter");
+    
+    // Verifica se o elemento existe antes de tentar modificar seu conteúdo
+    if (!typewriterElement) {
+        console.warn("Elemento com ID 'typewriter' não encontrado.");
+        return; // Sai da função se o elemento não existir
+    }
+    
     const currentPhrase = phrases[currentPhraseIndex];
     currentText = isDeleting
         ? currentPhrase.substring(0, currentText.length - 1)
         : currentPhrase.substring(0, currentText.length + 1);
-    document.getElementById("typewriter").textContent = currentText;
+    typewriterElement.textContent = currentText;
 
     if (!isDeleting && currentText === currentPhrase) {
         isDeleting = true;
@@ -33,6 +41,7 @@ function type() {
         }, isDeleting ? deleteDelay : typeDelay);
     }
 }
+
 type();
 
 
@@ -130,25 +139,28 @@ $(document).ready(function () {
     });
 
     // portifólio imagens e overlay /////////////////////////////////////////////////////////////////////////////////////////////
+// Selecionar todos os itens do portfólio
+document.querySelectorAll('.portfolio-item').forEach(item => {
+    item.addEventListener('click', function () {
+        // Obter o ID do overlay a ser exibido
+        const overlayId = this.getAttribute('data-overlay');
+        const overlay = document.getElementById(overlayId);
 
-    // Selecionar todos os itens do portfólio
-    document.querySelectorAll('.portfolio-item').forEach(item => {
-        item.addEventListener('click', function () {
-            // Obter o ID do overlay a ser exibido
-            const overlayId = this.getAttribute('data-overlay');
-            const overlay = document.getElementById(overlayId);
+        // Exibir o overlay
+        overlay.classList.add('show');
 
-            // Exibir o overlay
-            overlay.classList.add('show');
-        });
+        // Adicionar classe ao body para desativar o scroll
+        document.body.classList.add('no-scroll');
     });
+});
 
-    // Selecionar todos os botões de fechar
-    document.querySelectorAll('.close-overlay').forEach(button => {
-        button.addEventListener('click', function () {
-            // Fechar o overlay
-            this.closest('.overlay').classList.remove('show');
-        });
+// Selecionar todos os botões de fechar
+document.querySelectorAll('.close-overlay').forEach(button => {
+    button.addEventListener('click', function () {
+        // Fechar o overlay
+        this.closest('.overlay').classList.remove('show');
+
+        // Remover classe do body para ativar o scroll novamente
+        document.body.classList.remove('no-scroll');
     });
-
-    console.log('O script foi carregado corretamente.');
+});

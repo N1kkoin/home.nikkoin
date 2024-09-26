@@ -166,13 +166,13 @@
                     </a>
                 </div>
                 <div class="work-item">
-                    <a href="/portifolio#web-design">
+                    <a href="/portifolio#front-end">
                         <img src="images/fe/infofamimg.png" alt="Web Design | Front-end">
                         <h3>Web Design | Front-end</h3>
                     </a>
                 </div>
                 <div class="work-item">
-                    <a href="/portifolio#ilustracao">
+                    <a href="/portifolio#ilustracoes">
                         <img src="images\i\luz.jpg" alt="Ilustração">
                         <h3>Ilustrações</h3>
                     </a>
