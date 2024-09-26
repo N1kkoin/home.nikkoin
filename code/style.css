@@ -64,7 +64,7 @@ h2 {
     font-weight: 900;
 }
 
-button{
+button {
     padding: 5px 15px;
     text-decoration: none;
     text-transform: uppercase;
@@ -681,7 +681,7 @@ footer p {
 
 @media (max-width: 620px) {
 
- 
+
     .body_portifolio .button-container {
         width: 100%;
         padding: 0 20px;
@@ -781,7 +781,7 @@ footer p {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
-    
+
     border-radius: 6px;
     transition: background-color 0.3s;
 }
@@ -869,20 +869,22 @@ footer p {
     overflow-y: auto;
 }
 
-.overlay-content{
+.overlay-content {
     padding-top: 70px;
     padding-bottom: 50px;
     justify-content: baseline;
     max-width: 1000px;
     width: 100%;
     height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.overlay-content p{
- text-align: justify;
+.overlay-content p {
+    text-align: justify;
 }
 
-.overlay-content img{
+.overlay-content img {
     border-radius: 6px;
 }
 
@@ -920,53 +922,64 @@ footer p {
 
     html {
         -webkit-tap-highlight-color: transparent;
-     }
+    }
 }
 
 
 
 /* coworking ----------------------------------------------------------------------------------------------------------------------*/
 
+.coworking {
+    padding-bottom: 70px;
+}
+
+.coworking a {
+    color: #45B7E5;
+    font-weight: 500;
+}
+
+.coworking h1 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.coworking .img-principal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coworking .img-principal img {
+    width: 100%;
+    height: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
 .coworkingstyle {
+    margin-top: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-        "img-principal img-principal"
-        "quinta quinta"
-        "segunda terceira"
-        "segunda quarta"
-    ;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     gap: 10px;
-    height: 80vh;
-    position: relative;
-    z-index: 2;
-
 }
 
-.coworkingstyle .img-principal {
-    grid-area: img-principal;
+.coworkingstyle .div1 {
+    grid-area: 1 / 1 / 3 / 2;
 }
 
-.coworkingstyle .segunda {
-    grid-area: segunda;
-
+.coworkingstyle .div2 {
+    grid-area: 1 / 2 / 2 / 3;
 }
 
-.coworkingstyle .terceira {
-    grid-area: terceira;
+.coworkingstyle .div3 {
+    grid-area: 2 / 2 / 3 / 3;
 }
 
-.coworkingstyle .quarta {
-    grid-area: quarta;
 
-}
-
-.coworkingstyle .quinta {
-    grid-area: quinta;
-}
-
-.coworkingstyle .quinta p {
+.coworking p {
     margin-top: 6px;
     line-height: 1.3;
     font-size: large;
@@ -980,13 +993,29 @@ footer p {
     object-fit: cover;
 }
 
-.coworkingstyle a {
-    color: #45B7E5;
-    font-weight: 500;
-}
 
-.elementoinvisivel {
-    height: 10px;
-    width: 100%;
-}
+@media (max-width: 600px) {
+    .coworkingstyle {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 
+    /* Adicionando a propriedade background-size: cover às imagens */
+    .coworkingstyle img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .coworkingstyle .div1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .coworkingstyle .div2 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .coworkingstyle .div3 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+}

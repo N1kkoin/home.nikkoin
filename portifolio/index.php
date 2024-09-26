@@ -54,72 +54,69 @@
             <!-- Overlays -->
             <div id="overlay1" class="overlay">
                 <div class="overlay-content">
-
-
-                    <div class="coworkingstyle">
+                    <div class="coworking">
                         <div class="img-principal"><img src="/images/dg/coworking/coworkingfam.png" alt="Image 1">
                         </div>
-                        <div class="segunda"><img src="/images/dg/coworking/coworkingfam_2.png" alt="Image 1"></div>
-                        <div class="terceira"><img src="/images/dg/coworking/coworkingfam_3.png" alt="Image 1">
-                        </div>
-                        <div class="quarta"><img src="/images/dg/coworking/coworkingfam_4.png" alt="Image 1"></div>
-                        <div class="quinta">
-                            <h1>Coworking Shopping Park City <span style="color: #e53888;">2</span><span
-                                    style="color: #f9e20f;">0</span><span style="color: #45B7E5;">2</span><span
-                                    style="color: #1b3556;">3</span></h1>
-                            <p>Gostaria de falar um pouco do processo de um trabalho recente que fiz no Coworking da
-                                FAM -
-                                Faculdade
-                                de Americana do Shopping Park City de Sumaré. Me foi dado
-                                liberdade para fazer o que eu quisesse, com o tema “abstrato” e contendo a frase
-                                <i>“O
-                                    responsável
-                                    por suas vitórias, seu futuro e por realizar seus sonhos é você!”</i>
-                            </p>
-                            <p>Comecei pensando em regras, o espaço pede para ser calmo e o branco da parede permite
-                                isso,
-                                então não
-                                podia cobrir a parede com cor, o que faria o ambiente poluído visualmente, não
-                                ajudando quem
-                                fosse
-                                lá para descansar ou trabalhar.
-                                Também queria trabalhar algumas cores da marca que na época não estavam sendo tão
-                                trabalhadas. A
-                                maioria das cores são frias, mas o amarelo e o rosa dão uma vida a mais devido ao
-                                contraste.
-                            </p>
-                            <p>Com essas regras imaginarias na cabeça, já sabia que o ideal era um arco, a parte
-                                onde a
-                                pessoa
-                                trabalha não seria tão tocada pela arte e assim também conseguiria brincar com a
-                                frase de
-                                uma forma
-                                interessante, depois disso <a target="blank_"
-                                    href="https://www.instagram.com/danicassitas/">@danicassitas</a> teve a ideia de
-                                colocar
-                                um
-                                espelho no ‘você’ (antes o você
-                                estava no círculo só que fora), fazendo o trabalho final ser mais interessante, já
-                                que se
-                                tornou
-                                interativo.
-                                Se repararam, o mockup não tem a faixa vertical do lado. Na vida do designer às
-                                vezes coisas
-                                imprevistas ocorrem e isso fez a frase ficar dividida nas duas paredes, mas o
-                                conceito não
-                                mudou e a
-                                parte do espelho, por eu dar uma margem maior, não sofreu com a mudança.</p>
-                            <p>De qualquer forma, gostei do resultado e espero que os que viram também ;)
-                                </br></br>Modelo da foto: <a target="blank_"
-                                    href="https://www.instagram.com/alemarasampaio/">@alemarasampaio</a>
-                                </br>Publicado no meu IG <a target="blank_"
-                                    href="https://www.instagram.com/alemarasampaio/">@nikkoin_</a></p>
-                        </div>
-                        <div class="elementoinvisivel"></div>
-                    </div>
+                        <h1>Coworking Shopping Park City <span style="color: #e53888;">2</span><span
+                                style="color: #f9e20f;">0</span><span style="color: #45B7E5;">2</span><span
+                                style="color: #1b3556;">3</span></h1>
+                        <p>Gostaria de falar um pouco do processo de um trabalho recente que fiz no Coworking da
+                            FAM -
+                            Faculdade
+                            de Americana do Shopping Park City de Sumaré. Me foi dado
+                            liberdade para fazer o que eu quisesse, com o tema “abstrato” e contendo a frase
+                            <i>“O
+                                responsável
+                                por suas vitórias, seu futuro e por realizar seus sonhos é você!”</i>
+                        </p>
+                        <p>Comecei pensando em regras, o espaço pede para ser calmo e o branco da parede permite
+                            isso,
+                            então não
+                            podia cobrir a parede com cor, o que faria o ambiente poluído visualmente, não
+                            ajudando quem
+                            fosse
+                            lá para descansar ou trabalhar.
+                            Também queria trabalhar algumas cores da marca que na época não estavam sendo tão
+                            trabalhadas. A
+                            maioria das cores são frias, mas o amarelo e o rosa dão uma vida a mais devido ao
+                            contraste.
+                        </p>
+                        <p>Com essas regras imaginarias na cabeça, já sabia que o ideal era um arco, a parte
+                            onde a
+                            pessoa
+                            trabalha não seria tão tocada pela arte e assim também conseguiria brincar com a
+                            frase de
+                            uma forma
+                            interessante, depois disso <a target="blank_"
+                                href="https://www.instagram.com/danicassitas/">@danicassitas</a> teve a ideia de
+                            colocar
+                            um
+                            espelho no ‘você’ (antes o você
+                            estava no círculo só que fora), fazendo o trabalho final ser mais interessante, já
+                            que se
+                            tornou
+                            interativo.
+                            Se repararam, o mockup não tem a faixa vertical do lado. Na vida do designer às
+                            vezes coisas
+                            imprevistas ocorrem e isso fez a frase ficar dividida nas duas paredes, mas o
+                            conceito não
+                            mudou e a
+                            parte do espelho, por eu dar uma margem maior, não sofreu com a mudança.</p>
+                        <p>De qualquer forma, gostei do resultado e espero que os que viram também ;)
+                            </br></br>Modelo da foto: <a target="blank_"
+                                href="https://www.instagram.com/alemarasampaio/">@alemarasampaio</a>
+                            </br>Publicado no meu IG <a target="blank_"
+                                href="https://www.instagram.com/alemarasampaio/">@nikkoin_</a></p>
 
-                    <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
+                        <div class="coworkingstyle">
+                            <div class="div1"><img src="/images/dg/coworking/coworkingfam_2.png" alt="Image"></div>
+                            <div class="div2"><img src="/images/dg/coworking/coworkingfam_3.png" alt="Image">
+                            </div>
+                            <div class="div3"><img src="/images/dg/coworking/coworkingfam_4.png" alt="Image"></div>
+                        </div>
+                    </div>
                 </div>
+                <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
             </div>
 
             <div id="overlay2" class="overlay">
