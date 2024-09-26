@@ -74,7 +74,7 @@
                         Atualmente, como freelancer, realizo diversos tipos de projetos, com foco em desenvolver sites
                         responsivos personalizados em HTML, CSS e JS. Também ofereço serviços de hospedagem e manutenção
                         para os
-                        sites que desenvolvo. Estou aberta a outros tipos de trabalho conforme a necessidade dos
+                        sites que desenvolvo. Estou aberta a outros tipos de trabalhos conforme a necessidade dos
                         clientes.
                     </p>
 
