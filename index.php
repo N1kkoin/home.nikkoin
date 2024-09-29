@@ -27,7 +27,7 @@
         <header class="header_index">
             <div class="fundodiferenciado">
                 <div class="contatos">
-                    <a href="mailto:nikkoin@hotmail.com" title="Email"><i class="far fa-envelope"></i></a>
+                    <a href="mailto:contato@nikkoin.art" title="Email"><i class="far fa-envelope"></i></a>
                     <a href="https://www.instagram.com/nikkoin_/" title="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/nicoleheguy/" title="Linkedin"><i
                             class="fa-brands fa-linkedin-in"></i></a>
