@@ -1,5 +1,7 @@
 <?php 
     $title = "Nikkoin Portifólio";
+    $meta_description = "Conheça meus projetos de Ilustração, Design Gráfico e Web Design"; 
+
     include('../code/navbar.php'); 
 ?>
 

@@ -1,8 +1,9 @@
 <?php 
     $title = "Nikkoin Design";
+    $meta_description = "Nikkoin Design - Site de Nicole Heguy, Designer Gráfico, Web Designer e Front-end Developer."; 
+
     include('code/navbar.php'); 
 ?>
-
 
 <body class="body_index">
     <div>
@@ -14,7 +15,7 @@
                     <a href="https://www.linkedin.com/in/nicoleheguy/" title="Linkedin"><i
                             class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <img class="nikkoinlogo" src="images/Marca_NH.svg" loading="lazy">
+                <img class="nikkoinlogo" src="images/Marca_NH.svg" alt="Logo Nikkoin Design" loading="lazy">
                 <p class="escrevendo" id="typewriter">Nikkon</p>
             </div>
         </header>
@@ -34,7 +35,7 @@
             </br>
             <div class="imagem-texto-sobre">
                 <div class="imagem-container ">
-                    <img src="images/eu.jpg" loading="lazy">
+                    <img src="images/eu.jpg" alt="Foto minha no RD Summit 2023" loading="lazy">
                     <div class="legenda">Foto não está editada - RD Summit 2023</div>
                 </div>
                 <div>
@@ -121,25 +122,24 @@
                 <h2>Interesses</h2>
                 <div class="interesses">
                     <div>
-                        <div class="img_container"><img src="images/icons/games.svg" loading="lazy"> </div>
-
+                        <div class="img_container"><img src="images/icons/games.svg" loading="lazy" alt="Ícone jogos">
+                        </div>
                         <span>Jogos</span>
                     </div>
                     <div>
-                        <div class="img_container"><img style="width: 55px;" src="images/icons/arte.svg" loading="lazy"> </div>
-
+                        <div class="img_container"><img style="width: 55px;" src="images/icons/arte.svg"
+                                alt="Ícone arte" loading="lazy">
+                        </div>
                         <span>Desenhar</span>
                     </div>
                     <div>
-                        <div class="img_container"> <img src="images/icons/book.svg" loading="lazy"> </div>
-
-
+                        <div class="img_container"> <img src="images/icons/book.svg" alt="Ícone aprender"
+                                loading="lazy"></div>
                         <span>Aprender</span>
                     </div>
                     <div>
-                        <div class="img_container"> <img src="images/icons/cat.svg" loading="lazy">
+                        <div class="img_container"> <img src="images/icons/cat.svg" loading="lazy" alt="Ícone gatos">
                         </div>
-
                         <span>Gatos :3</span>
                     </div>
 
@@ -153,19 +153,19 @@
             <div class="work-grid">
                 <div class="work-item">
                     <a href="/portifolio#design-grafico">
-                        <img src="images/dg/coworking/coworkingfam_3.png" alt="Design Gráfico" loading="lazy">
-                        <h3>Design Gráfico</h3>
+                    <img src="images/dg/coworking/coworkingfam_3.png" alt="Imagem de Design Gráfico" loading="lazy">
+                    <h3>Design Gráfico</h3>
                     </a>
                 </div>
                 <div class="work-item">
                     <a href="/portifolio#front-end">
-                        <img src="images/fe/infofamimg.png" alt="Web Design | Front-end" loading="lazy">
+                        <img src="images/fe/infofamimg.png" alt="Imagem de Web Design e Front-end" loading="lazy">
                         <h3>Web Design | Front-end</h3>
                     </a>
                 </div>
                 <div class="work-item">
                     <a href="/portifolio#ilustracoes">
-                        <img src="images\i\luz.jpg" alt="Ilustração" loading="lazy">
+                        <img src="images\i\luz.jpg" alt="Imagem de Ilustração" loading="lazy">
                         <h3>Ilustrações</h3>
                     </a>
                 </div>
