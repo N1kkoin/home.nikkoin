@@ -73,6 +73,9 @@ button {
 }
 
 /* NAVBAR //////////////////////////////////////////////////////////////////////////////////////////////*/
+.nav_links a.ativa {
+    color: var(--verde-principal); /* cor diferente para o link ativo */
+}
 
 /* Estilo apenas para a página .body_index */
 .body_index nav {
@@ -128,6 +131,9 @@ nav {
 }
 
 /*--------------------------------------------------------------------------*/
+nav.scrolled-past-600 a.ativa {
+    color: var(--amarelo); /* cor diferente para o link ativo */
+}
 
 nav.scrolled-past-600 {
     background-color: var(--verde-principal);
