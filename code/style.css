@@ -307,7 +307,7 @@ nav.scrolled-past-600 {
 
 .imagem-texto-sobre img {
     border-radius: 0 6px 0 6px;
-    width: 270px;
+    width: 280px;
     height: 100%;
     object-fit: cover;
 
@@ -315,11 +315,8 @@ nav.scrolled-past-600 {
 
 .imagem-container {
     position: relative;
-    /* Agora a legenda se posiciona em relação a este container */
-    width: 270px;
-    /* Define a largura da imagem */
+    width: 280px;
     height: 280px;
-    /* Define a altura da imagem */
     float: right;
     margin-left: 20px;
 }
@@ -405,9 +402,7 @@ nav.scrolled-past-600 {
 
 .work-item {
     padding: 10px;
-    padding-bottom: 25px;
-    width: 250px;
-    height: 250px;
+    width: 290px;
     text-align: center;
     border: 2px solid white;
     border-radius: 6px;
@@ -425,10 +420,10 @@ nav.scrolled-past-600 {
 
 .work-item img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 4 / 3; /* Define a proporção da imagem */
     object-fit: cover;
     border-radius: 0 6px 0 6px;
-    height: 220px;
+   
     /* Defina uma altura fixa para a imagem */
 }
 
@@ -642,6 +637,20 @@ footer p {
     .frase {
         padding: 0;
     }
+
+    .work-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-item {
+        width: 100%;
+    }
+
+    .work-item img{
+        aspect-ratio: 3 / 2; /* Define a proporção da imagem */
+
+    }
 }
 
 @media (max-width: 700px) {
@@ -676,14 +685,7 @@ footer p {
         flex-wrap: wrap;
     }
 
-    .work-grid {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .work-item {
-        width: 100%;
-    }
 
 }
 
