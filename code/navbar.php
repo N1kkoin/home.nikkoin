@@ -28,9 +28,14 @@ gtag('config', 'G-23BZZMMJMP');
     <div class="nav_container">
         <a target="_blank" href="#" class="logo"><img src="/images/nh_logo.svg"></a>
         <div class="nav_links">
-            <a href="/" class="<?php echo ($_SERVER['REQUEST_URI'] == '/' ? 'ativa' : ''); ?>">Início</a>
-            <a href="/portifolio" class="<?php echo ($_SERVER['REQUEST_URI'] == '/portifolio' ? 'ativa' : ''); ?>">Portifólio</a>
-            <a target="_blank" href="/seja-veloz" class="<?php echo ($_SERVER['REQUEST_URI'] == '/seja-veloz' ? 'ativa' : ''); ?>">Seja Veloz</a>
+            <a href="/"
+                class="<?php echo ($_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '/index.php' ? 'ativa' : ''); ?>">Início</a>
+            <a href="/portifolio"
+                class="<?php echo ($_SERVER['REQUEST_URI'] == '/portifolio' || $_SERVER['REQUEST_URI'] == '/portifolio/' ? 'ativa' : ''); ?>">Portifólio</a>
+            <a target="_blank" href="/seja-veloz"
+                class="<?php echo ($_SERVER['REQUEST_URI'] == '/seja-veloz' || $_SERVER['REQUEST_URI'] == '/seja-veloz/' ? 'ativa' : ''); ?>">Seja
+                Veloz</a>
         </div>
+
     </div>
 </nav>

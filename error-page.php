@@ -34,32 +34,12 @@ switch ($error_code) {
 }
 
 // Exibir a mensagem de erro
+
+$title = "$error_code - Erro"; // Atualiza o título para o erro específico
+include('code/navbar.php');
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $error_code; ?> - Erro</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="alternate icon" href="images/icone.ico">
-    <link rel="icon" href="images/icone.svg">
-</head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-23BZZMMJMP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-23BZZMMJMP');
-</script>
-
 <body>
-    <?php include('code/navbar.php'); ?>
 
     <div class="index_nh">
         <div class="fundodiferenciado_quatrozeroquatro">
@@ -73,22 +53,22 @@ switch ($error_code) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="code/script.js"></script>
     <script>
-    // COUNTDRON 404 PAGE ---------------------------///////////////////////
+        // COUNTDRON 404 PAGE ---------------------------///////////////////////
 
-    document.addEventListener('DOMContentLoaded', function() {
-        let countdown = 5;
-        const countdownElement = document.getElementById('countdown');
+        document.addEventListener('DOMContentLoaded', function() {
+            let countdown = 5;
+            const countdownElement = document.getElementById('countdown');
 
-        const interval = setInterval(() => {
-            countdown--;
-            countdownElement.textContent = countdown;
+            const interval = setInterval(() => {
+                countdown--;
+                countdownElement.textContent = countdown;
 
-            if (countdown === 0) {
-                clearInterval(interval);
-                window.location.href = '/';
-            }
-        }, 1000);
-    });
+                if (countdown === 0) {
+                    clearInterval(interval);
+                    window.location.href = '/';
+                }
+            }, 1000);
+        });
     </script>
 </body>
 
