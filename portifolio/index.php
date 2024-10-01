@@ -4,7 +4,6 @@
 ?>
 
 <body class="body_portifolio">
-
     <div>
         <header class="header_portifolio">
             <h1>Portifólio</h1>
@@ -193,11 +192,13 @@
                 </div>
                 <!-- Imagem 2 -->
                 <div class="portfolio-item">
-                    <a target="_blank" href="/seja-veloz/"><img src="/images/fe/seja_veloz/sejavelozimg.png" alt="Imagem 2" class="portfolio-image"></a>
+                    <a target="_blank" href="/seja-veloz/"><img src="/images/fe/seja_veloz/sejavelozimg.png"
+                            alt="Imagem 2" class="portfolio-image"></a>
                 </div>
                 <!-- Imagem 3 -->
                 <div class="portfolio-item">
-                    <a target="_blank" href="https://hospitalveterinariofam.com.br/"><img src="/images/fe/banner_atedimento.png" alt="Imagem 3" class="portfolio-image"></a>
+                    <a target="_blank" href="https://hospitalveterinariofam.com.br/"><img
+                            src="/images/fe/banner_atedimento.png" alt="Imagem 3" class="portfolio-image"></a>
                 </div>
                 <!-- Imagem 4 -->
                 <div class="portfolio-item" data-overlay="email">
@@ -209,7 +210,7 @@
             <div id="info-fam" class="overlay">
                 <div class="overlay-content">
                     <iframe src="//jsfiddle.net/Nikkoin/kf9up7Lo/99/embedded/result/?accentColor=73C382"
-                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
@@ -256,7 +257,7 @@
             <div id="mariana" class="overlay">
                 <div class="overlay-content">
                     <div class="imgs-design"><img src="/images/i/i3.5.png"></div>
-                    
+
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
@@ -289,7 +290,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/jquery-anyimagecomparisonslider-plugin'></script>
-    
+
     <script src="../code/script.js"></script>
 </body>
 

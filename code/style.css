@@ -74,7 +74,7 @@ button {
 
 /* NAVBAR //////////////////////////////////////////////////////////////////////////////////////////////*/
 .nav_links a.ativa {
-    color: var(--verde-principal); /* cor diferente para o link ativo */
+    color: var(--verde-claro); /* cor diferente para o link ativo */
 }
 
 /* Estilo apenas para a página .body_index */
