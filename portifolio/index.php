@@ -22,23 +22,23 @@
             <div class="portfolio-container">
                 <!-- Imagem 1 -->
                 <div class="portfolio-item" data-overlay="overlay1">
-                    <img src="/images/dg/coworking/coworkingfam.png" alt="Imagem 1" class="portfolio-image">
+                    <img src="/images/dg/coworking/coworkingfam.png" alt="Imagem 1" class="portfolio-image" loading="lazy">
                 </div>
                 <!-- Imagem 5 -->
                 <div class="portfolio-item" data-overlay="overlay5">
-                    <img src="/images/dg/trunfomeme/dg2.png" alt="Imagem 3" class="portfolio-image">
+                    <img src="/images/dg/trunfomeme/dg2.png" alt="Imagem 3" class="portfolio-image" loading="lazy">
                 </div>
                 <!-- Imagem 2 -->
                 <div class="portfolio-item" data-overlay="overlay2">
-                    <img src="/images/dg/dg3.png" alt="Imagem 2" class="portfolio-image">
+                    <img src="/images/dg/dg3.png" alt="Imagem 2" class="portfolio-image" loading="lazy">
                 </div>
                 <!-- Imagem 3 -->
                 <div class="portfolio-item" data-overlay="overlay3">
-                    <img src="/images/dg/dg5.png" alt="Imagem 3" class="portfolio-image">
+                    <img src="/images/dg/dg5.png" alt="Imagem 3" class="portfolio-image" loading="lazy">
                 </div>
                 <!-- Imagem 4 -->
                 <div class="portfolio-item" data-overlay="overlay4">
-                    <img src="/images/dg/dg4.png" alt="Imagem 3" class="portfolio-image">
+                    <img src="/images/dg/dg4.png" alt="Imagem 3" class="portfolio-image" loading="lazy">
                 </div>
             </div>
 
@@ -46,7 +46,7 @@
             <div id="overlay1" class="overlay">
                 <div class="overlay-content">
                     <div class="coworking">
-                        <div class="img-principal"><img src="/images/dg/coworking/coworkingfam.png" alt="Image 1">
+                        <div class="img-principal"><img src="/images/dg/coworking/coworkingfam.png" alt="Image 1" loading="lazy">
                         </div>
                         <h1>Coworking Shopping Park City <span style="color: #e53888;">2</span><span
                                 style="color: #f9e20f;">0</span><span style="color: #45B7E5;">2</span><span
@@ -100,10 +100,10 @@
                                 href="https://www.instagram.com/alemarasampaio/">@nikkoin_</a></p>
 
                         <div class="coworkingstyle">
-                            <div class="div1"><img src="/images/dg/coworking/coworkingfam_2.png" alt="Image"></div>
-                            <div class="div2"><img src="/images/dg/coworking/coworkingfam_3.png" alt="Image">
+                            <div class="div1"><img src="/images/dg/coworking/coworkingfam_2.png" alt="Image" loading="lazy"></div>
+                            <div class="div2"><img src="/images/dg/coworking/coworkingfam_3.png" alt="Image" loading="lazy">
                             </div>
-                            <div class="div3"><img src="/images/dg/coworking/coworkingfam_4.png" alt="Image"></div>
+                            <div class="div3"><img src="/images/dg/coworking/coworkingfam_4.png" alt="Image" loading="lazy"></div>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
             <div id="overlay5" class="overlay">
                 <div class="overlay-content">
                     <div class="trunfo">
-                        <div class="img-principal"><img src="/images/dg/trunfomeme/meme_1.png"></div>
+                        <div class="img-principal"><img src="/images/dg/trunfomeme/meme_1.png" loading="lazy"></div>
                         <div class="trunfomeme ">
                             <h1>Super Trunfo de Memes <span style="color: #C82D36;">2022</span></h1>
                             <p>Destaco o Super Trunfo, entre um dos projetos acadêmicos que mais aprecio, desenvolvido
@@ -140,7 +140,7 @@
                             <p>
                         </div>
 
-                        <div class="segunda"><img src="/images/dg/trunfomeme/meme_2.png"></div>
+                        <div class="segunda"><img src="/images/dg/trunfomeme/meme_2.png" loading="lazy"></div>
                     </div>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
@@ -148,7 +148,7 @@
 
             <div id="overlay2" class="overlay">
                 <div class="overlay-content">
-                    <div class="calendario"> <img src="/images/dg/dg3.5.png"></div>
+                    <div class="calendario"> <img src="/images/dg/dg3.5.png" loading="lazy"></div>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
@@ -156,7 +156,7 @@
             <div id="overlay3" class="overlay">
                 <div class="overlay-content">
                     <div class="mapa ">
-                        <img src="/images/dg/MapaFAM_1.png">
+                        <img src="/images/dg/MapaFAM_1.png" loading="lazy">
                         <div class="aics-wrapper">
                             *Passe o mouse para ver a diferença
                             <div id="aics-autostart">
@@ -168,7 +168,7 @@
                                 </div>
                             </div>
                         </div>
-                        <img src="/images/dg/MapaFAM_2.png">
+                        <img src="/images/dg/MapaFAM_2.png" loading="lazy">
                     </div>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
@@ -176,7 +176,7 @@
 
             <div id="overlay4" class="overlay">
                 <div class="overlay-content">
-                    <div class="eu"> <img src="/images/dg/NH_marca.png"></div>
+                    <div class="eu"> <img src="/images/dg/NH_marca.png" loading="lazy"></div>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
@@ -188,21 +188,21 @@
             <div class="portfolio-container">
                 <!-- Imagem 1 -->
                 <div class="portfolio-item" data-overlay="info-fam">
-                    <img src="/images/fe/infofamimg.png" alt="Imagem 1" class="portfolio-image">
+                    <img src="/images/fe/infofamimg.png" alt="Imagem 1" class="portfolio-image" loading="lazy">
                 </div>
                 <!-- Imagem 2 -->
                 <div class="portfolio-item">
                     <a target="_blank" href="/seja-veloz/"><img src="/images/fe/seja_veloz/sejavelozimg.png"
-                            alt="Imagem 2" class="portfolio-image"></a>
+                            alt="Imagem 2" class="portfolio-image" loading="lazy"></a>
                 </div>
                 <!-- Imagem 3 -->
                 <div class="portfolio-item">
                     <a target="_blank" href="https://hospitalveterinariofam.com.br/"><img
-                            src="/images/fe/banner_atedimento.png" alt="Imagem 3" class="portfolio-image"></a>
+                            src="/images/fe/banner_atedimento.png" alt="Imagem 3" class="portfolio-image" loading="lazy"></a>
                 </div>
                 <!-- Imagem 4 -->
                 <div class="portfolio-item" data-overlay="email">
-                    <img src="/images/fe/templeteemail.png" alt="Imagem 3" class="portfolio-image">
+                    <img src="/images/fe/templeteemail.png" alt="Imagem 3" class="portfolio-image" loading="lazy">
                 </div>
             </div>
 
@@ -237,26 +237,26 @@
             <div class="portfolio-container">
                 <!-- Imagem 1 -->
                 <div class="portfolio-item" data-overlay="mariana">
-                    <img src="/images/i/i3.png" alt="Imagem 1" class="portfolio-image">
+                    <img src="/images/i/i3.png" alt="Imagem 1" class="portfolio-image" loading="lazy">
                 </div>
                 <!-- Imagem 2 -->
                 <div class="portfolio-item" data-overlay="varios">
-                    <img src="/images/i/i2.png" alt="Imagem 2" class="portfolio-image">
+                    <img src="/images/i/i2.png" alt="Imagem 2" class="portfolio-image" loading="lazy">
                 </div>
                 <!-- Imagem 3 -->
                 <div class="portfolio-item" data-overlay="humanoide">
-                    <img src="/images/i/i5.png" alt="Imagem 3" class="portfolio-image">
+                    <img src="/images/i/i5.png" alt="Imagem 3" class="portfolio-image" loading="lazy">
                 </div>
                 <!-- Imagem 4 -->
                 <div class="portfolio-item" data-overlay="manga">
-                    <img src="/images/i/i4.png" alt="Imagem 3" class="portfolio-image">
+                    <img src="/images/i/i4.png" alt="Imagem 3" class="portfolio-image" loading="lazy">
                 </div>
             </div>
 
             <!-- Overlays -->
             <div id="mariana" class="overlay">
                 <div class="overlay-content">
-                    <div class="imgs-design"><img src="/images/i/i3.5.png"></div>
+                    <div class="imgs-design"><img src="/images/i/i3.5.png" loading="lazy"></div>
 
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
@@ -264,21 +264,21 @@
 
             <div id="varios" class="overlay">
                 <div class="overlay-content">
-                    <div class="imgs-design"><img src="/images/i/i1.5.png"></div>
+                    <div class="imgs-design"><img src="/images/i/i1.5.png" loading="lazy"></div>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
 
             <div id="humanoide" class="overlay">
                 <div class="overlay-content">
-                    <div class="imgs-design"><img src="/images/i/i5.5.png"></div>
+                    <div class="imgs-design"><img src="/images/i/i5.5.png" loading="lazy"></div>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
 
             <div id="manga" class="overlay">
                 <div class="overlay-content">
-                    <div class="imgs-design"><img src="/images/i/i4.5.png"></div>
+                    <div class="imgs-design"><img src="/images/i/i4.5.png" loading="lazy"></div>
                     <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>

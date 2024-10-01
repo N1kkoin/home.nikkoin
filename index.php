@@ -14,7 +14,7 @@
                     <a href="https://www.linkedin.com/in/nicoleheguy/" title="Linkedin"><i
                             class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <img class="nikkoinlogo" src="images/Marca_NH.svg">
+                <img class="nikkoinlogo" src="images/Marca_NH.svg" loading="lazy">
                 <p class="escrevendo" id="typewriter">Nikkon</p>
             </div>
         </header>
@@ -34,7 +34,7 @@
             </br>
             <div class="imagem-texto-sobre">
                 <div class="imagem-container ">
-                    <img src="images/eu.jpg">
+                    <img src="images/eu.jpg" loading="lazy">
                     <div class="legenda">Foto não está editada - RD Summit 2023</div>
                 </div>
                 <div>
@@ -121,23 +121,23 @@
                 <h2>Interesses</h2>
                 <div class="interesses">
                     <div>
-                        <div class="img_container"><img src="images/icons/games.svg"> </div>
+                        <div class="img_container"><img src="images/icons/games.svg" loading="lazy"> </div>
 
                         <span>Jogos</span>
                     </div>
                     <div>
-                        <div class="img_container"><img style="width: 55px;" src="images/icons/arte.svg"> </div>
+                        <div class="img_container"><img style="width: 55px;" src="images/icons/arte.svg" loading="lazy"> </div>
 
                         <span>Desenhar</span>
                     </div>
                     <div>
-                        <div class="img_container"> <img src="images/icons/book.svg"> </div>
+                        <div class="img_container"> <img src="images/icons/book.svg" loading="lazy"> </div>
 
 
                         <span>Aprender</span>
                     </div>
                     <div>
-                        <div class="img_container"> <img src="images/icons/cat.svg">
+                        <div class="img_container"> <img src="images/icons/cat.svg" loading="lazy">
                         </div>
 
                         <span>Gatos :3</span>
@@ -153,19 +153,19 @@
             <div class="work-grid">
                 <div class="work-item">
                     <a href="/portifolio#design-grafico">
-                        <img src="images/dg/coworking/coworkingfam_3.png" alt="Design Gráfico">
+                        <img src="images/dg/coworking/coworkingfam_3.png" alt="Design Gráfico" loading="lazy">
                         <h3>Design Gráfico</h3>
                     </a>
                 </div>
                 <div class="work-item">
                     <a href="/portifolio#front-end">
-                        <img src="images/fe/infofamimg.png" alt="Web Design | Front-end">
+                        <img src="images/fe/infofamimg.png" alt="Web Design | Front-end" loading="lazy">
                         <h3>Web Design | Front-end</h3>
                     </a>
                 </div>
                 <div class="work-item">
                     <a href="/portifolio#ilustracoes">
-                        <img src="images\i\luz.jpg" alt="Ilustração">
+                        <img src="images\i\luz.jpg" alt="Ilustração" loading="lazy">
                         <h3>Ilustrações</h3>
                     </a>
                 </div>
