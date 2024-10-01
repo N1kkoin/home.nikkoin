@@ -578,12 +578,8 @@ footer p {
 
 .loguinho {
     width: 11px;
-    filter: invert(72%) sepia(16%) saturate(284%) hue-rotate(144deg) brightness(86%) contrast(88%);
-}
-
-.loguinho img {
-    width: 11px;
     height: 11px;
+    filter: invert(72%) sepia(16%) saturate(284%) hue-rotate(144deg) brightness(86%) contrast(88%);
 }
 
 /* 404 ERROR ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
