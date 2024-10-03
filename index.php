@@ -10,14 +10,16 @@
         <header class="header_index">
             <div class="fundodiferenciado">
                 <div class="contatos">
-                    <a class="animacao" href="mailto:contato@nikkoin.art" title="Email"  data-delay="300"><i class="far fa-envelope"></i></a>
-                    <a class="animacao" href="https://www.instagram.com/nikkoin_/" title="Instagram" data-delay="500"><i class="fab fa-instagram" ></i></a>
-                    <a class="animacao" href="https://www.linkedin.com/in/nicoleheguy/" title="Linkedin" data-delay="800"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a class="animacao" href="mailto:contato@nikkoin.art" title="Email" data-delay="0"><i
+                            class="far fa-envelope"></i></a>
+                    <a class="animacao" href="https://www.instagram.com/nikkoin_/" title="Instagram" data-delay="200"><i
+                            class="fab fa-instagram"></i></a>
+                    <a class="animacao" href="https://www.linkedin.com/in/nicoleheguy/" title="Linkedin"
+                        data-delay="400"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <img class="nikkoinlogo animacao" src="images/Marca_NH.svg" alt="Logo Nikkoin Design" loading="lazy"
-                    data-delay="1000">
-                <p class="escrevendo animacao" id="typewriter" data-delay="1200">Nikkon</p>
+                    data-delay="600">
+                <p class="escrevendo animacao" id="typewriter" data-delay="800">Nikkon</p>
             </div>
         </header>
 
