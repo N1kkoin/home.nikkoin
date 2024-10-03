@@ -215,6 +215,18 @@ nav.scrolled-past-600 {
     padding: 10px 50px;
 }
 
+.animacao {
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(20px); /* Inicialmente deslocada para baixo */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Animação suave */
+}
+
+.loaded {
+    opacity: 1; /* Totalmente visível */
+    transform: translateY(0); /* Volta à posição original */
+}
+
+
 .contatos {
     margin-top: 40px;
     display: flex;
@@ -719,13 +731,13 @@ footer p {
     align-items: center;
     flex-direction: column;
     background-color: var(--roxo);
-    position: relative;
+
     /* Garante que os elementos internos fiquem posicionados corretamente */
     color: white;
     /* Ajuste a cor do texto para garantir que ele seja visível */
     text-align: center;
     /* Centraliza o texto */
-    width: calc(100% - 40px);
+ 
     margin: 0 auto;
     border-radius: 0 0 6px 6px;
 }

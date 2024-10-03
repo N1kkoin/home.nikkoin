@@ -10,13 +10,14 @@
         <header class="header_index">
             <div class="fundodiferenciado">
                 <div class="contatos">
-                    <a href="mailto:contato@nikkoin.art" title="Email"><i class="far fa-envelope"></i></a>
-                    <a href="https://www.instagram.com/nikkoin_/" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/nicoleheguy/" title="Linkedin"><i
+                    <a class="animacao" href="mailto:contato@nikkoin.art" title="Email"  data-delay="300"><i class="far fa-envelope"></i></a>
+                    <a class="animacao" href="https://www.instagram.com/nikkoin_/" title="Instagram" data-delay="500"><i class="fab fa-instagram" ></i></a>
+                    <a class="animacao" href="https://www.linkedin.com/in/nicoleheguy/" title="Linkedin" data-delay="800"><i
                             class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <img class="nikkoinlogo" src="images/Marca_NH.svg" alt="Logo Nikkoin Design" loading="lazy">
-                <p class="escrevendo" id="typewriter">Nikkon</p>
+                <img class="nikkoinlogo animacao" src="images/Marca_NH.svg" alt="Logo Nikkoin Design" loading="lazy"
+                    data-delay="1000">
+                <p class="escrevendo animacao" id="typewriter" data-delay="1200">Nikkon</p>
             </div>
         </header>
 
@@ -153,8 +154,8 @@
             <div class="work-grid">
                 <div class="work-item">
                     <a href="/portifolio#design-grafico">
-                    <img src="images/dg/coworking/coworkingfam_3.png" alt="Imagem de Design Gráfico" loading="lazy">
-                    <h3>Design Gráfico</h3>
+                        <img src="images/dg/coworking/coworkingfam_3.png" alt="Imagem de Design Gráfico" loading="lazy">
+                        <h3>Design Gráfico</h3>
                     </a>
                 </div>
                 <div class="work-item">

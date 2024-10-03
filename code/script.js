@@ -164,3 +164,20 @@ document.querySelectorAll('.close-overlay').forEach(button => {
         document.body.classList.remove('no-scroll');
     });
 });
+
+
+// Animação logo e outros elementos com delay ////////////////////////////////////////////////////////////////////////////////
+window.addEventListener("load", function() {
+    // Seleciona todos os elementos com a classe 'animacao'
+    var elements = document.querySelectorAll(".animacao");
+    
+    // Aplica a classe 'loaded' a cada elemento com base no valor de 'data-delay'
+    elements.forEach(function(element) {
+        var delay = element.getAttribute('data-delay') || 0; // Pega o valor de 'data-delay' ou 0 se não existir
+        
+        // Define um timeout para aplicar o atraso e adicionar a classe 'loaded'
+        setTimeout(function() {
+            element.classList.add("loaded");
+        }, delay);
+    });
+});
