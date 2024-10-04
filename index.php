@@ -12,14 +12,14 @@
                 <div class="contatos">
                     <a class="animacao" href="mailto:contato@nikkoin.art" title="Email" data-delay="0"><i
                             class="far fa-envelope"></i></a>
-                    <a class="animacao" href="https://www.instagram.com/nikkoin_/" title="Instagram" data-delay="200"><i
+                    <a class="animacao" href="https://www.instagram.com/nikkoin_/" title="Instagram" data-delay="150"><i
                             class="fab fa-instagram"></i></a>
                     <a class="animacao" href="https://www.linkedin.com/in/nicoleheguy/" title="Linkedin"
-                        data-delay="400"><i class="fa-brands fa-linkedin-in"></i></a>
+                        data-delay="250"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <img class="nikkoinlogo animacao" src="images/Marca_NH.svg" alt="Logo Nikkoin Design" loading="lazy"
-                    data-delay="600">
-                <p class="escrevendo animacao" id="typewriter" data-delay="800">Nikkon</p>
+                    data-delay="400">
+                <p class="escrevendo animacao" id="typewriter" data-delay="600">Nikkon</p>
             </div>
         </header>
 
