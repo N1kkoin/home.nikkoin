@@ -721,7 +721,7 @@ footer p {
 /* PORTIFOLIO //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .body_portifolio {
-    background-color: white;
+    background-color: #f5f9fa;
 }
 
 .body_portifolio .header_portifolio {
@@ -731,14 +731,9 @@ footer p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: var(--roxo);
-
-    /* Garante que os elementos internos fiquem posicionados corretamente */
-    color: white;
-    /* Ajuste a cor do texto para garantir que ele seja visível */
-    text-align: center;
-    /* Centraliza o texto */
- 
+    background-color: #f5f9fa;
+    color: black;
+    text-align: center; 
     margin: 0 auto;
     border-radius: 0 0 6px 6px;
 }
@@ -766,6 +761,7 @@ footer p {
     width: 100%;
     margin: 0 auto;
     border-radius: 6px;
+    background-color: white;
 }
 
 
@@ -776,22 +772,28 @@ footer p {
     gap: 10px;
 }
 
+.body_portifolio .button:nth-child(2) {
+    background-color: var(--verde-principal);
+    border: 2px solid var(--verde-principal);
 
+}
 
 .body_portifolio .button {
-    background-color: var(--amarelo);
-    color: black;
+    background-color: var(--verde-claro);
+    color: white;
     padding: 5px 15px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
-
     border-radius: 6px;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
+    border: 2px solid var(--verde-claro);
 }
 
 .body_portifolio .button:hover {
-    background-color: white;
+    color: black;
+    border: 2px solid var(--verde-principal);
+    background-color: transparent;
 }
 
 .body_portifolio .section {

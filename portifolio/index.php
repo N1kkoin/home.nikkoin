@@ -236,7 +236,7 @@
                 <h2 data-link="/portifolio#ilustracoes"><i class="fa-solid fa-link"></i> Ilustrações</h2>
             </div>
 
-            <div class="portfolio-container">
+            <div style="padding-bottom: 80px;" class="portfolio-container">
                 <!-- Imagem 1 -->
                 <div class="portfolio-item" data-overlay="mariana">
                     <img src="/images/i/i3.png" alt="Imagem 1" class="portfolio-image" loading="lazy">
