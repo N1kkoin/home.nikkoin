@@ -65,7 +65,11 @@ window.addEventListener('load', checkScrollPosition);
 // Verifica o scroll enquanto o usuário navega na página
 window.addEventListener('scroll', checkScrollPosition);
 
+var btn = $('.btn');
 
+btn.on('click', function() {
+  $(this).toggleClass('active not-active');
+});
 
 // MAIN /////////////////////////////////////////////////////////////////////////////////////////////////
 
