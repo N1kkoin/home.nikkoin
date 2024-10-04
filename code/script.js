@@ -177,7 +177,8 @@ window.addEventListener("load", function() {
     
     // Aplica a classe 'loaded' a cada elemento com base no valor de 'data-delay'
     elements.forEach(function(element) {
-        var delay = element.getAttribute('data-delay') || 0; // Pega o valor de 'data-delay' ou 0 se não existir
+        // Converte o valor de 'data-delay' para um número, ou define como 0 se não existir
+        var delay = parseInt(element.getAttribute('data-delay')) || 0;
         
         // Define um timeout para aplicar o atraso e adicionar a classe 'loaded'
         setTimeout(function() {

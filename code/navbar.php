@@ -19,7 +19,7 @@ function isActive($path) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="alternate icon" href="/images/icone.ico">
     <link rel="icon" href="/images/icone.svg">
-    <link rel="stylesheet" href="/code/style.css?v=1.23">
+    <link rel="stylesheet" href="/code/style.css?v=1.24">
 </head>
 
 <!-- Google tag (gtag.js) -->
