@@ -34,20 +34,53 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['client_username'])) {
     $tags = htmlspecialchars(trim($_POST['tags']));
 
     // Inserir os dados do post no banco de dados
-    $stmt = $conn->prepare("INSERT INTO posts (client_username, title, description, tags) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $client_username, $title, $description, $tags);
-    $stmt->execute();
+    $stmt = $conn->prepare("INSERT INTO posts (client_username, title, description, tags, thumbnail) VALUES (?, ?, ?, ?, ?)");
     
-    $post_id = $stmt->insert_id; // Obter o ID do post recém-criado
+    // Processar o upload da miniatura
+    $thumbnail_name = '';
+    if (isset($_FILES['thumbnail']) && $_FILES['thumbnail']['error'] == UPLOAD_ERR_OK) {
+        $thumbnail_name = $_FILES['thumbnail']['name'];
+        $thumbnail_tmp_name = $_FILES['thumbnail']['tmp_name'];
+        $thumbnail_target = "uploads/$client_username/" . basename($thumbnail_name);
+        
+        // Mover a imagem da miniatura
+        if (move_uploaded_file($thumbnail_tmp_name, $thumbnail_target)) {
+            // Miniatura foi enviada com sucesso
+        } else {
+            echo "Erro ao enviar a imagem da miniatura.";
+            exit;
+        }
+    } else {
+        $thumbnail_name = null; // Caso não haja imagem da miniatura
+    }
+
+    $stmt->bind_param("sssss", $client_username, $title, $description, $tags, $thumbnail_name);
+    
+    if ($stmt->execute()) {
+        $post_id = $stmt->insert_id; // Obter o ID do post recém-criado
+    } else {
+        echo "Erro ao criar post: " . $stmt->error;
+        exit;
+    }
 
     // Processar o upload dos arquivos
     if (isset($_FILES['files'])) {
         foreach ($_FILES['files']['tmp_name'] as $key => $tmp_name) {
             if ($_FILES['files']['error'][$key] == UPLOAD_ERR_OK) {
                 $file_name = $_FILES['files']['name'][$key];
+                $file_tmp_name = $_FILES['files']['tmp_name'][$key];
                 $target_file = "uploads/$client_username/" . basename($file_name);
 
-                if (move_uploaded_file($tmp_name, $target_file)) {
+                // Certifica-se de que o diretório existe
+                if (!is_dir("uploads/$client_username/")) {
+                    if (!mkdir("uploads/$client_username/", 0777, true)) {
+                        echo "Erro ao criar o diretório para upload.";
+                        exit;
+                    }
+                }
+
+                // Mover o arquivo enviado para o diretório de destino
+                if (move_uploaded_file($file_tmp_name, $target_file)) {
                     // Registro do arquivo no banco de dados
                     $stmt = $conn->prepare("INSERT INTO uploads (client_username, file_name, post_id) VALUES (?, ?, ?)");
                     $stmt->bind_param("ssi", $client_username, $target_file, $post_id);
@@ -55,6 +88,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['client_username'])) {
                 } else {
                     echo "Erro ao enviar o arquivo: $file_name";
                 }
+            } else {
+                echo "Erro no upload do arquivo: " . $_FILES['files']['name'][$key] . ". Código de erro: " . $_FILES['files']['error'][$key];
             }
         }
     }
@@ -119,6 +154,7 @@ if (isset($_POST['delete_post_id'])) {
     <!-- Formulário de Upload -->
     <h2>Enviar Arquivo</h2>
     <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="thumbnail" required>
         <input type="file" name="files[]" multiple required>
         <input type="hidden" name="client_username" value="<?php echo htmlspecialchars($username); ?>">
         <input type="text" name="title" placeholder="Título" required>
@@ -138,32 +174,38 @@ if (isset($_POST['delete_post_id'])) {
             <small>Tags: <?php echo htmlspecialchars($row['tags']); ?></small><br>
 
             <?php
-                // Consulta para obter os arquivos associados ao post
-                $stmt_files = $conn->prepare("SELECT file_name FROM uploads WHERE post_id = ?");
-                $stmt_files->bind_param("i", $row['id']);
-                $stmt_files->execute();
-                $result_files = $stmt_files->get_result();
+             // Exibe a imagem da miniatura
+            if (!empty($row['thumbnail'])): ?>
+            <img src="uploads/<?php echo htmlspecialchars($username); ?>/<?php echo htmlspecialchars($row['thumbnail']); ?>"
+                alt="Imagem do Post" style="max-width: 100px; max-height: 100px;" />
+            <?php else: ?>
+            <p>Nenhuma imagem disponível para este post.</p>
+            <?php endif; ?>
 
-                $image_found = false;
-                while ($file = $result_files->fetch_assoc()) {
-                    $file_extension = pathinfo($file['file_name'], PATHINFO_EXTENSION);
-                    if (in_array($file_extension, ['jpg', 'jpeg', 'png'])) {
-                        echo '<img src="' . htmlspecialchars($file['file_name']) . '" alt="Imagem do Post" style="max-width: 100px; max-height: 100px;"/>';
-                        $image_found = true;
-                        break; // Exibe apenas a primeira imagem encontrada
-                    }
+            <?php
+             // Consulta para obter os arquivos associados ao post
+            $stmt_files = $conn->prepare("SELECT file_name FROM uploads WHERE post_id = ?");
+            $stmt_files->bind_param("i", $row['id']);
+            $stmt_files->execute();
+            $result_files = $stmt_files->get_result();
+
+            $files_list = '';
+            while ($file = $result_files->fetch_assoc()) {
+                $file_extension = pathinfo($file['file_name'], PATHINFO_EXTENSION);
+
+                // Adiciona links para arquivos .rar, .zip, .pdf e imagens
+                if (in_array($file_extension, ['rar', 'zip', 'pdf', 'jpg', 'jpeg', 'png'])) {
+                    $files_list .= '<li><a href="' . htmlspecialchars($file['file_name']) . '" download>' . htmlspecialchars(basename($file['file_name'])) . '</a></li>';
                 }
+            }
 
-                if (!$image_found) {
-                    echo '<p>Nenhuma imagem disponível para este post.</p>';
-                }
-                ?>
+            // Exibe os arquivos .rar, .zip e outros tipos de arquivos se existirem
+            if (!empty($files_list)) {
+                echo '<h4>Arquivos adicionais:</h4><ul>' . $files_list . '</ul>';
+            }
 
-            <!-- Botões de Editar e Deletar -->
-            <form method="GET" action="edit_post.php" style="display:inline;">
-                <input type="hidden" name="post_id" value="<?php echo $row['id']; ?>">
-                <button type="submit">Editar</button>
-            </form>
+            ?>
+
             <form method="POST" action="" style="display:inline;">
                 <input type="hidden" name="delete_post_id" value="<?php echo $row['id']; ?>">
                 <button type="submit"
