@@ -16,22 +16,47 @@ if (isset($_POST['search'])) {
 
 // Prepara a consulta para obter a lista de usuários
 $stmt = $conn->prepare("
-    SELECT users.username, users.created_at, 
-    COUNT(uploads.client_username) as file_count
-    FROM users 
+    SELECT 
+        users.username, 
+        users.created_at, 
+        COUNT(uploads.client_username) as file_count,
+        MAX(posts.created_at) as last_post_date
+    FROM 
+        users 
     LEFT JOIN uploads ON users.username = uploads.client_username
-    WHERE users.username LIKE ?
-    GROUP BY users.username
+    LEFT JOIN posts ON users.username = posts.client_username
+    WHERE 
+        users.username LIKE ?
+    GROUP BY 
+        users.username
 ");
 $search_param = "%" . $filter . "%";
 $stmt->bind_param("s", $search_param);
 $stmt->execute();
 $result = $stmt->get_result();
 
-
 // Fecha a declaração
 $stmt->close();
 
+// Função para exibir a tabela de usuários
+function displayUsers($result) {
+    $output = '';
+    while ($row = $result->fetch_assoc()) {
+        $output .= '<tr>';
+        $output .= '<td><a href="view_files.php?username=' . urlencode($row['username']) . '">' . htmlspecialchars($row['username']) . '</a></td>';
+        $output .= '<td>' . htmlspecialchars($row['created_at']) . '</td>';
+        $output .= '<td>' . (int)$row['file_count'] . '</td>';
+        $output .= '<td>' . ($row['last_post_date'] ? htmlspecialchars($row['last_post_date']) : 'Nenhum post') . '</td>';
+        $output .= '</tr>';
+    }
+    return $output;
+}
+
+// Se for uma requisição AJAX, retorne apenas os resultados
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search'])) {
+    echo displayUsers($result);
+    exit; // Para evitar a impressão do restante do HTML
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,43 +65,53 @@ $stmt->close();
     <meta charset="UTF-8">
     <title>Área Administrativa - Lista de Usuários</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // A cada mudança no input de busca
+            $('#search').on('input', function() {
+                var searchQuery = $(this).val();
+
+                $.ajax({
+                    url: 'admin.php', // Mesmo arquivo para processar a busca
+                    type: 'POST',
+                    data: { search: searchQuery },
+                    success: function(data) {
+                        $('#results tbody').html(data); // Atualiza a tabela com os resultados
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <h1>Área Administrativa</h1>
     <p>Lista de todos os usuários</p>
     
     <!-- Formulário de pesquisa -->
-    <form method="POST" action="">
-        <input type="text" name="search" placeholder="Buscar usuário" value="<?php echo htmlspecialchars($filter); ?>">
-        <button type="submit">Buscar</button>
+    <form id="search-form" method="POST" action="">
+        <input type="text" id="search" name="search" placeholder="Buscar usuário" value="<?php echo htmlspecialchars($filter); ?>">
     </form>
 
     <h2>Lista de Usuários</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Nome de Usuário</th>
-                <th>Data de Criação</th>
-                <th>Número de Arquivos Enviados</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php while ($row = $result->fetch_assoc()): ?>
+    <div id="results">
+        <table>
+            <thead>
                 <tr>
-                    <td>
-                        <a href="view_files.php?username=<?php echo urlencode($row['username']); ?>">
-                            <?php echo htmlspecialchars($row['username']); ?>
-                        </a>
-                    </td>
-                    <td><?php echo htmlspecialchars($row['created_at']); ?></td>
-                    <td><?php echo (int)$row['file_count']; ?></td>
-                   
+                    <th>Nome de Usuário</th>
+                    <th>Data de Criação</th>
+                    <th>Número de Arquivos Enviados</th>
+                    <th>Ações</th>
                 </tr>
-            <?php endwhile; ?>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <?php echo displayUsers($result); // Exibe os usuários inicialmente ?>
+            </tbody>
+        </table>
+    </div>
 
     <a href="logout.php">Sair</a>
+    <script src="assets/js/script.js"></script>
+
 </body>
 </html>

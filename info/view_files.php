@@ -105,54 +105,79 @@ if (isset($_POST['delete_post_id'])) {
 
 <body>
 
-<h1>Arquivos de <?php echo htmlspecialchars($username); ?></h1>
+    <h1>Arquivos de <?php echo htmlspecialchars($username); ?></h1>
 
-<!-- Mensagens de Sucesso ou Erro -->
-<?php if ($message): ?>
+    <!-- Mensagens de Sucesso ou Erro -->
+    <?php if ($message): ?>
     <div class="success"><?php echo $message; ?></div>
-<?php endif; ?>
-
-<?php if ($error): ?>
-    <div class="error"><?php echo $error; ?></div>
-<?php endif; ?>
-
-<!-- Formulário de Criar Post -->
-<h2>Criar Post</h2>
-<form method="POST" enctype="multipart/form-data">
-    <input type="text" name="title" placeholder="Título" required>
-    <textarea name="description" placeholder="Descrição" required></textarea>
-    <input type="text" name="tags" placeholder="Tags (separadas por vírgula)" required>
-    <input type="file" name="files[]" multiple required>
-    <input type="hidden" name="client_username" value="<?php echo htmlspecialchars($username); ?>">
-    <button type="submit">Criar Post</button>
-</form>
-
-<!-- Lista de Posts -->
-<h2>Posts Enviados</h2>
-<ul>
-    <?php if ($result_posts->num_rows > 0): ?>
-        <?php while ($row = $result_posts->fetch_assoc()): ?>
-            <li>
-                <strong><?php echo htmlspecialchars($row['title']); ?></strong><br>
-                <em><?php echo htmlspecialchars($row['description']); ?></em><br>
-                <small>Tags: <?php echo htmlspecialchars($row['tags']); ?></small><br>
-                <form method="POST" action="edit_post.php" style="display:inline;">
-                    <input type="hidden" name="post_id" value="<?php echo $row['id']; ?>">
-                    <button type="submit">Editar</button>
-                </form>
-                <form method="POST" action="" style="display:inline;">
-                    <input type="hidden" name="delete_post_id" value="<?php echo $row['id']; ?>">
-                    <button type="submit" onclick="return confirm('Você tem certeza que deseja excluir este post?');">Deletar</button>
-                </form>
-            </li>
-        <?php endwhile; ?>
-    <?php else: ?>
-        <li>Nenhum post encontrado para este usuário.</li>
     <?php endif; ?>
-</ul>
 
-<a href="admin.php">Voltar para Admin</a>
-<a href="logout.php">Sair</a>
+    <?php if ($error): ?>
+    <div class="error"><?php echo $error; ?></div>
+    <?php endif; ?>
+
+    <!-- Formulário de Upload -->
+    <h2>Enviar Arquivo</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="files[]" multiple required>
+        <input type="hidden" name="client_username" value="<?php echo htmlspecialchars($username); ?>">
+        <input type="text" name="title" placeholder="Título" required>
+        <textarea name="description" placeholder="Descrição" required></textarea>
+        <input type="text" name="tags" placeholder="Tags (separadas por vírgula)" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Lista de Arquivos -->
+    <h2>Posts Enviados</h2>
+    <ul>
+        <?php if ($result_posts->num_rows > 0): ?>
+        <?php while ($row = $result_posts->fetch_assoc()): ?>
+        <li>
+            <strong><?php echo htmlspecialchars($row['title']); ?></strong><br>
+            <em><?php echo htmlspecialchars($row['description']); ?></em><br>
+            <small>Tags: <?php echo htmlspecialchars($row['tags']); ?></small><br>
+
+            <?php
+                // Consulta para obter os arquivos associados ao post
+                $stmt_files = $conn->prepare("SELECT file_name FROM uploads WHERE post_id = ?");
+                $stmt_files->bind_param("i", $row['id']);
+                $stmt_files->execute();
+                $result_files = $stmt_files->get_result();
+
+                $image_found = false;
+                while ($file = $result_files->fetch_assoc()) {
+                    $file_extension = pathinfo($file['file_name'], PATHINFO_EXTENSION);
+                    if (in_array($file_extension, ['jpg', 'jpeg', 'png'])) {
+                        echo '<img src="' . htmlspecialchars($file['file_name']) . '" alt="Imagem do Post" style="max-width: 100px; max-height: 100px;"/>';
+                        $image_found = true;
+                        break; // Exibe apenas a primeira imagem encontrada
+                    }
+                }
+
+                if (!$image_found) {
+                    echo '<p>Nenhuma imagem disponível para este post.</p>';
+                }
+                ?>
+
+            <!-- Botões de Editar e Deletar -->
+            <form method="GET" action="edit_post.php" style="display:inline;">
+                <input type="hidden" name="post_id" value="<?php echo $row['id']; ?>">
+                <button type="submit">Editar</button>
+            </form>
+            <form method="POST" action="" style="display:inline;">
+                <input type="hidden" name="delete_post_id" value="<?php echo $row['id']; ?>">
+                <button type="submit"
+                    onclick="return confirm('Você tem certeza que deseja excluir este post?');">Deletar</button>
+            </form>
+        </li>
+        <?php endwhile; ?>
+        <?php else: ?>
+        <li>Nenhum post encontrado para este usuário.</li>
+        <?php endif; ?>
+    </ul>
+
+    <a href="admin.php">Voltar para Admin</a>
+    <a href="logout.php">Sair</a>
 </body>
 
 </html>
