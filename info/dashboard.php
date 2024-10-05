@@ -27,32 +27,36 @@ $posts_result = $stmt->get_result();
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
+
 <body>
 
-    <h1>Bem-vindo, <?php echo $username; ?>!</h1>
+    <div class="client-area">
 
-    <!-- Exibe os posts do admin -->
-    <h2>Posts para você:</h2>
-    <ul>
-        <?php if ($posts_result->num_rows > 0): ?>
-        <?php while ($post = $posts_result->fetch_assoc()): ?>
-        <li>
-            <h3><?php echo htmlspecialchars($post['title']); ?></h3>
-            <p><?php echo htmlspecialchars($post['description']); ?></p>
-            <p><strong>Tags:</strong> <?php echo htmlspecialchars($post['tags']); ?></p>
+        <h1>Bem-vindo, <span class="username"><?php echo $username; ?></span>!</h1>
 
-            <!-- Exibe a imagem da miniatura do post -->
-            <?php if (!empty($post['thumbnail'])): ?>
-            <img src="uploads/<?php echo htmlspecialchars($username); ?>/<?php echo htmlspecialchars($post['thumbnail']); ?>"
-                alt="Miniatura do Post" style="max-width: 100px; max-height: 100px;" />
-            <?php else: ?>
-            <p>Nenhuma miniatura disponível para este post.</p>
-            <?php endif; ?>
+        <!-- Exibe os posts do admin -->
+        <h2>Posts para você:</h2>
+        <ul class="post-list">
+            <?php if ($posts_result->num_rows > 0): ?>
+            <?php while ($post = $posts_result->fetch_assoc()): ?>
+            <li class="post-item">
+                <h3 class="post-title"><?php echo htmlspecialchars($post['title']); ?></h3>
+                <p class="post-description"><?php echo htmlspecialchars($post['description']); ?></p>
+                <p class="post-tags"><strong>Tags:</strong> <?php echo htmlspecialchars($post['tags']); ?></p>
 
-            <!-- Exibe os arquivos relacionados ao post -->
-            <h4>Arquivos do Post:</h4>
-            <ul>
-                <?php 
+                <!-- Exibe a imagem da miniatura do post -->
+                <?php if (!empty($post['thumbnail'])): ?>
+                <img class="post-thumbnail"
+                    src="uploads/<?php echo htmlspecialchars($username); ?>/<?php echo htmlspecialchars($post['thumbnail']); ?>"
+                    alt="Miniatura do Post" />
+                <?php else: ?>
+                <p class="no-thumbnail">Nenhuma miniatura disponível para este post.</p>
+                <?php endif; ?>
+
+                <!-- Exibe os arquivos relacionados ao post -->
+                <h4>Arquivos do Post:</h4>
+                <ul class="file-list">
+                    <?php 
                         // Busca os arquivos relacionados ao post no banco de dados
                         $stmt_files = $conn->prepare("SELECT file_name FROM uploads WHERE post_id = ?");
                         $stmt_files->bind_param("i", $post['id']);
@@ -66,28 +70,29 @@ $posts_result = $stmt->get_result();
 
                                  // Exibe apenas o link para arquivos que são imagens
                                  if (in_array($file_extension, ['jpg', 'jpeg', 'png'])): ?>
-                <li>
-                    <a href="<?php echo htmlspecialchars($safe_file); ?>" download>
-                        <?php echo basename($safe_file); ?>
-                    </a>
-                </li>
-                <?php else: ?>
-                <li><a href="<?php echo htmlspecialchars($safe_file); ?>"
-                        download><?php echo basename($safe_file); ?></a></li>
-                <?php endif; ?>
-                <?php endwhile; 
+                    <li class="file-item">
+                        <a class="file-link" href="<?php echo htmlspecialchars($safe_file); ?>" download>
+                            <?php echo basename($safe_file); ?>
+                        </a>
+                    </li>
+                    <?php else: ?>
+                    <li class="file-item"><a class="file-link" href="<?php echo htmlspecialchars($safe_file); ?>"
+                            download><?php echo basename($safe_file); ?></a></li>
+                    <?php endif; ?>
+                    <?php endwhile; 
                         else: ?>
-                <li>Nenhum arquivo anexado a este post.</li>
-                <?php endif; ?>
-            </ul>
-        </li>
-        <?php endwhile; ?>
-        <?php else: ?>
-        <li>Nenhum post disponível.</li>
-        <?php endif; ?>
-    </ul>
+                    <li class="no-files">Nenhum arquivo anexado a este post.</li>
+                    <?php endif; ?>
+                </ul>
+            </li>
+            <?php endwhile; ?>
+            <?php else: ?>
+            <li class="no-posts">Nenhum post disponível.</li>
+            <?php endif; ?>
+        </ul>
 
-    <a href="logout.php">Sair</a>
+        <a class="logout-link" href="logout.php">Sair</a>
+    </div>
 </body>
 
 </html>

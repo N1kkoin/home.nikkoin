@@ -61,36 +61,41 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search'])) {
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Área Administrativa - Lista de Usuários</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
-            // A cada mudança no input de busca
-            $('#search').on('input', function() {
-                var searchQuery = $(this).val();
+    $(document).ready(function() {
+        // A cada mudança no input de busca
+        $('#search').on('input', function() {
+            var searchQuery = $(this).val();
 
-                $.ajax({
-                    url: 'admin.php', // Mesmo arquivo para processar a busca
-                    type: 'POST',
-                    data: { search: searchQuery },
-                    success: function(data) {
-                        $('#results tbody').html(data); // Atualiza a tabela com os resultados
-                    }
-                });
+            $.ajax({
+                url: 'admin.php', // Mesmo arquivo para processar a busca
+                type: 'POST',
+                data: {
+                    search: searchQuery
+                },
+                success: function(data) {
+                    $('#results tbody').html(data); // Atualiza a tabela com os resultados
+                }
             });
         });
+    });
     </script>
 </head>
+
 <body>
     <h1>Área Administrativa</h1>
     <p>Lista de todos os usuários</p>
-    
+
     <!-- Formulário de pesquisa -->
     <form id="search-form" method="POST" action="">
-        <input type="text" id="search" name="search" placeholder="Buscar usuário" value="<?php echo htmlspecialchars($filter); ?>">
+        <input type="text" id="search" name="search" placeholder="Buscar usuário"
+            value="<?php echo htmlspecialchars($filter); ?>">
     </form>
 
     <h2>Lista de Usuários</h2>
@@ -114,4 +119,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search'])) {
     <script src="assets/js/script.js"></script>
 
 </body>
+
 </html>
