@@ -2,6 +2,9 @@
 session_start();
 require 'db.php';
 
+// Define o fuso horário para Brasília
+date_default_timezone_set('America/Sao_Paulo');
+
 // Verifica se o usuário é admin
 if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
     header("Location: login.php");
@@ -38,15 +41,20 @@ $result = $stmt->get_result();
 // Fecha a declaração
 $stmt->close();
 
+// Função para formatar as datas
+function formatDate($date) {
+    return date('d/m/Y H:i:s', strtotime($date));
+}
+
 // Função para exibir a tabela de usuários
 function displayUsers($result) {
     $output = '';
     while ($row = $result->fetch_assoc()) {
         $output .= '<tr>';
-        $output .= '<td><a href="view_files.php?username=' . urlencode($row['username']) . '">' . htmlspecialchars($row['username']) . '</a></td>';
-        $output .= '<td>' . htmlspecialchars($row['created_at']) . '</td>';
-        $output .= '<td>' . (int)$row['file_count'] . '</td>';
-        $output .= '<td>' . ($row['last_post_date'] ? htmlspecialchars($row['last_post_date']) : 'Nenhum post') . '</td>';
+        $output .= '<td class="username-cell"><a href="view_files.php?username=' . urlencode($row['username']) . '">' . htmlspecialchars($row['username']) . '</a></td>';
+        $output .= '<td class="creation-date-cell">' . formatDate($row['created_at']) . '</td>';
+        $output .= '<td class="file-count-cell">' . (int)$row['file_count'] . '</td>';
+        $output .= '<td class="last-post-cell">' . ($row['last_post_date'] ? formatDate($row['last_post_date']) : 'Nenhum post') . '</td>';
         $output .= '</tr>';
     }
     return $output;
@@ -89,35 +97,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search'])) {
 </head>
 
 <body>
-    <h1>Área Administrativa</h1>
-    <p>Lista de todos os usuários</p>
+    <div class="admin-area">
+        <h1>Área Administrativa</h1>
+        <p>Lista de todos os usuários</p>
 
-    <!-- Formulário de pesquisa -->
-    <form id="search-form" method="POST" action="">
-        <input type="text" id="search" name="search" placeholder="Buscar usuário"
-            value="<?php echo htmlspecialchars($filter); ?>">
-    </form>
+        <!-- Formulário de pesquisa -->
+        <form id="search-form" method="POST" action="">
+            <input type="text" id="search" name="search" class="search-input" placeholder="Buscar usuário"
+                value="<?php echo htmlspecialchars($filter); ?>">
+        </form>
 
-    <h2>Lista de Usuários</h2>
-    <div id="results">
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome de Usuário</th>
-                    <th>Data de Criação</th>
-                    <th>Número de Arquivos Enviados</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php echo displayUsers($result); // Exibe os usuários inicialmente ?>
-            </tbody>
-        </table>
+        <h2>Lista de Usuários</h2>
+        <div id="results">
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Nome de Usuário</th>
+                        <th>Data de Criação</th>
+                        <th>Número de Arquivos Enviados</th>
+                        <th>Última Modificação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php echo displayUsers($result); // Exibe os usuários inicialmente ?>
+                </tbody>
+            </table>
+        </div>
+        <a class="logout-link" href="logout.php">Sair</a>
     </div>
-
-    <a href="logout.php">Sair</a>
     <script src="assets/js/script.js"></script>
-
 </body>
 
 </html>

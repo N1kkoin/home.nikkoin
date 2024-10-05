@@ -140,86 +140,87 @@ if (isset($_POST['delete_post_id'])) {
 
 <body>
 
-    <h1>Arquivos de <?php echo htmlspecialchars($username); ?></h1>
+    <div class="admin-area">
+        <h1>Arquivos de <?php echo htmlspecialchars($username); ?></h1>
 
-    <!-- Mensagens de Sucesso ou Erro -->
-    <?php if ($message): ?>
-    <div class="success"><?php echo $message; ?></div>
-    <?php endif; ?>
-
-    <?php if ($error): ?>
-    <div class="error"><?php echo $error; ?></div>
-    <?php endif; ?>
-
-    <!-- Formulário de Upload -->
-    <h2>Enviar Arquivo</h2>
-    <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="thumbnail" required>
-        <input type="file" name="files[]" multiple required>
-        <input type="hidden" name="client_username" value="<?php echo htmlspecialchars($username); ?>">
-        <input type="text" name="title" placeholder="Título" required>
-        <textarea name="description" placeholder="Descrição" required></textarea>
-        <input type="text" name="tags" placeholder="Tags (separadas por vírgula)" required>
-        <button type="submit">Enviar</button>
-    </form>
-
-    <!-- Lista de Arquivos -->
-    <h2>Posts Enviados</h2>
-    <ul>
-        <?php if ($result_posts->num_rows > 0): ?>
-        <?php while ($row = $result_posts->fetch_assoc()): ?>
-        <li>
-            <strong><?php echo htmlspecialchars($row['title']); ?></strong><br>
-            <em><?php echo htmlspecialchars($row['description']); ?></em><br>
-            <small>Tags: <?php echo htmlspecialchars($row['tags']); ?></small><br>
-
-            <?php
-             // Exibe a imagem da miniatura
-            if (!empty($row['thumbnail'])): ?>
-            <img src="uploads/<?php echo htmlspecialchars($username); ?>/<?php echo htmlspecialchars($row['thumbnail']); ?>"
-                alt="Imagem do Post" style="max-width: 100px; max-height: 100px;" />
-            <?php else: ?>
-            <p>Nenhuma imagem disponível para este post.</p>
-            <?php endif; ?>
-
-            <?php
-             // Consulta para obter os arquivos associados ao post
-            $stmt_files = $conn->prepare("SELECT file_name FROM uploads WHERE post_id = ?");
-            $stmt_files->bind_param("i", $row['id']);
-            $stmt_files->execute();
-            $result_files = $stmt_files->get_result();
-
-            $files_list = '';
-            while ($file = $result_files->fetch_assoc()) {
-                $file_extension = pathinfo($file['file_name'], PATHINFO_EXTENSION);
-
-                // Adiciona links para arquivos .rar, .zip, .pdf e imagens
-                if (in_array($file_extension, ['rar', 'zip', 'pdf', 'jpg', 'jpeg', 'png'])) {
-                    $files_list .= '<li><a href="' . htmlspecialchars($file['file_name']) . '" download>' . htmlspecialchars(basename($file['file_name'])) . '</a></li>';
-                }
-            }
-
-            // Exibe os arquivos .rar, .zip e outros tipos de arquivos se existirem
-            if (!empty($files_list)) {
-                echo '<h4>Arquivos adicionais:</h4><ul>' . $files_list . '</ul>';
-            }
-
-            ?>
-
-            <form method="POST" action="" style="display:inline;">
-                <input type="hidden" name="delete_post_id" value="<?php echo $row['id']; ?>">
-                <button type="submit"
-                    onclick="return confirm('Você tem certeza que deseja excluir este post?');">Deletar</button>
-            </form>
-        </li>
-        <?php endwhile; ?>
-        <?php else: ?>
-        <li>Nenhum post encontrado para este usuário.</li>
+        <!-- Mensagens de Sucesso ou Erro -->
+        <?php if ($message): ?>
+        <div class="message success"><?php echo $message; ?></div>
         <?php endif; ?>
-    </ul>
 
-    <a href="admin.php">Voltar para Admin</a>
-    <a href="logout.php">Sair</a>
+        <?php if ($error): ?>
+        <div class="message error"><?php echo $error; ?></div>
+        <?php endif; ?>
+
+        <!-- Formulário de Upload -->
+        <h2>Enviar Arquivo</h2>
+        <form method="POST" enctype="multipart/form-data" class="upload-form">
+            <input type="file" name="thumbnail" required class="file-input">
+            <input type="file" name="files[]" multiple required class="file-input">
+            <input type="hidden" name="client_username" value="<?php echo htmlspecialchars($username); ?>">
+            <input type="text" name="title" placeholder="Título" required class="text-input">
+            <textarea name="description" placeholder="Descrição" required class="textarea-input"></textarea>
+            <input type="text" name="tags" placeholder="Tags (separadas por vírgula)" required class="text-input">
+            <button type="submit" class="submit-button">Enviar</button>
+        </form>
+
+        <!-- Lista de Arquivos -->
+        <h2>Posts Enviados</h2>
+        <ul class="posts-list">
+            <?php if ($result_posts->num_rows > 0): ?>
+            <?php while ($row = $result_posts->fetch_assoc()): ?>
+            <li class="post-item">
+                <strong><?php echo htmlspecialchars($row['title']); ?></strong><br>
+                <em><?php echo htmlspecialchars($row['description']); ?></em><br>
+                <small>Tags: <?php echo htmlspecialchars($row['tags']); ?></small><br>
+
+                <?php
+                // Exibe a imagem da miniatura
+                if (!empty($row['thumbnail'])): ?>
+                <img src="uploads/<?php echo htmlspecialchars($username); ?>/<?php echo htmlspecialchars($row['thumbnail']); ?>"
+                    alt="Imagem do Post" class="thumbnail-img" />
+                <?php else: ?>
+                <p>Nenhuma imagem disponível para este post.</p>
+                <?php endif; ?>
+
+                <?php
+                // Consulta para obter os arquivos associados ao post
+                $stmt_files = $conn->prepare("SELECT file_name FROM uploads WHERE post_id = ?");
+                $stmt_files->bind_param("i", $row['id']);
+                $stmt_files->execute();
+                $result_files = $stmt_files->get_result();
+
+                $files_list = '';
+                while ($file = $result_files->fetch_assoc()) {
+                    $file_extension = pathinfo($file['file_name'], PATHINFO_EXTENSION);
+
+                    // Adiciona links para arquivos .rar, .zip, .pdf e imagens
+                    if (in_array($file_extension, ['rar', 'zip', 'pdf', 'jpg', 'jpeg', 'png'])) {
+                        $files_list .= '<li><a href="' . htmlspecialchars($file['file_name']) . '" download>' . htmlspecialchars(basename($file['file_name'])) . '</a></li>';
+                    }
+                }
+
+                // Exibe os arquivos .rar, .zip e outros tipos de arquivos se existirem
+                if (!empty($files_list)) {
+                    echo '<h4>Arquivos:</h4><ul class="additional-files">' . $files_list . '</ul>';
+                }
+                ?>
+
+                <form method="POST" action="" style="display:inline;">
+                    <input type="hidden" name="delete_post_id" value="<?php echo $row['id']; ?>">
+                    <button type="submit" class="delete-button"
+                        onclick="return confirm('Você tem certeza que deseja excluir este post?');">Deletar</button>
+                </form>
+            </li>
+            <?php endwhile; ?>
+            <?php else: ?>
+            <li>Nenhum post encontrado para este usuário.</li>
+            <?php endif; ?>
+        </ul>
+
+        <a href="admin.php" class="back-link">Voltar para Admin</a>
+        <a href="logout.php" class="logout-link">Sair</a>
+    </div>
 </body>
 
 </html>

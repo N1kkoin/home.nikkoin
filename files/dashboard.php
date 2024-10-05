@@ -54,7 +54,7 @@ $posts_result = $stmt->get_result();
                 <?php endif; ?>
 
                 <!-- Exibe os arquivos relacionados ao post -->
-                <h4>Arquivos do Post:</h4>
+                <h4>Arquivos:</h4>
                 <ul class="file-list">
                     <?php 
                         // Busca os arquivos relacionados ao post no banco de dados
