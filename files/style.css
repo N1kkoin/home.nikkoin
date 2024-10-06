@@ -65,9 +65,11 @@ button {
     text-transform: uppercase;
     font-weight: 500;
     font-family: var(--fonte-resto);
+    font-size: 14px;
 }
 
 .login-button {
+    margin-top: 20px;
     color: #fff;
     background: var(--verde-principal);
     border: 0;
@@ -75,24 +77,22 @@ button {
     width: 100%;
     padding: 10px 15px;
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 500;
     font-family: var(--fonte-resto);
-    border-radius: 4px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
 .main_page {
     display: flex;
     align-items: center;
-    justify-content: center;
+
     flex-direction: column;
     gap: 10px;
     height: 100vh;
     box-sizing: border-box;
     width: 100%;
     margin: 0 auto;
-    background-color: var(--verde-principal);
+    background-color: white;
     padding: 20px 40px;
 }
 
@@ -121,23 +121,30 @@ h2 {
 h1.login-title {
     color: #666;
     margin: 0px auto 25px;
-    font-size: 25px;
-    font-weight: 300;
+    font-size: 35px;
+    font-weight: 600;
     text-align: center;
 }
 
 .login-input {
+    border: 0;
     font-size: 15px;
-    border: 1px solid #ccc;
+    background-color: white;
+
     padding: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     height: 25px;
     width: calc(100% - 23px);
+    border: none;
+    border-bottom: 2px solid #e1e9ea;
 }
 
 .login-input:focus {
-    border-color: #6e8095;
+    border: none;
     outline: none;
+    border-bottom: 2px solid #c9d3d5;
+
+    
 }
 
 .link {
@@ -163,7 +170,7 @@ h1.login-title {
     display: block;
 }
 
-.registro-sucesso{
+.registro-sucesso {
     width: 300px;
     height: auto;
     padding: 25px;
@@ -171,7 +178,50 @@ h1.login-title {
     background-color: white;
 }
 
-.registro-sucesso h3{
+.registro-sucesso h3 {
     text-align: center;
     margin-top: 0;
+}
+
+/* Estilo para os botões de alternância */
+.toggle-buttons {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.toggle-button {
+    border: none;
+    background-color: #f5f9fa;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.toggle-button.active {
+
+    background-color: var(--verde-claro);
+    color: white;
+}
+
+/* Estilizando o texto do placeholder */
+::placeholder {
+    color: #c9d3d5; /* Cor do placeholder */
+    font-style: italic; /* Faz o texto parecer em itálico */
+    opacity: 1; /* Define a opacidade para evitar que o placeholder seja muito claro */
+}
+
+/* Para compatibilidade com navegadores mais antigos */
+:-ms-input-placeholder { /* Para o Internet Explorer 10+ */
+    color: #c9d3d5; /* Cor do placeholder */
+    font-style: italic; /* Faz o texto parecer em itálico */
+}
+
+::-ms-input-placeholder { /* Para o Microsoft Edge */
+    color: #c9d3d5; /* Cor do placeholder */
+    font-style: italic; /* Faz o texto parecer em itálico */
 }

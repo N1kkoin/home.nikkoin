@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <title>Login / Registration</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
@@ -59,12 +61,12 @@
             mysqli_stmt_bind_param($stmt, "ssss", $username, $password_hash, $email, $create_datetime);
 
             if (mysqli_stmt_execute($stmt)) {
-            echo "<div class='registro-sucesso'>
+                echo "<div class='registro-sucesso'>
                   <h3>You are registered successfully.</h3>
                   <p class='link'>Faça <a href=''>Login</a></p>
                   </div>";
             } else {
-                echo "<div class='form'>
+                echo "<div class='registro-sucesso'>
                   <h3>There was an error in the registration process.</h3><br/>
                   <p class='link'>Click here to <a href=''>try again</a>.</p>
                   </div>";
@@ -74,34 +76,45 @@
 
         <!-- Formulário de Login -->
         <div id="login-form" class="form-container active">
+
             <form class="form" method="post" name="login">
+
+                <!-- Botões para alternar entre os formulários -->
+                <div class="toggle-buttons">
+                    <button class="toggle-button active" onclick="toggleForms('login')">Login</button>
+                    <button class="toggle-button" onclick="toggleForms('register')">Criar conta</button>
+                </div>
+
                 <h1 class="login-title">Login</h1>
                 <input type="text" class="login-input" name="login_username" placeholder="Username" required
                     autofocus />
                 <input type="password" class="login-input" name="login_password" placeholder="Password" required />
-                <input type="submit" value="Login" class="login-button" />
-                <p class="link">Don't have an account? <a href="javascript:void(0)" onclick="toggleForms()">Register
-                        Now</a></p>
+                <button type="submit" value="Login" class="login-button"> Login</button>
             </form>
         </div>
 
         <!-- Formulário de Registro -->
         <div id="register-form" class="form-container">
             <form class="form" action="" method="post">
+
+                <!-- Botões para alternar entre os formulários -->
+                <div class="toggle-buttons">
+                    <button class="toggle-button" onclick="toggleForms('login')">Login</button>
+                    <button class="toggle-button active" onclick="toggleForms('register')">Criar conta</button>
+                </div>
+
                 <h1 class="login-title">Registration</h1>
                 <input type="text" class="login-input" name="register_username" placeholder="Username" required />
                 <input type="email" class="login-input" name="register_email" placeholder="Email Address" required />
                 <input type="password" class="login-input" name="register_password" placeholder="Password" required />
-                <input type="submit" value="Register" class="login-button" />
-                <p class="link">Already have an account? <a href="javascript:void(0)" onclick="toggleForms()">Login
-                        here</a></p>
+                <button type="submit" value="Register" class="login-button"> Register</button>
             </form>
         </div>
 
     </div>
 
     <script src="script.js"></script>
-      
+
     </script>
 </body>
 
