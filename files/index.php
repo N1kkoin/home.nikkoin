@@ -57,9 +57,6 @@
             $password = $_POST['register_password'];
             $create_datetime = date("Y-m-d H:i:s");
 
-            $password_hash = password_hash($password, PASSWORD_DEFAULT);
-
-
             // Verificar se o username ou email já está em uso
             $check_query = "SELECT * FROM `users` WHERE username = ? OR email = ?";
             $stmt = mysqli_prepare($con, $check_query);
