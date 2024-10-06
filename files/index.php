@@ -47,6 +47,9 @@
             }
         }
 
+        // Definir o fuso horário para o horário de Brasília (Brasil)
+        date_default_timezone_set('America/Sao_Paulo');
+
         // Processamento do Registro
         if (isset($_POST['register_username'])) {
             $username = mysqli_real_escape_string($con, $_POST['register_username']);
@@ -63,12 +66,10 @@
             if (mysqli_stmt_execute($stmt)) {
                 echo "<div class='registro-sucesso'>
                   <h3>You are registered successfully.</h3>
-                  <p class='link'>Faça <a href=''>Login</a></p>
                   </div>";
             } else {
                 echo "<div class='registro-sucesso'>
                   <h3>There was an error in the registration process.</h3><br/>
-                  <p class='link'>Click here to <a href=''>try again</a>.</p>
                   </div>";
             }
         }
@@ -86,17 +87,18 @@
                 </div>
 
                 <h1 class="login-title">Login</h1>
-              <!-- Input com ícone para o Username -->
-            <div class="input-with-icon">
-                <i class="fas fa-user"></i> <!-- Ícone de usuário -->
-                <input type="text" class="login-input" name="login_username" placeholder="Username" required autofocus />
-            </div>
+                <!-- Input com ícone para o Username -->
+                <div class="input-with-icon">
+                    <i class="fas fa-user"></i> <!-- Ícone de usuário -->
+                    <input type="text" class="login-input" name="login_username" placeholder="Username" required
+                        autofocus />
+                </div>
 
-            <!-- Input com ícone para o Password -->
-            <div class="input-with-icon">
-                <i class="fas fa-lock"></i> <!-- Ícone de cadeado -->
-                <input type="password" class="login-input" name="login_password" placeholder="Password" required />
-            </div>
+                <!-- Input com ícone para o Password -->
+                <div class="input-with-icon">
+                    <i class="fas fa-lock"></i> <!-- Ícone de cadeado -->
+                    <input type="password" class="login-input" name="login_password" placeholder="Password" required />
+                </div>
 
                 <button type="submit" value="Login" class="login-button"> Login</button>
             </form>
@@ -113,23 +115,25 @@
                 </div>
 
                 <h1 class="login-title">Registration</h1>
-                  <!-- Input com ícone para o Username -->
-            <div class="input-with-icon">
-                <i class="fas fa-user"></i> <!-- Ícone de usuário -->
-                <input type="text" class="login-input" name="register_username" placeholder="Username" required />
-            </div>
+                <!-- Input com ícone para o Username -->
+                <div class="input-with-icon">
+                    <i class="fas fa-user"></i> <!-- Ícone de usuário -->
+                    <input type="text" class="login-input" name="register_username" placeholder="Username" required />
+                </div>
 
-            <!-- Input com ícone para o Email -->
-            <div class="input-with-icon">
-                <i class="fas fa-envelope"></i> <!-- Ícone de envelope -->
-                <input type="email" class="login-input" name="register_email" placeholder="Email Address" required />
-            </div>
+                <!-- Input com ícone para o Email -->
+                <div class="input-with-icon">
+                    <i class="fas fa-envelope"></i> <!-- Ícone de envelope -->
+                    <input type="email" class="login-input" name="register_email" placeholder="Email Address"
+                        required />
+                </div>
 
-            <!-- Input com ícone para o Password -->
-            <div class="input-with-icon">
-                <i class="fas fa-lock"></i> <!-- Ícone de cadeado -->
-                <input type="password" class="login-input" name="register_password" placeholder="Password" required />
-            </div>
+                <!-- Input com ícone para o Password -->
+                <div class="input-with-icon">
+                    <i class="fas fa-lock"></i> <!-- Ícone de cadeado -->
+                    <input type="password" class="login-input" name="register_password" placeholder="Password"
+                        required />
+                </div>
                 <button type="submit" value="Register" class="login-button"> Register</button>
             </form>
         </div>
