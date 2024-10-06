@@ -59,18 +59,36 @@
 
             $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
-            $query = "INSERT INTO `users` (username, password, email, create_datetime) VALUES (?, ?, ?, ?)";
-            $stmt = mysqli_prepare($con, $query);
-            mysqli_stmt_bind_param($stmt, "ssss", $username, $password_hash, $email, $create_datetime);
 
-            if (mysqli_stmt_execute($stmt)) {
-                echo "<div class='registro-sucesso'>
-                  <h3>You are registered successfully.</h3>
-                  </div>";
+            // Verificar se o username ou email já está em uso
+            $check_query = "SELECT * FROM `users` WHERE username = ? OR email = ?";
+            $stmt = mysqli_prepare($con, $check_query);
+            mysqli_stmt_bind_param($stmt, "ss", $username, $email);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+
+            if (mysqli_num_rows($result) > 0) {
+                // Se já existir um usuário com o mesmo username ou email
+                echo "<div class='registro-erro'>
+              <h3>O nome de usuário ou e-mail já está em uso. Tente outro.</h3>
+              </div>";
             } else {
-                echo "<div class='registro-sucesso'>
-                  <h3>There was an error in the registration process.</h3><br/>
+                // Se não existir, prossiga com o registro
+                $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+                $query = "INSERT INTO `users` (username, password, email, create_datetime) VALUES (?, ?, ?, ?)";
+                $stmt = mysqli_prepare($con, $query);
+                mysqli_stmt_bind_param($stmt, "ssss", $username, $password_hash, $email, $create_datetime);
+
+                if (mysqli_stmt_execute($stmt)) {
+                    echo "<div class='registro-sucesso'>
+                  <h3>Você se registrou com sucesso.</h3>
                   </div>";
+                } else {
+                    echo "<div class='registro-erro'>
+                  <h3>Houve um erro no processo de registro.</h3><br/>
+                  </div>";
+                }
             }
         }
         ?>
