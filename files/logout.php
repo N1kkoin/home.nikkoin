@@ -1,6 +1,8 @@
 <?php
-session_start();
-session_destroy();
-header("Location: index.php");
-exit;
+    session_start();
+    // Destroy session
+    if(session_destroy()) {
+        // Redirecting To Home Page
+        header("Location: login.php");
+    }
 ?>

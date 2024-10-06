@@ -1,49 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
 <?php
-session_start();
-require 'db.php';
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Sanitização da entrada do usuário
-    $username = htmlspecialchars(trim($_POST['username']));
-    $password = $_POST['password'];
-
-    // Prepara a consulta para evitar SQL Injection
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
-        
-        // Verifica a senha
-        if (password_verify($password, $user['password'])) {
-            // Regenera ID de sessão para segurança
-            session_regenerate_id(true);
+    require('db.php');
+    session_start();
+    // When form submitted, check and create user session.
+    if (isset($_POST['username'])) {
+        $username = stripslashes($_REQUEST['username']);    // removes backslashes
+        $username = mysqli_real_escape_string($con, $username);
+        $password = stripslashes($_REQUEST['password']);
+        $password = mysqli_real_escape_string($con, $password);
+        // Check user is exist in the database
+        $query    = "SELECT * FROM `users` WHERE username='$username'
+                     AND password='" . md5($password) . "'";
+        $result = mysqli_query($con, $query) or die(mysql_error());
+        $rows = mysqli_num_rows($result);
+        if ($rows == 1) {
             $_SESSION['username'] = $username;
-            $_SESSION['role'] = $user['role'];  // Armazena o papel do usuário na sessão
-            
-            // Redireciona de acordo com o papel do usuário
-            if ($user['role'] == 'admin') {
-                header("Location: admin.php");
-            } else {
-                header("Location: dashboard.php");
-            }
-            exit;
+            // Redirect to user dashboard page
+            header("Location: dashboard_user.php");
         } else {
-            echo "Senha incorreta.";
+            echo "<div class='form'>
+                  <h3>Incorrect Username/password.</h3><br/>
+                  <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
+                  </div>";
         }
     } else {
-        echo "Usuário não encontrado.";
-    }
-
-    $stmt->close();
-}
 ?>
-
-
-<form method="POST" action="">
-    <input type="text" name="username" placeholder="Nome de usuário" required>
-    <input type="password" name="password" placeholder="Senha" required>
-    <button type="submit">Entrar</button>
-</form>
+    <form class="form" method="post" name="login">
+        <h1 class="login-title">Login</h1>
+        <input type="text" class="login-input" name="username" placeholder="Username" autofocus="true"/>
+        <input type="password" class="login-input" name="password" placeholder="Password"/>
+        <input type="submit" value="Login" name="submit" class="login-button"/>
+        <p class="link">Don't have an account? <a href="registration.php">Registration Now</a></p>
+  </form>
+<?php
+    }
+?>
+</body>
+</html>
