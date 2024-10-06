@@ -149,7 +149,7 @@
                     <input type="password" class="login-input" name="register_password" placeholder="Senha"
                         required />
                 </div>
-                <button type="submit" value="Register" class="login-button"> Register</button>
+                <button type="submit" value="Register" class="login-button"> Criar Conta</button>
             </form>
         </div>
 

@@ -68,6 +68,8 @@ button {
     font-size: 14px;
 }
 
+
+/* LOGIN REGISTRACAO -//////////////////////////////////////////////////*/
 .login-button {
     margin-top: 20px;
     color: #fff;
@@ -119,8 +121,8 @@ h2 {
 }
 
 h1.login-title {
-    color: #666;
-    margin: 0px auto 25px;
+    font-family: var(--fonte-titulos);
+    margin: 0px auto 0px;
     font-size: 35px;
     font-weight: 600;
     text-align: center;
@@ -160,10 +162,6 @@ width: 100%;
     color: var(--verde-principal);
 }
 
-
-
-/* LOGIN REGISTRACAO -//////////////////////////////////////////////////*/
-
 /* Estilos básicos para diferenciar as seções */
 .form-container {
     display: none;
@@ -176,20 +174,25 @@ width: 100%;
 /* Estilo do div de sucesso */
 .registro-sucesso {
     position: absolute;
-    top: 20px; /* Posição superior */
+    bottom: 20px; /* Posição superior */
     left: 50%;
     transform: translateX(-50%);
-    background-color: #4CAF50; /* Cor de fundo verde para sucesso */
+    background-color: var(--verde-claro); /* Cor de fundo verde para sucesso */
     color: white; /* Cor do texto */
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     font-size: 16px;
-    z-index: 1000;
     opacity: 0; /* Inicia invisível */
     visibility: hidden; /* Não está visível inicialmente */
     transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
 }
+
+.registro-sucesso h3{
+    margin: 0;
+    padding: 0;
+    padding: 0 10px;
+}
+
 
 /* Quando a classe "show" for adicionada, o div aparecerá */
 .registro-sucesso.show {
@@ -295,6 +298,6 @@ width: 100%;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: #29907F;
+    color: var(--verde-principal);
 }
 
