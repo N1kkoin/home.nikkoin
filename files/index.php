@@ -86,9 +86,18 @@
                 </div>
 
                 <h1 class="login-title">Login</h1>
-                <input type="text" class="login-input" name="login_username" placeholder="Username" required
-                    autofocus />
+              <!-- Input com ícone para o Username -->
+            <div class="input-with-icon">
+                <i class="fas fa-user"></i> <!-- Ícone de usuário -->
+                <input type="text" class="login-input" name="login_username" placeholder="Username" required autofocus />
+            </div>
+
+            <!-- Input com ícone para o Password -->
+            <div class="input-with-icon">
+                <i class="fas fa-lock"></i> <!-- Ícone de cadeado -->
                 <input type="password" class="login-input" name="login_password" placeholder="Password" required />
+            </div>
+
                 <button type="submit" value="Login" class="login-button"> Login</button>
             </form>
         </div>
@@ -104,9 +113,23 @@
                 </div>
 
                 <h1 class="login-title">Registration</h1>
+                  <!-- Input com ícone para o Username -->
+            <div class="input-with-icon">
+                <i class="fas fa-user"></i> <!-- Ícone de usuário -->
                 <input type="text" class="login-input" name="register_username" placeholder="Username" required />
+            </div>
+
+            <!-- Input com ícone para o Email -->
+            <div class="input-with-icon">
+                <i class="fas fa-envelope"></i> <!-- Ícone de envelope -->
                 <input type="email" class="login-input" name="register_email" placeholder="Email Address" required />
+            </div>
+
+            <!-- Input com ícone para o Password -->
+            <div class="input-with-icon">
+                <i class="fas fa-lock"></i> <!-- Ícone de cadeado -->
                 <input type="password" class="login-input" name="register_password" placeholder="Password" required />
+            </div>
                 <button type="submit" value="Register" class="login-button"> Register</button>
             </form>
         </div>

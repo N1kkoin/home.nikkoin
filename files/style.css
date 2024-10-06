@@ -130,13 +130,16 @@ h1.login-title {
     border: 0;
     font-size: 15px;
     background-color: white;
-
-    padding: 10px;
+width: 100%;
+   
     margin-bottom: 10px;
     height: 25px;
-    width: calc(100% - 23px);
+    box-sizing: border-box;
     border: none;
     border-bottom: 2px solid #e1e9ea;
+    padding: 20px 20px 20px 40px;
+    /* Espaço para o ícone */
+    margin: 10px 0;
 }
 
 .login-input:focus {
@@ -144,7 +147,7 @@ h1.login-title {
     outline: none;
     border-bottom: 2px solid #c9d3d5;
 
-    
+
 }
 
 .link {
@@ -210,18 +213,43 @@ h1.login-title {
 
 /* Estilizando o texto do placeholder */
 ::placeholder {
-    color: #c9d3d5; /* Cor do placeholder */
-    font-style: italic; /* Faz o texto parecer em itálico */
-    opacity: 1; /* Define a opacidade para evitar que o placeholder seja muito claro */
+    color: #c9d3d5;
+    /* Cor do placeholder */
+    font-style: italic;
+    /* Faz o texto parecer em itálico */
+    opacity: 1;
+    /* Define a opacidade para evitar que o placeholder seja muito claro */
 }
 
 /* Para compatibilidade com navegadores mais antigos */
-:-ms-input-placeholder { /* Para o Internet Explorer 10+ */
-    color: #c9d3d5; /* Cor do placeholder */
-    font-style: italic; /* Faz o texto parecer em itálico */
+:-ms-input-placeholder {
+    /* Para o Internet Explorer 10+ */
+    color: #c9d3d5;
+    /* Cor do placeholder */
+    font-style: italic;
+    /* Faz o texto parecer em itálico */
 }
 
-::-ms-input-placeholder { /* Para o Microsoft Edge */
-    color: #c9d3d5; /* Cor do placeholder */
-    font-style: italic; /* Faz o texto parecer em itálico */
+::-ms-input-placeholder {
+    /* Para o Microsoft Edge */
+    color: #c9d3d5;
+    /* Cor do placeholder */
+    font-style: italic;
+    /* Faz o texto parecer em itálico */
 }
+
+
+
+/* Estilo dos inputs com ícones */
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #29907F;
+}
+
