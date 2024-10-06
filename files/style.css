@@ -95,7 +95,7 @@ button {
 }
 
 .dashboard_user-page {
-    border-top: 2px solid var(--verde-claro);
+ 
     max-width: 1000px;
     box-sizing: border-box;
     width: 100%;
@@ -140,8 +140,6 @@ h1.login-title {
     border-color: #6e8095;
     outline: none;
 }
-
-
 
 .link {
     color: #666;
