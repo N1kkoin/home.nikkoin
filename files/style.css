@@ -82,11 +82,12 @@ button {
     cursor: pointer;
 }
 
-.registration_page,
-.login_page {
+.main_page {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 10px;
     height: 100vh;
     box-sizing: border-box;
     width: 100%;
@@ -149,3 +150,28 @@ h1.login-title {
     color: var(--verde-principal);
 }
 
+
+
+/* LOGIN REGISTRACAO -//////////////////////////////////////////////////*/
+
+/* Estilos básicos para diferenciar as seções */
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+.registro-sucesso{
+    width: 300px;
+    height: auto;
+    padding: 25px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.registro-sucesso h3{
+    text-align: center;
+    margin-top: 0;
+}

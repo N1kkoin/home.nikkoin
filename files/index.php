@@ -1,3 +1,108 @@
-<?php
-header("Location: login.php");
-?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Login / Registration</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="main_page">
+        <?php
+        require('db.php');
+        session_start();
+
+        // Processamento do Login
+        if (isset($_POST['login_username'])) {
+            $username = mysqli_real_escape_string($con, $_POST['login_username']);
+            $password = $_POST['login_password'];
+
+            $query = "SELECT * FROM `users` WHERE username = ?";
+            $stmt = mysqli_prepare($con, $query);
+            mysqli_stmt_bind_param($stmt, 's', $username);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+
+            if ($result && mysqli_num_rows($result) == 1) {
+                $user = mysqli_fetch_assoc($result);
+
+                if (password_verify($password, $user['password'])) {
+                    $_SESSION['username'] = $username;
+                    header("Location: dashboard.php");
+                    exit();
+                } else {
+                    echo "<div class='form'>
+                      <h3>Incorrect Username/password.</h3><br/>
+                      <p class='link'>Click here to <a href=''>Login</a> again.</p>
+                      </div>";
+                }
+            } else {
+                echo "<div class='form'>
+                  <h3>Incorrect Username/password.</h3><br/>
+                  <p class='link'>Click here to <a href=''>Login</a> again.</p>
+                  </div>";
+            }
+        }
+
+        // Processamento do Registro
+        if (isset($_POST['register_username'])) {
+            $username = mysqli_real_escape_string($con, $_POST['register_username']);
+            $email = mysqli_real_escape_string($con, $_POST['register_email']);
+            $password = $_POST['register_password'];
+            $create_datetime = date("Y-m-d H:i:s");
+
+            $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+            $query = "INSERT INTO `users` (username, password, email, create_datetime) VALUES (?, ?, ?, ?)";
+            $stmt = mysqli_prepare($con, $query);
+            mysqli_stmt_bind_param($stmt, "ssss", $username, $password_hash, $email, $create_datetime);
+
+            if (mysqli_stmt_execute($stmt)) {
+            echo "<div class='registro-sucesso'>
+                  <h3>You are registered successfully.</h3>
+                  <p class='link'>Faça <a href=''>Login</a></p>
+                  </div>";
+            } else {
+                echo "<div class='form'>
+                  <h3>There was an error in the registration process.</h3><br/>
+                  <p class='link'>Click here to <a href=''>try again</a>.</p>
+                  </div>";
+            }
+        }
+        ?>
+
+        <!-- Formulário de Login -->
+        <div id="login-form" class="form-container active">
+            <form class="form" method="post" name="login">
+                <h1 class="login-title">Login</h1>
+                <input type="text" class="login-input" name="login_username" placeholder="Username" required
+                    autofocus />
+                <input type="password" class="login-input" name="login_password" placeholder="Password" required />
+                <input type="submit" value="Login" class="login-button" />
+                <p class="link">Don't have an account? <a href="javascript:void(0)" onclick="toggleForms()">Register
+                        Now</a></p>
+            </form>
+        </div>
+
+        <!-- Formulário de Registro -->
+        <div id="register-form" class="form-container">
+            <form class="form" action="" method="post">
+                <h1 class="login-title">Registration</h1>
+                <input type="text" class="login-input" name="register_username" placeholder="Username" required />
+                <input type="email" class="login-input" name="register_email" placeholder="Email Address" required />
+                <input type="password" class="login-input" name="register_password" placeholder="Password" required />
+                <input type="submit" value="Register" class="login-button" />
+                <p class="link">Already have an account? <a href="javascript:void(0)" onclick="toggleForms()">Login
+                        here</a></p>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+      
+    </script>
+</body>
+
+</html>
