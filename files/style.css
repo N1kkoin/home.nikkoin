@@ -241,15 +241,15 @@ width: 100%;
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
-    background-color: #e1e9ea;
-    padding: 10px;
+    border: 2px solid #e1e9ea;
+    padding: 15px;
     box-sizing: border-box;
     border-radius: 6px;
 }
 
 .toggle-button {
     border: none;
-    background-color: white;
+    background-color: #f5f9fa;
     border-radius: 3px;
     text-align: center;
     cursor: pointer;
