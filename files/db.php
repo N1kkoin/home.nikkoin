@@ -1,15 +1,18 @@
 <?php
 
 // Configurações do banco de dados
-define('DB_HOST', 'localhost');  // Geralmente é 'localhost' no Hostinger
-define('DB_USER', 'u575812263_nick');  // Nome de usuário que você criou
-define('DB_PASS', "Lunemo121'");    // Senha que você definiu
-define('DB_NAME', 'u575812263_nikkoinart');  // Nome do banco de dados que você criou
+define('DB_HOST', 'localhost');  // Geralmente 'localhost'
+define('DB_USER', 'root');       // Nome de usuário do banco de dados
+define('DB_PASS', '');           // Senha do banco de dados
+define('DB_NAME', 'teste');      // Nome do banco de dados
 
 // Cria a conexão com o banco de dados
 $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-// Check connection
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+// Verifica se há erros na conexão
+if ($con->connect_error) {
+    die("Falha na conexão com o banco de dados: " . $con->connect_error);
 }
+
+// Se quiser fechar a conexão em algum momento no código, use:
+// $con->close();
