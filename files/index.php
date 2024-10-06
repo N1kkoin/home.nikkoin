@@ -101,18 +101,18 @@
                     <button class="toggle-button" onclick="toggleForms('register')">Criar conta</button>
                 </div>
 
-                <h1 class="login-title">Login</h1>
+                <h1 class="login-title">Já sou cliente</h1>
                 <!-- Input com ícone para o Username -->
                 <div class="input-with-icon">
                     <i class="fas fa-user"></i> <!-- Ícone de usuário -->
-                    <input type="text" class="login-input" name="login_username" placeholder="Username" required
+                    <input type="text" class="login-input" name="login_username" placeholder="Usuário" required
                         autofocus />
                 </div>
 
                 <!-- Input com ícone para o Password -->
                 <div class="input-with-icon">
                     <i class="fas fa-lock"></i> <!-- Ícone de cadeado -->
-                    <input type="password" class="login-input" name="login_password" placeholder="Password" required />
+                    <input type="password" class="login-input" name="login_password" placeholder="Senha" required />
                 </div>
 
                 <button type="submit" value="Login" class="login-button"> Login</button>
@@ -129,24 +129,24 @@
                     <button class="toggle-button active" onclick="toggleForms('register')">Criar conta</button>
                 </div>
 
-                <h1 class="login-title">Registration</h1>
+                <h1 class="login-title">Criar uma conta</h1>
                 <!-- Input com ícone para o Username -->
                 <div class="input-with-icon">
                     <i class="fas fa-user"></i> <!-- Ícone de usuário -->
-                    <input type="text" class="login-input" name="register_username" placeholder="Username" required />
+                    <input type="text" class="login-input" name="register_username" placeholder="Usuário" required />
                 </div>
 
                 <!-- Input com ícone para o Email -->
                 <div class="input-with-icon">
                     <i class="fas fa-envelope"></i> <!-- Ícone de envelope -->
-                    <input type="email" class="login-input" name="register_email" placeholder="Email Address"
+                    <input type="email" class="login-input" name="register_email" placeholder="E-mail"
                         required />
                 </div>
 
                 <!-- Input com ícone para o Password -->
                 <div class="input-with-icon">
                     <i class="fas fa-lock"></i> <!-- Ícone de cadeado -->
-                    <input type="password" class="login-input" name="register_password" placeholder="Password"
+                    <input type="password" class="login-input" name="register_password" placeholder="Senha"
                         required />
                 </div>
                 <button type="submit" value="Register" class="login-button"> Register</button>
