@@ -24,7 +24,7 @@ $posts_result = $stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <title>Área do Cliente</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 

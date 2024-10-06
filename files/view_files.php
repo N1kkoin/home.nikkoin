@@ -26,6 +26,12 @@ $stmt->bind_param("s", $username);
 $stmt->execute();
 $result_posts = $stmt->get_result();
 
+// Função para sanitizar o nome do arquivo
+function sanitizeFileName($filename) {
+    // Remove caracteres especiais e espaços, mantendo apenas letras, números, underline e hífen
+    return preg_replace('/[^a-zA-Z0-9-_\.]/', '_', $filename);
+}
+
 // Processar a criação do post
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['client_username'])) {
     $client_username = htmlspecialchars(trim($_POST['client_username']));
@@ -35,33 +41,45 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['client_username'])) {
 
     // Inserir os dados do post no banco de dados
     $stmt = $conn->prepare("INSERT INTO posts (client_username, title, description, tags, thumbnail) VALUES (?, ?, ?, ?, ?)");
-    
+
     // Processar o upload da miniatura
     $thumbnail_name = '';
     if (isset($_FILES['thumbnail']) && $_FILES['thumbnail']['error'] == UPLOAD_ERR_OK) {
-        $thumbnail_name = $_FILES['thumbnail']['name'];
+        $thumbnail_name = sanitizeFileName($_FILES['thumbnail']['name']);
+        $thumbnail_name = time() . "_" . $thumbnail_name; // Adiciona um timestamp
         $thumbnail_tmp_name = $_FILES['thumbnail']['tmp_name'];
         $thumbnail_target = "uploads/$client_username/" . basename($thumbnail_name);
         
-        // Mover a imagem da miniatura
-        if (move_uploaded_file($thumbnail_tmp_name, $thumbnail_target)) {
-            // Miniatura foi enviada com sucesso
-        } else {
-            echo "Erro ao enviar a imagem da miniatura.";
+        $allowed_extensions = ['jpg', 'jpeg', 'png']; // Adicione as extensões permitidas
+        $file_extension = strtolower(pathinfo($thumbnail_name, PATHINFO_EXTENSION));
+
+        if (!in_array($file_extension, $allowed_extensions)) {
+            echo "Formato de arquivo não suportado: $file_extension";
             exit;
         }
+
+   
+    // Mover a imagem da miniatura
+    if (!move_uploaded_file($thumbnail_tmp_name, $thumbnail_target)) {
+        // Mensagens de erro mais específicas
+        $error_message = error_get_last();
+        echo "Erro ao enviar a imagem da miniatura. Detalhes: " . htmlspecialchars($error_message['message']);
+        exit;
+    }
+    } elseif ($_FILES['thumbnail']['error'] !== UPLOAD_ERR_NO_FILE) {
+        echo "Erro no upload da miniatura: " . $_FILES['thumbnail']['error'];
+        exit;
     } else {
         $thumbnail_name = null; // Caso não haja imagem da miniatura
     }
 
     $stmt->bind_param("sssss", $client_username, $title, $description, $tags, $thumbnail_name);
     
-    if ($stmt->execute()) {
-        $post_id = $stmt->insert_id; // Obter o ID do post recém-criado
-    } else {
+    if (!$stmt->execute()) {
         echo "Erro ao criar post: " . $stmt->error;
         exit;
     }
+    $post_id = $stmt->insert_id; // Obter o ID do post recém-criado
 
     // Processar o upload dos arquivos
     if (isset($_FILES['files'])) {
@@ -135,7 +153,7 @@ if (isset($_POST['delete_post_id'])) {
 <head>
     <meta charset="UTF-8">
     <title>Arquivos de <?php echo htmlspecialchars($username); ?></title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
@@ -176,11 +194,15 @@ if (isset($_POST['delete_post_id'])) {
 
                 <?php
                 // Exibe a imagem da miniatura
-                if (!empty($row['thumbnail'])): ?>
-                <img src="uploads/<?php echo htmlspecialchars($username); ?>/<?php echo htmlspecialchars($row['thumbnail']); ?>"
-                    alt="Imagem do Post" class="thumbnail-img" />
-                <?php else: ?>
-                <p>Nenhuma imagem disponível para este post.</p>
+                if (!empty($row['thumbnail'])):
+                    $thumbnail_path = "uploads/" . htmlspecialchars($username) . "/" . htmlspecialchars($row['thumbnail']);
+                    if (file_exists($thumbnail_path)): ?>
+                        <img src="<?php echo $thumbnail_path; ?>" alt="Imagem do Post" class="thumbnail-img" />
+                    <?php else: ?>
+                        <p>A miniatura não está disponível no caminho: <?php echo $thumbnail_path; ?></p>
+                    <?php endif;
+                else: ?>
+                    <p>Nenhuma imagem disponível para este post.</p>
                 <?php endif; ?>
 
                 <?php
@@ -189,38 +211,24 @@ if (isset($_POST['delete_post_id'])) {
                 $stmt_files->bind_param("i", $row['id']);
                 $stmt_files->execute();
                 $result_files = $stmt_files->get_result();
-
-                $files_list = '';
-                while ($file = $result_files->fetch_assoc()) {
-                    $file_extension = pathinfo($file['file_name'], PATHINFO_EXTENSION);
-
-                    // Adiciona links para arquivos .rar, .zip, .pdf e imagens
-                    if (in_array($file_extension, ['rar', 'zip', 'pdf', 'jpg', 'jpeg', 'png'])) {
-                        $files_list .= '<li><a href="' . htmlspecialchars($file['file_name']) . '" download>' . htmlspecialchars(basename($file['file_name'])) . '</a></li>';
-                    }
-                }
-
-                // Exibe os arquivos .rar, .zip e outros tipos de arquivos se existirem
-                if (!empty($files_list)) {
-                    echo '<h4>Arquivos:</h4><ul class="additional-files">' . $files_list . '</ul>';
-                }
                 ?>
+                <ul>
+                    <?php while ($file_row = $result_files->fetch_assoc()): ?>
+                    <li><?php echo htmlspecialchars($file_row['file_name']); ?></li>
+                    <?php endwhile; ?>
+                </ul>
 
-                <form method="POST" action="" style="display:inline;">
+                <form method="POST">
                     <input type="hidden" name="delete_post_id" value="<?php echo $row['id']; ?>">
-                    <button type="submit" class="delete-button"
-                        onclick="return confirm('Você tem certeza que deseja excluir este post?');">Deletar</button>
+                    <button type="submit" class="delete-button">Deletar Post</button>
                 </form>
             </li>
             <?php endwhile; ?>
             <?php else: ?>
-            <li>Nenhum post encontrado para este usuário.</li>
+            <p>Nenhum post encontrado para este usuário.</p>
             <?php endif; ?>
         </ul>
-
-        <a href="admin.php" class="back-link">Voltar para Admin</a>
-        <a href="logout.php" class="logout-link">Sair</a>
     </div>
-</body>
 
+</body>
 </html>

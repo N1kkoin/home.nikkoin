@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search'])) {
 <head>
     <meta charset="UTF-8">
     <title>Área Administrativa - Lista de Usuários</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
     $(document).ready(function() {
@@ -125,7 +125,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search'])) {
         </div>
         <a class="logout-link" href="logout.php">Sair</a>
     </div>
-    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
