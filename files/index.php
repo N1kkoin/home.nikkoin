@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html>
+<?php 
+    $title = "Login - NH";
+    $meta_description = "Área de clientes - Nikkoin Design"; 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login / Registration</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-</head>
+    include('code/navbar.php'); 
+?>
 
 <body>
     <div class="main_page">
@@ -160,9 +155,9 @@
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="code/script.js"></script>
 
-    </script>
+
 </body>
 
 </html>

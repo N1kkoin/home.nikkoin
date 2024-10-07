@@ -19,7 +19,7 @@ function isActive($path) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="alternate icon" href="/images/icone.ico">
     <link rel="icon" href="/images/icone.svg">
-    <link rel="stylesheet" href="/code/style.css?v=1.24">
+    <link rel="stylesheet" href="/code/style.css">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -37,7 +37,7 @@ gtag('config', 'G-23BZZMMJMP');
 
 <nav>
     <div class="nav_container">
-        <a href="#" class="logo"><img src="/images/nh_logo.svg" alt="Ícone NH" loading="lazy"></a>
+        <a href="https://nikkoin.art" class="logo"><img src="/images/nh_logo.svg" alt="Ícone NH" loading="lazy"></a>
 
        <!-- <div class="box">
             <div class="btn not-active">
@@ -48,9 +48,9 @@ gtag('config', 'G-23BZZMMJMP');
         </div> -->
 
         <div class="nav_links">
-            <a href="/" class="<?php echo isActive('/'); ?>">Início</a>
-            <a href="/portifolio" class="<?php echo isActive('/portifolio'); ?>">Portifólio</a>
-            <a target="_blank" href="/seja-veloz" class="<?php echo isActive('/seja-veloz'); ?>">Seja Veloz</a>
+            <a href="https://nikkoin.art">Início</a>
+            <a href="https://nikkoin.art/portifolio">Portifólio</a>
+            <a target="_blank" href="https://nikkoin.art/seja-veloz">Seja Veloz</a>
         </div>
     </div>
 </nav>
