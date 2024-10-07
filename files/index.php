@@ -17,6 +17,12 @@
         require('db.php');
         session_start();
 
+        // Verifique se o usuário já está logado
+        if (isset($_SESSION['username'])) {
+            header("Location: dashboard_user.php");
+            exit();
+        }
+
         // Processamento do Login
         if (isset($_POST['login_username'])) {
             $username = mysqli_real_escape_string($con, $_POST['login_username']);
@@ -33,7 +39,7 @@
 
                 if (password_verify($password, $user['password'])) {
                     $_SESSION['username'] = $username;
-                    header("Location: dashboard.php");
+                    header("Location: dashboard_user.php");
                     exit();
                 } else {
                     echo "<div class='form'>

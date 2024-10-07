@@ -1,6 +1,6 @@
 <?php
-//include auth_session.php file on all user panel pages
-include("auth_session.php");
+//require auth_session.php file on all user panel pages
+require("auth_session.php");
 ?>
 <!DOCTYPE html>
 <html>
