@@ -1,3 +1,15 @@
+# Redirecionar erros para a página de erro personalizada
+
+ErrorDocument 400 https://nikkoin.art/error-page.php
+ErrorDocument 401 https://nikkoin.art/error-page.php
+ErrorDocument 403 https://nikkoin.art/error-page.php
+ErrorDocument 404 https://nikkoin.art/error-page.php
+ErrorDocument 500 https://nikkoin.art/error-page.php
+ErrorDocument 502 https://nikkoin.art/error-page.php
+ErrorDocument 503 https://nikkoin.art/error-page.php
+ErrorDocument 504 https://nikkoin.art/error-page.php
+
+
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
