@@ -1,16 +1,19 @@
-  // Alternar entre os formulários
-  function toggleForms() {
+// Alternar entre os formulários
+function toggleForms(event, form) {
+    event.preventDefault(); // Previne o envio do formulário
+    
     var loginForm = document.getElementById('login-form');
     var registerForm = document.getElementById('register-form');
 
-    if (loginForm.classList.contains('active')) {
+    if (form === 'login') {
+        loginForm.classList.add('active');
+        registerForm.classList.remove('active');
+    } else {
         loginForm.classList.remove('active');
         registerForm.classList.add('active');
-    } else {
-        registerForm.classList.remove('active');
-        loginForm.classList.add('active');
     }
 }
+
 
 function showSuccessMessage() {
     var successDiv = document.querySelector('.registro-sucesso');

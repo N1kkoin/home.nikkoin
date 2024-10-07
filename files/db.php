@@ -1,4 +1,11 @@
 <?php
+/*
+// Configurações do banco de dados
+define('DB_HOST', 'localhost');  // Geralmente 'localhost'
+define('DB_USER', 'u575812263_nick');       // Nome de usuário do banco de dados
+define('DB_PASS', "Lunemo121'");           // Senha do banco de dados
+define('DB_NAME', 'u575812263_nikkoinart');      // Nome do banco de dados
+*/
 
 // Configurações do banco de dados
 define('DB_HOST', 'localhost');  // Geralmente 'localhost'

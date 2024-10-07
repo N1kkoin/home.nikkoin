@@ -12,6 +12,7 @@
 <body>
     <div class="main_page">
         <?php
+
         require('db.php');
         session_start();
 
@@ -97,11 +98,10 @@
 
                 <!-- Botões para alternar entre os formulários -->
                 <div class="toggle-buttons">
-                    <button class="toggle-button active" onclick="toggleForms('login')">Login</button>
-                    <button class="toggle-button" onclick="toggleForms('register')">Criar conta</button>
+                    <button class="toggle-button active" onclick="toggleForms(event, 'login')">Login</button>
+                    <button class="toggle-button" onclick="toggleForms(event, 'register')">Criar conta</button>
                 </div>
 
-                <h1 class="login-title">Já sou cliente</h1>
                 <!-- Input com ícone para o Username -->
                 <div class="input-with-icon">
                     <i class="fas fa-user"></i> <!-- Ícone de usuário -->
@@ -125,11 +125,11 @@
 
                 <!-- Botões para alternar entre os formulários -->
                 <div class="toggle-buttons">
-                    <button class="toggle-button" onclick="toggleForms('login')">Login</button>
-                    <button class="toggle-button active" onclick="toggleForms('register')">Criar conta</button>
+                    <button class="toggle-button" onclick="toggleForms(event, 'login')">Login</button>
+                    <button class="toggle-button active" onclick="toggleForms(event, 'register')">Criar conta</button>
+
                 </div>
 
-                <h1 class="login-title">Criar uma conta</h1>
                 <!-- Input com ícone para o Username -->
                 <div class="input-with-icon">
                     <i class="fas fa-user"></i> <!-- Ícone de usuário -->
@@ -139,15 +139,13 @@
                 <!-- Input com ícone para o Email -->
                 <div class="input-with-icon">
                     <i class="fas fa-envelope"></i> <!-- Ícone de envelope -->
-                    <input type="email" class="login-input" name="register_email" placeholder="E-mail"
-                        required />
+                    <input type="email" class="login-input" name="register_email" placeholder="E-mail" required />
                 </div>
 
                 <!-- Input com ícone para o Password -->
                 <div class="input-with-icon">
                     <i class="fas fa-lock"></i> <!-- Ícone de cadeado -->
-                    <input type="password" class="login-input" name="register_password" placeholder="Senha"
-                        required />
+                    <input type="password" class="login-input" name="register_password" placeholder="Senha" required />
                 </div>
                 <button type="submit" value="Register" class="login-button"> Criar Conta</button>
             </form>
