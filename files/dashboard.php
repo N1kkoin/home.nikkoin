@@ -17,7 +17,7 @@ require("auth_session.php");
         <div>
             <p>Hey, <?php echo $_SESSION['username']; ?>!</p>
             <p>You are in user dashboard page.</p>
-            <p><a href="logout.php">Logout</a></p>
+            <p><a href="logout">Logout</a></p>
         </div>
     </div>
 </body>

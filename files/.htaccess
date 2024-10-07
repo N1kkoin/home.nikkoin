@@ -10,7 +10,15 @@ ErrorDocument 503 https://nikkoin.art/error-page.php
 ErrorDocument 504 https://nikkoin.art/error-page.php
 
 
-RewriteEngine on
+RewriteEngine On
+
+# Se a URL não for uma pasta
 RewriteCond %{REQUEST_FILENAME} !-d
+
+# Se o arquivo existir com extensão .php, reescreva a URL sem .php
 RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ $1.php
+RewriteRule ^(.*)$ $1.php [L,QSA]
+
+# Redirecionar qualquer URL que contenha ".php" para a versão sem ".php"
+RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ]"
+RewriteRule ^(.*)\.php$ /$1 [R=301,L]
