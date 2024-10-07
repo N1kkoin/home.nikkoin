@@ -127,7 +127,7 @@ button {
     padding: 25px;
     border-radius: 6px;
     background: white;
- border: 2px solid #f5f9fa;
+    border: 2px solid #f5f9fa;
 }
 
 h2 {
@@ -149,8 +149,8 @@ h1.login-title {
     border: 0;
     font-size: 15px;
     background-color: white;
-width: 100%;
-   
+    width: 100%;
+    font-family: var(--fonte-resto);
     margin-bottom: 10px;
     height: 25px;
     box-sizing: border-box;
@@ -191,20 +191,25 @@ width: 100%;
 /* Estilo do div de sucesso */
 .registro-sucesso {
     position: absolute;
-    bottom: 20px; /* Posição superior */
+    bottom: 20px;
+    /* Posição superior */
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--verde-claro); /* Cor de fundo verde para sucesso */
-    color: white; /* Cor do texto */
+    background-color: var(--verde-claro);
+    /* Cor de fundo verde para sucesso */
+    color: white;
+    /* Cor do texto */
     padding: 15px;
     border-radius: 5px;
     font-size: 16px;
-    opacity: 0; /* Inicia invisível */
-    visibility: hidden; /* Não está visível inicialmente */
+    opacity: 0;
+    /* Inicia invisível */
+    visibility: hidden;
+    /* Não está visível inicialmente */
     transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
 }
 
-.registro-sucesso h3{
+.registro-sucesso h3 {
     margin: 0;
     padding: 0;
     padding: 0 10px;
@@ -223,6 +228,7 @@ width: 100%;
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -241,6 +247,7 @@ width: 100%;
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -324,8 +331,9 @@ width: 100%;
 
 /* Change the white to any color */
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
+    font-family: var(--fonte-resto);
 }
