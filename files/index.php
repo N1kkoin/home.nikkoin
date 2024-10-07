@@ -19,7 +19,7 @@
 
         // Verifique se o usuário já está logado
         if (isset($_SESSION['username'])) {
-            header("Location: dashboard_user.php");
+            header("Location: dashboard.php");
             exit();
         }
 
@@ -39,7 +39,7 @@
 
                 if (password_verify($password, $user['password'])) {
                     $_SESSION['username'] = $username;
-                    header("Location: dashboard_user.php");
+                    header("Location: dashboard.php");
                     exit();
                 } else {
                     echo "<div class='form'>
