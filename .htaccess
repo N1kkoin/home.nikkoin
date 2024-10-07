@@ -31,9 +31,3 @@ ErrorDocument 504 /error-page.php
     Header set Cache-Control "public, max-age=31536000"
 </IfModule>
 
-# Habilita o RewriteEngine
-RewriteEngine On
-
-# Redireciona qualquer solicitação de "arquivo" para "arquivo.php" se existir
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
