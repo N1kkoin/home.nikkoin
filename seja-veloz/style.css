@@ -22,6 +22,10 @@
     background-color: #ff0000;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #f4f7fd;
     font-family: 'Open Sans', sans-serif;
@@ -553,7 +557,7 @@ a .googleplay {
         .div7 { grid-area: 4 / 1 / 5 / 3; }
 
         .div7 iframe {
-            min-height: 250px;
+            min-height: 200px;
         }
         
 }

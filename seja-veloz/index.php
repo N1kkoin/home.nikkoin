@@ -5,7 +5,7 @@ include('code/navbar.php');
 ?>
 
 <body>
-   
+
     <header><img src="images/logocomtag_seja_veloz.svg"></header>
 
     <main>
@@ -157,15 +157,15 @@ include('code/navbar.php');
                     <div class="galeria2023">
                         <div class="div1"> <img class="img-segundaria1 imgs-paraovelay" src="/images/fe/seja_veloz/fe2.jpg" alt="Imagem"></div>
                         <div class="div2"><img class="img-segundaria3 imgs-paraovelay" src="/images/fe/seja_veloz/fe1.jpg" alt="Imagem"> </div>
-                        <div class="div3"><img class="img-segundaria2 imgs-paraovelay" src="/images/fe/seja_veloz/fe4.jpg" alt="Imagem">  </div>
+                        <div class="div3"><img class="img-segundaria2 imgs-paraovelay" src="/images/fe/seja_veloz/fe4.jpg" alt="Imagem"> </div>
                         <div class="div4"> <img class="img-segundaria4 imgs-paraovelay" src="/images/fe/seja_veloz/fe3.jpg" alt="Imagem"></div>
                         <div class="div5"> <img class="img-segundaria5 imgs-paraovelay" src="/images/fe/seja_veloz/fe5.jpg" alt="Imagem"></div>
                         <div class="div6"> <img class="img-segundaria6 imgs-paraovelay" src="/images/fe/seja_veloz/fe6.jpg" alt="Imagem"> </div>
-                        <div class="div7">  <iframe class="videosv"
-                    src="https://www.youtube.com/embed/jYAtoA7WSho?&modestbranding=1&modestbranding=1&playsinline=1&playlist=jYAtoA7WSho"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                        <div class="div7"> <iframe class="videosv"
+                                src="https://www.youtube.com/embed/jYAtoA7WSho?&modestbranding=1&modestbranding=1&playsinline=1&playlist=jYAtoA7WSho"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                     </div>
                     <p style="font-size: small;color: #77779e;text-align: right;">Atualizado em 25/05/2024</p>
 
@@ -182,4 +182,4 @@ include('code/navbar.php');
         </div>
     </main>
 
-<?php include('code/footer.php'); ?>
+    <?php include('code/footer.php'); ?>
