@@ -1,27 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt">
+<?php
+$title = "Seja Veloz";
 
-<head>
-    <link rel="icon" type="image/svg+xml" href="/seja-veloz/imgs/iconesv.svg">
-    <link rel="alternate icon" href="images/iconesv.ico">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seja Veloz</title>
-    <link rel="stylesheet" href="style.css?v=1.3">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-</head>
-
-<!-- Google tag (gtag.js) 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-23BZZMMJMP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'G-23BZZMMJMP');
-</script>-->
+include('code/navbar.php');
+?>
 
 <body>
     <nav>
@@ -31,7 +12,7 @@
                 <a href="/seja-veloz">Inicio</a>
                 <a href="">Sobre</a>
                 <a class="jogarbotao" href="#jogar">Jogar</a>
- 
+
             </div>
         </div>
     </nav>
@@ -103,10 +84,4 @@
     <script src="script.js"></script>
 </body>
 
-<footer>
-    <p>&copy; 2024 <img class="loguinho" src="/images/nh_logo.svg"> Nikkoin Design - Todos os direitos reservados. | <a
-            href="/seja-veloz/privacy/">Termos de Serviço e
-            Política de Privacidade</a></p>
-</footer>
-
-</html>
+<?php include('code/footer.php'); ?>
