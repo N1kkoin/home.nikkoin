@@ -1,8 +1,8 @@
-<?php 
-    $title = "Nikkoin Design";
-    $meta_description = "Nikkoin Design - Site de Nicole Heguy, Designer Gráfico, Web Designer e Front-end Developer."; 
+<?php
+$title = "Nikkoin Design";
+$meta_description = "Nikkoin Design - Site de Nicole Heguy, Designer Gráfico, Web Designer e Front-end Developer.";
 
-    include('code/navbar.php'); 
+include('code/navbar.php');
 ?>
 
 <body class="body_index">

@@ -47,6 +47,24 @@ type();
 
 // NAVBAR //////////////////////////////////////////////////////////////////
 
+
+document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.querySelector('.box .btn');
+    const navLinksMobile = document.querySelector('.nav_links_mobile');
+
+    btn.addEventListener('click', function () {
+        navLinksMobile.classList.toggle('open');
+    });
+
+
+    // Fecha o menu ao redimensionar a tela para maior que 768px
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 850) {
+            navLinksMobile.classList.remove('open');
+        }
+    });
+});
+
 // Função que verifica o scroll e aplica/remova a classe com base na rolagem
 function checkScrollPosition() {
     const nav = document.querySelector('nav');
@@ -70,6 +88,13 @@ var btn = $('.btn');
 btn.on('click', function() {
   $(this).toggleClass('active not-active');
 });
+
+$(window).on('resize', function() {
+    if ($(window).width() > 850) {
+      // Certifique-se de que o botão volte para o estado 'not-active' ao redimensionar
+      btn.removeClass('active').addClass('not-active');
+    }
+  });
 
 // MAIN /////////////////////////////////////////////////////////////////////////////////////////////////
 

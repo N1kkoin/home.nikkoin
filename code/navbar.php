@@ -1,7 +1,15 @@
 <?php
-function isActive($path) {
+function isActive($path)
+{
     return ($_SERVER['REQUEST_URI'] == $path || $_SERVER['REQUEST_URI'] == rtrim($path, '/') . '/') ? 'ativa' : '';
 }
+
+// Variável que contém o HTML dos links de navegação
+$nav_links_html = '
+    <a href="/" class="' . isActive('/') . '">Início</a>
+    <a href="/portifolio" class="' . isActive('/portifolio') . '">Portifólio</a>
+    <a target="_blank" href="/seja-veloz" class="' . isActive('/seja-veloz') . '">Seja Veloz</a>
+';
 ?>
 
 <!DOCTYPE html>
@@ -25,32 +33,36 @@ function isActive($path) {
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-23BZZMMJMP"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
 
-function gtag() {
-    dataLayer.push(arguments);
-}
-gtag('js', new Date());
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-gtag('config', 'G-23BZZMMJMP');
+    gtag('config', 'G-23BZZMMJMP');
 </script>
 
 <nav>
     <div class="nav_container">
         <a href="#" class="logo"><img src="/images/nh_logo.svg" alt="Ícone NH" loading="lazy"></a>
 
-       <!-- <div class="box">
+        <div class="box">
             <div class="btn not-active">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-        </div> -->
+        </div>
 
         <div class="nav_links">
-            <a href="/" class="<?php echo isActive('/'); ?>">Início</a>
-            <a href="/portifolio" class="<?php echo isActive('/portifolio'); ?>">Portifólio</a>
-            <a target="_blank" href="/seja-veloz" class="<?php echo isActive('/seja-veloz'); ?>">Seja Veloz</a>
+            <?php echo $nav_links_html; ?>
         </div>
+
+        <!-- Nav links for mobile -->
+        <div class="nav_links_mobile">
+            <?php echo $nav_links_html; ?>
+        </div>
+        
     </div>
 </nav>
