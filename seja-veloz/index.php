@@ -5,17 +5,7 @@ include('code/navbar.php');
 ?>
 
 <body>
-    <nav>
-        <div class="navbar">
-            <a><img src="images/iconesv.svg" alt="Logo Seja Veloz"></a>
-            <div>
-                <a href="/seja-veloz">Inicio</a>
-                <a href="">Sobre</a>
-                <a class="jogarbotao" href="#jogar">Jogar</a>
-
-            </div>
-        </div>
-    </nav>
+   
     <header><img src="images/logocomtag_seja_veloz.svg"></header>
 
     <main>
@@ -81,7 +71,7 @@ include('code/navbar.php');
             </div>
         </div>
 
-        <div class="accordion-content">
+        <div id="sobre" class="accordion-content">
             <h2 class="titulo2">Histórico</h2>
             <div class="accordion-item">
                 <div class="item-header">
@@ -191,7 +181,5 @@ include('code/navbar.php');
             <img class="overlay-content" id="overlay-img" src="">
         </div>
     </main>
-    <script src="script.js"></script>
-</body>
 
 <?php include('code/footer.php'); ?>

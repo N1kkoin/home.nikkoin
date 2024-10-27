@@ -1,22 +1,11 @@
 <?php
 $title = "Seja Veloz | Privacy";
 
-include('code/navbar.php');
+include('../code/navbar.php');
 ?>
 
 <body>
-    <nav>
-        <div class="navbar">
-            <a><img src="images/iconesv.svg" alt="Logo Seja Veloz"></a>
-            <div>
-                <a href="/seja-veloz">Inicio</a>
-                <a href="">Sobre</a>
-                <a class="jogarbotao" href="#jogar">Jogar</a>
-
-            </div>
-        </div>
-    </nav>
-    <header><img src="images/logocomtag_seja_veloz.svg"></header>
+    <header><img src="/seja-veloz/images/logocomtag_seja_veloz.svg"></header>
 
     <main>
         <div class="termos e politica">
@@ -289,7 +278,5 @@ include('code/navbar.php');
         </div>
 
     </main>
-    <script src="script.js"></script>
-</body>
 
-<?php include('code/footer.php'); ?>
+<?php include('../code/footer.php'); ?>
