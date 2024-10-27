@@ -29,9 +29,9 @@
             <a><img src="images/iconesv.svg" alt="Logo Seja Veloz"></a>
             <div>
                 <a href="/seja-veloz">Inicio</a>
-                <a>Sobre</a>
-                <a>Itchi.io</a>
-                <a>Google Play</a>
+                <a href="">Sobre</a>
+                <a class="jogarbotao" href="#jogar">Jogar</a>
+ 
             </div>
         </div>
     </nav>
@@ -82,7 +82,7 @@
             <p style="text-align: center;">O intuito do jogo é aprender/praticar a escrever sem as sugestões automáticas, que
                 estamos sempre acostumados no dia a dia, de forma criativa e desafiadora.</p>
 
-            <div class="jogos_container">
+            <div id="jogar" class="jogos_container">
                 <div class="svgcomtexto">
                     <a alt='Disponível no Google Play'
                         href='https://play.google.com/store/apps/details?id=nikkoin.sejaveloz&pcampaignid=web_share&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
