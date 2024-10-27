@@ -154,7 +154,7 @@ include('code/navbar.php');
                             encontravam um novo desafio de resistência em vez de tempo, o que me inspirou a criar o Modo
                             Perfeccionista.</p>
                     </div>
-                    <div class="parent">
+                    <div class="galeria2023">
                         <div class="div1"> <img class="img-segundaria1 imgs-paraovelay" src="/images/fe/seja_veloz/fe2.jpg" alt="Imagem"></div>
                         <div class="div2"><img class="img-segundaria3 imgs-paraovelay" src="/images/fe/seja_veloz/fe1.jpg" alt="Imagem"> </div>
                         <div class="div3"><img class="img-segundaria2 imgs-paraovelay" src="/images/fe/seja_veloz/fe4.jpg" alt="Imagem">  </div>
