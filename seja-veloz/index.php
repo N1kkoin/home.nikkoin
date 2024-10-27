@@ -63,7 +63,7 @@ include('code/navbar.php');
                 </div>
                 <div class="svgcomtexto">
                     <a alt='Disponível no Itch.io'
-                        href='https://itch.io/embed-upload/11821241'>
+                        href='https://nikkoin.itch.io/seja-veloz'>
                         <img class="googleplay" src="images/badge_itchio.svg">
                     </a>
                     <p>PC & Mobile - Free</p>
