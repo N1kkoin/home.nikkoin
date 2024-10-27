@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1b1c1e3e;
+    border-radius: 10px;
+    border: 3px solid #f4f7fd;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f4f7fd;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff0000;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #ff0000;
+}
+
+body {
+    background-color: #f4f7fd;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+
+}
+
+nav {
+    background-color: white;
+    padding: 20px 0;
+    width: 100%;
+
+}
+
+.navbar {
+    max-width: 1000px;
+    width: calc(100% - 20px);
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar div {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar img {
+    width: 40px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 350px;
+    border-top: 2px solid;
+    border-image: linear-gradient(to right, #ff0000, #ffe601, #007bff);
+    border-image-slice: 1;
+}
+
+header img {
+    max-width: 400px;
+    padding: 0 20px 0 20px;
+}
+
+main {
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: calc(100% - 20px);
+    max-width: 1000px;
+    padding: 5px 20px;
+    border-radius: 8px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+footer {
+
+    color: #77779e;
+    text-align: center;
+    padding: 14px 20px;
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+footer p {
+    margin: 0;
+    font-size: 11px;
+}
+
+.loguinho {
+    width: 9px;
+    filter: invert(50%);
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+a .googleplay {
+    width: 100%;
+    max-width: 200px;
+   
+}
+
+.jogos_container {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+}
+
+.svgcomtexto{
+    text-align: center;
+    color: #77779e;
+    font-size: small;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------*/
+.container-jogo {
+    margin-top: -60px;
+}
+
+.titulojogo {
+    color: white;
+    margin-top: 20px;
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*Topicos*/
+.grid-container {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    margin-top: 20px;
+    margin: 0 auto;
+    border: 2px solid #007bff;
+    gap: 10px;
+}
+
+.comojogar {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.modonormal {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.mododesafiador {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.modoperfeccionista {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.grid-item {
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.contentdogrid h3 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.grid-item:first-of-type h3, .grid-item:first-of-type p {
+    text-align: center;
+}
+
+@media (max-width: 960px) {
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+
+    .comojogar {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .modonormal {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .mododesafiador {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .modoperfeccionista {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    .titulojogo {
+        font-size: large;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .jogos_container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
