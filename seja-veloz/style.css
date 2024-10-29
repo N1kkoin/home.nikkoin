@@ -98,7 +98,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: white;
-    height: 350px;
+    padding:  80px 0;
     border-top: 2px solid;
     border-image: linear-gradient(to right, #ff0000, #ffe601, #007bff);
     border-image-slice: 1;
@@ -151,14 +151,13 @@ footer p {
 a .googleplay {
     width: 100%;
     max-width: 200px;
-
 }
 
 .jogos_container {
     margin-top: 40px;
     display: flex;
     align-items: center;
-    gap: 50px;
+    padding: 0 20px;
     justify-content: center;
 }
 
@@ -508,9 +507,10 @@ a .googleplay {
 }
 
 @media (max-width: 600px) {
-    .jogos_container {
-        flex-direction: column;
-        gap: 20px;
+    a .googleplay {
+        width: 100%;
+        max-width: 150px;
+    
     }
 
     .sejaveloz {

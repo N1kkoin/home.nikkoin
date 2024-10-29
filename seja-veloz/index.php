@@ -6,7 +6,23 @@ include('code/navbar.php');
 
 <body>
 
-    <header><img src="images/logocomtag_seja_veloz.svg"></header>
+    <header><img src="images/logocomtag_seja_veloz.svg">
+    <div id="jogar" class="jogos_container">
+                <div class="svgcomtexto">
+                    <a alt='Disponível no Google Play'
+                        href='https://play.google.com/store/apps/details?id=nikkoin.sejaveloz&pcampaignid=web_share&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                        <img class="googleplay" src="images/google-play-badge.svg">
+                    </a>
+                    <p>Android - R$ 1,29</p>
+                </div>
+                <div class="svgcomtexto">
+                    <a alt='Disponível no Itch.io'
+                        href='https://nikkoin.itch.io/seja-veloz'>
+                        <img class="googleplay" src="images/badge_itchio.svg">
+                    </a>
+                    <p>PC & Mobile - Free</p>
+                </div>
+            </div></header>
 
     <main>
         <div class="container-jogo">
@@ -53,22 +69,7 @@ include('code/navbar.php');
             <p style="text-align: center;">O intuito do jogo é aprender/praticar a escrever sem as sugestões automáticas, que
                 estamos sempre acostumados no dia a dia, de forma criativa e desafiadora.</p>
 
-            <div id="jogar" class="jogos_container">
-                <div class="svgcomtexto">
-                    <a alt='Disponível no Google Play'
-                        href='https://play.google.com/store/apps/details?id=nikkoin.sejaveloz&pcampaignid=web_share&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-                        <img class="googleplay" src="images/google-play-badge.svg">
-                    </a>
-                    <p>Android - R$ 1,29</p>
-                </div>
-                <div class="svgcomtexto">
-                    <a alt='Disponível no Itch.io'
-                        href='https://nikkoin.itch.io/seja-veloz'>
-                        <img class="googleplay" src="images/badge_itchio.svg">
-                    </a>
-                    <p>PC & Mobile - Free</p>
-                </div>
-            </div>
+         
         </div>
 
         <div id="sobre" class="accordion-content">
