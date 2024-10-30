@@ -26,7 +26,7 @@ include('code/navbar.php');
 
     <main>
         <div class="container-jogo">
-            <h2 class="titulojogo">Seja mais rapido que um gato nesse jogo de digitação!</h2>
+            <h2 class="titulojogo">Seja mais rapido que um gato nesse jogo de digitação</h2>
             <div>
                 <div class="grid-container">
                     <div class="grid-item comojogar">

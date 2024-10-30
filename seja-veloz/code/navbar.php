@@ -5,6 +5,10 @@
   <link rel="icon" type="image/svg+xml" href="/seja-veloz/imgs/iconesv.svg">
   <link rel="alternate icon" href="/seja-veloz/images/iconesv.ico">
 
+
+    <meta name="description"
+        content="Aprenda enquanto se diverte com este jogo de digitação (datilografia)!">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo isset($title) ? $title : 'Seja Veloz'; ?></title>
