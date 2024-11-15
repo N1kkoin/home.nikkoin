@@ -9,6 +9,9 @@ ErrorDocument 502 /error-page.php
 ErrorDocument 503 /error-page.php
 ErrorDocument 504 /error-page.php
 
+Redirect 301 /seja-veloz https://games.nikkoin.art/seja-veloz
+
+
 <IfModule LiteSpeed>
     # Habilita o módulo de expiração
     ExpiresActive On
