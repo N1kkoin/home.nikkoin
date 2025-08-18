@@ -45,7 +45,7 @@ $nav_links_html = '
 
 <nav>
     <div class="nav_container">
-        <a href="#" class="logo"><img src="/images/nh_logo.svg" alt="Ícone NH" loading="lazy"></a>
+        <a href="/" class="logo"><img src="/images/nh_logo.svg" alt="Ícone NH" loading="lazy"></a>
 
         <div class="box">
             <div class="btn not-active">
