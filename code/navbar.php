@@ -8,7 +8,7 @@ function isActive($path)
 $nav_links_html = '
     <a href="/" class="' . isActive('/') . '">Início</a>
     <a href="/portifolio" class="' . isActive('/portifolio') . '">Portifólio</a>
-    <a target="_blank" href="/seja-veloz" class="' . isActive('/seja-veloz') . '">Seja Veloz</a>
+    <a target="_blank" href="https://games.nikkoin.art/" class="' . '">Games</a>
 ';
 ?>
 
