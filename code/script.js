@@ -52,6 +52,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const btn = document.querySelector('.box .btn');
     const navLinksMobile = document.querySelector('.nav_links_mobile');
 
+    if (!btn || !navLinksMobile) {
+        return;
+    }
+
     btn.addEventListener('click', function () {
         navLinksMobile.classList.toggle('open');
     });
@@ -68,6 +72,19 @@ document.addEventListener('DOMContentLoaded', function () {
 // Função que verifica o scroll e aplica/remova a classe com base na rolagem
 function checkScrollPosition() {
     const nav = document.querySelector('nav');
+
+    if (!nav) {
+        return;
+    }
+
+    // Verifica se a classe foi adicionada via PHP (permanente nas subpáginas do portfólio)
+    const forceScrolled = nav.dataset.forceScrolled === 'true';
+
+    // Se a classe foi adicionada via PHP, não remove ela
+    if (forceScrolled) {
+        nav.classList.add('scrolled-past-600');
+        return;
+    }
 
     // Adiciona ou remove a classe 'scrolled-past-600' se o scrollY for maior que 600
     if (window.scrollY > 600) {

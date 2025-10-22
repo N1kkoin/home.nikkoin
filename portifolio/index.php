@@ -120,8 +120,6 @@
         <?php include('../code/footer.php'); ?>
 
     </div>
-
-    <script src="../code/script.js"></script>
 </body>
 
 </html>

@@ -28,8 +28,8 @@
 
                 <p>De qualquer forma, gostei do resultado e espero que os que viram também ;)</p>
 
-                <p><strong>Modelo da foto:</strong> <a target="_blank" href="https://www.instagram.com/alemarasampaio/">@alemarasampaio</a><br>
-                <strong>Publicado no meu IG:</strong> <a target="_blank" href="https://www.instagram.com/nikkoin_/">@nikkoin_</a></p>
+                <p><strong>Modelo da foto:</strong> <a target="_blank" href="https://www.instagram.com/alemarasampaio/">@alemarasampaio</a></p>
+                <p style="margin-top: -20px;"><strong>Publicado no meu IG:</strong> <a target="_blank" href="https://www.instagram.com/nikkoin_/">@nikkoin_</a></p>
             </div>
 
             <div class="galeria-imagens">

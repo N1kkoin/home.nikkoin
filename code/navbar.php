@@ -11,7 +11,7 @@ $nav_links_html = '
     <a target="_blank" href="https://games.nikkoin.art/" class="' . '">Games</a>
 ';
 
-$versao = '1.1';
+$versao = '1.2';
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +30,8 @@ $versao = '1.1';
     <link rel="alternate icon" href="/images/icone.ico">
     <link rel="icon" href="/images/icone.svg">
     <link rel="stylesheet" href="/code/style.css?v=<?php echo $versao; ?>">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="/code/script.js?v=<?php echo $versao; ?>"></script>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -45,7 +47,21 @@ $versao = '1.1';
     gtag('config', 'G-23BZZMMJMP');
 </script>
 
-<nav>
+<?php
+// Verificar se está em uma subpasta do portfólio
+$current_uri = $_SERVER['REQUEST_URI'];
+$is_portfolio_subpage = preg_match('#/portifolio/(design-grafico|front-end|ilustracoes)/#', $current_uri);
+$nav_attributes = [];
+
+if ($is_portfolio_subpage) {
+    $nav_attributes[] = 'class="scrolled-past-600"';
+    $nav_attributes[] = 'data-force-scrolled="true"';
+}
+
+$nav_attributes_string = empty($nav_attributes) ? '' : ' ' . implode(' ', $nav_attributes);
+?>
+
+<nav<?php echo $nav_attributes_string; ?>>
     <div class="nav_container">
         <a href="/" class="logo"><img src="/images/nh_logo.svg" alt="Ícone NH" loading="lazy"></a>
 

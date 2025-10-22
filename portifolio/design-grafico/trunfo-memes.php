@@ -1,8 +1,8 @@
-<?php 
-    $title = "Super Trunfo de Memes 2022 - Nikkoin";
-    $meta_description = "Projeto acadêmico de Design Gráfico: Super Trunfo comemorativo de 101 anos do primeiro meme"; 
+<?php
+$title = "Super Trunfo de Memes 2022 - Nikkoin";
+$meta_description = "Projeto acadêmico de Design Gráfico: Super Trunfo comemorativo de 101 anos do primeiro meme";
 
-    include('../../code/navbar.php'); 
+include('../../code/navbar.php');
 ?>
 
 <body class="body_artigo">
@@ -14,7 +14,9 @@
 
         <div class="artigo-content">
             <div class="img-principal">
-                <img src="/images/dg/trunfomeme/meme_1.png" alt="Super Trunfo de Memes" loading="lazy">
+                <img src="/images/dg/trunfomeme/meme_2.png" alt="Super Trunfo de Memes - Detalhes" loading="lazy">
+                <img src="/images/dg/trunfomeme/dg2.png" alt="Super Trunfo de Memes - Cartas" loading="lazy">
+
             </div>
 
             <div class="artigo-texto">
@@ -30,10 +32,6 @@
                 </ul>
             </div>
 
-            <div class="galeria-imagens">
-                <img src="/images/dg/trunfomeme/meme_2.png" alt="Super Trunfo de Memes - Detalhes" loading="lazy">
-                <img src="/images/dg/trunfomeme/dg2.png" alt="Super Trunfo de Memes - Cartas" loading="lazy">
-            </div>
 
             <div class="artigo-navegacao">
                 <a href="/portifolio#design-grafico" class="btn-voltar">← Voltar ao Portfólio</a>
@@ -43,4 +41,5 @@
 
     <?php include('../../code/footer.php'); ?>
 </body>
+
 </html>

@@ -178,9 +178,6 @@ include('code/navbar.php');
         <?php include('code/footer.php'); ?>
 
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="code/script.js?v=<?php echo $versao; ?>"></script>
 </body>
 
 </html>
