@@ -2,7 +2,7 @@
     $title = "Super Trunfo de Memes 2022 - Nikkoin";
     $meta_description = "Projeto acadêmico de Design Gráfico: Super Trunfo comemorativo de 101 anos do primeiro meme"; 
 
-    include('../../../code/navbar.php'); 
+    include('../../code/navbar.php'); 
 ?>
 
 <body class="body_artigo">
@@ -41,6 +41,6 @@
         </div>
     </article>
 
-    <?php include('../../../code/footer.php'); ?>
+    <?php include('../../code/footer.php'); ?>
 </body>
 </html>

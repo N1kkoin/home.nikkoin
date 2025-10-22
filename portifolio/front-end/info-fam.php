@@ -2,7 +2,7 @@
     $title = "Info FAM - Componente Web - Nikkoin";
     $meta_description = "Componente web desenvolvido para o sistema Info FAM"; 
 
-    include('../../../code/navbar.php'); 
+    include('../../code/navbar.php'); 
 ?>
 
 <body class="body_artigo">
@@ -33,6 +33,6 @@
         </div>
     </article>
 
-    <?php include('../../../code/footer.php'); ?>
+    <?php include('../../code/footer.php'); ?>
 </body>
 </html>

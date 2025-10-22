@@ -2,7 +2,7 @@
     $title = "Marca Pessoal NH - Nikkoin";
     $meta_description = "Desenvolvimento da marca pessoal NH"; 
 
-    include('../../../code/navbar.php'); 
+    include('../../code/navbar.php'); 
 ?>
 
 <body class="body_artigo">
@@ -31,6 +31,6 @@
         </div>
     </article>
 
-    <?php include('../../../code/footer.php'); ?>
+    <?php include('../../code/footer.php'); ?>
 </body>
 </html>

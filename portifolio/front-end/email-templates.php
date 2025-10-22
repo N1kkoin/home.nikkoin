@@ -2,7 +2,7 @@
     $title = "Templates de E-mail - Nikkoin";
     $meta_description = "Templates de e-mail para comunicado interno e assinatura"; 
 
-    include('../../../code/navbar.php'); 
+    include('../../code/navbar.php'); 
 ?>
 
 <body class="body_artigo">
@@ -40,6 +40,6 @@
         </div>
     </article>
 
-    <?php include('../../../code/footer.php'); ?>
+    <?php include('../../code/footer.php'); ?>
 </body>
 </html>

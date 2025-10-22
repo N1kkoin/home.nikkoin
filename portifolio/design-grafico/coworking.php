@@ -2,7 +2,7 @@
     $title = "Coworking Shopping Park City 2023 - Nikkoin";
     $meta_description = "Processo criativo do projeto de arte para o Coworking da FAM no Shopping Park City de Sumaré"; 
 
-    include('../../../code/navbar.php'); 
+    include('../../code/navbar.php'); 
 ?>
 
 <body class="body_artigo">
@@ -44,6 +44,6 @@
         </div>
     </article>
 
-    <?php include('../../../code/footer.php'); ?>
+    <?php include('../../code/footer.php'); ?>
 </body>
 </html>

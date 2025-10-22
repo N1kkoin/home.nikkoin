@@ -24,31 +24,31 @@
             <div class="portfolio-container">
                 <!-- Coworking FAM -->
                 <div class="portfolio-item">
-                    <a href="/portifolio/artigos/design-grafico/coworking.php">
+                    <a href="/portifolio/design-grafico/coworking.php">
                         <img src="/images/dg/coworking/coworkingfam.png" alt="Coworking Shopping Park City 2023" class="portfolio-image" loading="lazy">
                     </a>
                 </div>
                 <!-- Super Trunfo de Memes -->
                 <div class="portfolio-item">
-                    <a href="/portifolio/artigos/design-grafico/trunfo-memes.php">
+                    <a href="/portifolio/design-grafico/trunfo-memes.php">
                         <img src="/images/dg/trunfomeme/dg2.png" alt="Super Trunfo de Memes 2022" class="portfolio-image" loading="lazy">
                     </a>
                 </div>
                 <!-- Calendário FAM -->
                 <div class="portfolio-item">
-                    <a href="/portifolio/artigos/design-grafico/calendario.php">
+                    <a href="/portifolio/design-grafico/calendario.php">
                         <img src="/images/dg/dg3.png" alt="Calendário FAM" class="portfolio-image" loading="lazy">
                     </a>
                 </div>
                 <!-- Mapa FAM -->
                 <div class="portfolio-item">
-                    <a href="/portifolio/artigos/design-grafico/mapa-fam.php">
+                    <a href="/portifolio/design-grafico/mapa-fam.php">
                         <img src="/images/dg/dg5.png" alt="Mapa FAM" class="portfolio-image" loading="lazy">
                     </a>
                 </div>
                 <!-- Marca Pessoal -->
                 <div class="portfolio-item">
-                    <a href="/portifolio/artigos/design-grafico/marca-pessoal.php">
+                    <a href="/portifolio/design-grafico/marca-pessoal.php">
                         <img src="/images/dg/dg4.png" alt="Marca Pessoal NH" class="portfolio-image" loading="lazy">
                     </a>
                 </div>
@@ -61,7 +61,7 @@
             <div class="portfolio-container">
                 <!-- Info FAM -->
                 <div class="portfolio-item">
-                    <a href="/portifolio/artigos/front-end/info-fam.php">
+                    <a href="/portifolio/front-end/info-fam.php">
                         <img src="/images/fe/infofamimg.png" alt="Info FAM" class="portfolio-image" loading="lazy">
                     </a>
                 </div>
@@ -79,7 +79,7 @@
                 </div>
                 <!-- Templates de E-mail -->
                 <div class="portfolio-item">
-                    <a href="/portifolio/artigos/front-end/email-templates.php">
+                    <a href="/portifolio/front-end/email-templates.php">
                         <img src="/images/fe/templeteemail.png" alt="Templates de E-mail" class="portfolio-image" loading="lazy">
                     </a>
                 </div>
@@ -92,25 +92,25 @@
             <div style="padding-bottom: 80px;" class="portfolio-container">
                 <!-- Mariana -->
                 <div class="portfolio-item">
-                    <a href="/portifolio/artigos/ilustracoes/mariana.php">
+                    <a href="/portifolio/ilustracoes/mariana.php">
                         <img src="/images/i/i3.png" alt="Ilustração Mariana" class="portfolio-image" loading="lazy">
                     </a>
                 </div>
                 <!-- Vários -->
                 <div class="portfolio-item">
-                    <a href="/portifolio/artigos/ilustracoes/varios.php">
+                    <a href="/portifolio/ilustracoes/varios.php">
                         <img src="/images/i/i2.png" alt="Ilustrações Variadas" class="portfolio-image" loading="lazy">
                     </a>
                 </div>
                 <!-- Humanoide -->
                 <div class="portfolio-item">
-                    <a href="/portifolio/artigos/ilustracoes/humanoide.php">
+                    <a href="/portifolio/ilustracoes/humanoide.php">
                         <img src="/images/i/i5.png" alt="Ilustração Humanoide" class="portfolio-image" loading="lazy">
                     </a>
                 </div>
                 <!-- Mangá -->
                 <div class="portfolio-item">
-                    <a href="/portifolio/artigos/ilustracoes/manga.php">
+                    <a href="/portifolio/ilustracoes/manga.php">
                         <img src="/images/i/i4.png" alt="Ilustração Estilo Mangá" class="portfolio-image" loading="lazy">
                     </a>
                 </div>

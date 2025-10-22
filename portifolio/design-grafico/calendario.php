@@ -2,7 +2,7 @@
     $title = "Calendário FAM - Nikkoin";
     $meta_description = "Projeto de calendário desenvolvido para a FAM"; 
 
-    include('../../../code/navbar.php'); 
+    include('../../code/navbar.php'); 
 ?>
 
 <body class="body_artigo">
@@ -31,6 +31,6 @@
         </div>
     </article>
 
-    <?php include('../../../code/footer.php'); ?>
+    <?php include('../../code/footer.php'); ?>
 </body>
 </html>

@@ -2,7 +2,7 @@
     $title = "Mapa FAM - Evolução 2020-2022 - Nikkoin";
     $meta_description = "Projeto de redesign do mapa da FAM - comparação entre versões 2020 e 2022"; 
 
-    include('../../../code/navbar.php'); 
+    include('../../code/navbar.php'); 
 ?>
 
 <body class="body_artigo">
@@ -41,7 +41,7 @@
         </div>
     </article>
 
-    <?php include('../../../code/footer.php'); ?>
+    <?php include('../../code/footer.php'); ?>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/jquery-anyimagecomparisonslider-plugin'></script>

@@ -2,7 +2,7 @@
     $title = "Ilustração Humanoide - Nikkoin";
     $meta_description = "Ilustração digital de personagem humanoide"; 
 
-    include('../../../code/navbar.php'); 
+    include('../../code/navbar.php'); 
 ?>
 
 <body class="body_artigo">
@@ -31,6 +31,6 @@
         </div>
     </article>
 
-    <?php include('../../../code/footer.php'); ?>
+    <?php include('../../code/footer.php'); ?>
 </body>
 </html>
