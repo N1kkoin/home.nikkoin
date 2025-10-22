@@ -474,6 +474,8 @@ nav.scrolled-past-600 {
 /* MAIN ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .body_index {
     background-color: #f5f9fa;
+    background-image: radial-gradient(#e0edf0 1.05px, transparent 1.05px);
+background-size: 21px 21px;
 }
 
 .main_index {
@@ -939,6 +941,8 @@ footer p {
 
 .body_portifolio {
     background-color: #f5f9fa;
+    background-image: radial-gradient(#e0edf0 1.05px, transparent 1.05px);
+background-size: 21px 21px;
 }
 
 .body_portifolio .header_portifolio {
@@ -953,6 +957,8 @@ footer p {
     text-align: center;
     margin: 0 auto;
     border-radius: 0 0 6px 6px;
+    background-image: radial-gradient(#e0edf0 1.05px, transparent 1.05px);
+background-size: 21px 21px;
 }
 
 .body_portifolio .header_portifolio h1,
