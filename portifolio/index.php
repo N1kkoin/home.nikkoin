@@ -67,7 +67,7 @@
                 </div>
                 <!-- Seja Veloz -->
                 <div class="portfolio-item">
-                    <a target="_blank" href="/seja-veloz/">
+                    <a target="_blank" href="https://games.nikkoin.art/seja-veloz/">
                         <img src="/images/fe/seja_veloz/sejavelozimg.png" alt="Seja Veloz" class="portfolio-image" loading="lazy">
                     </a>
                 </div>
