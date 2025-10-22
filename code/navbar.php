@@ -10,6 +10,8 @@ $nav_links_html = '
     <a href="/portifolio" class="' . isActive('/portifolio') . '">Portifólio</a>
     <a target="_blank" href="https://games.nikkoin.art/" class="' . '">Games</a>
 ';
+
+$versao = '1.1';
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +29,7 @@ $nav_links_html = '
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="alternate icon" href="/images/icone.ico">
     <link rel="icon" href="/images/icone.svg">
-    <link rel="stylesheet" href="/code/style.css?v=1.24">
+    <link rel="stylesheet" href="/code/style.css?v=<?php echo $versao; ?>">
 </head>
 
 <!-- Google tag (gtag.js) -->
