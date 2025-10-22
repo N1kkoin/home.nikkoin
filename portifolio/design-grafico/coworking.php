@@ -32,7 +32,7 @@
                 <p style="margin-top: -20px;"><strong>Publicado no meu IG:</strong> <a target="_blank" href="https://www.instagram.com/nikkoin_/">@nikkoin_</a></p>
             </div>
 
-            <div class="galeria-imagens">
+            <div class="galeria-imagens coworking">
                 <img src="/images/dg/coworking/coworkingfam_2.png" alt="Coworking FAM - Foto 2" loading="lazy">
                 <img src="/images/dg/coworking/coworkingfam_3.png" alt="Coworking FAM - Foto 3" loading="lazy">
                 <img src="/images/dg/coworking/coworkingfam_4.png" alt="Coworking FAM - Foto 4" loading="lazy">
