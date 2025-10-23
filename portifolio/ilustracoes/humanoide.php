@@ -13,13 +13,7 @@
         </header>
 
         <div class="artigo-content">
-            <div class="img-principal">
-                <img src="/images/i/i5.png" alt="Ilustração Humanoide" loading="lazy">
-            </div>
-
-            <div class="artigo-texto">
-                <p>Ilustração digital de personagem humanoide.</p>
-            </div>
+       
 
             <div class="galeria-imagens">
                 <img src="/images/i/i5.5.png" alt="Ilustração Humanoide - Detalhes" loading="lazy">

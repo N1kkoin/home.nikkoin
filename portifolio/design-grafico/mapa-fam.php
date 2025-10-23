@@ -18,7 +18,6 @@
             </div>
 
             <div class="artigo-texto">
-                <p>Projeto de redesign do mapa da FAM - Faculdade de Americana. Veja abaixo a evolução do design entre 2020 e 2022.</p>
                 <p><em>*Passe o mouse para ver a diferença</em></p>
             </div>
 

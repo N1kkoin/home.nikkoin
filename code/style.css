@@ -1495,12 +1495,23 @@ background-size: 21px 21px;
 }
 
 .coworking{
-  grid-template-areas: "img1 img2" "img1 img3";
-    align-items: start;
-      display: grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, auto);
+    
+    grid-template-rows: 1fr 1fr; /* equal heights */
+    gap: 10px;
+    grid-template-areas: "img1 img2" "img1 img3";
+    align-items: stretch;
+    padding-bottom: 0;
 }
+
+.galeria-imagens{
+    width: 100%;
+}
+
+.galeria-imagens img {
+    width: 100%;
+    height: auto;}
 
 .coworking img {
     width: 100%;

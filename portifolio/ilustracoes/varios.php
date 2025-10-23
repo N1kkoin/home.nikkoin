@@ -13,14 +13,7 @@
         </header>
 
         <div class="artigo-content">
-            <div class="img-principal">
-                <img src="/images/i/i2.png" alt="Ilustrações Variadas" loading="lazy">
-            </div>
-
-            <div class="artigo-texto">
-                <p>Coleção de ilustrações digitais explorando diferentes estilos e técnicas.</p>
-            </div>
-
+    
             <div class="galeria-imagens">
                 <img src="/images/i/i1.5.png" alt="Ilustrações Variadas - Detalhes" loading="lazy">
             </div>

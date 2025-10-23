@@ -17,11 +17,6 @@
                 <img src="/images/fe/infofamimg.png" alt="Info FAM" loading="lazy">
             </div>
 
-            <div class="artigo-texto">
-                <p>Componente web desenvolvido para o sistema Info FAM.</p>
-                <p>Veja o componente funcionando abaixo:</p>
-            </div>
-
             <div class="iframe-container">
                 <iframe src="//jsfiddle.net/Nikkoin/kf9up7Lo/99/embedded/result/?accentColor=73C382"
                     allowfullscreen="allowfullscreen" frameborder="0"></iframe>

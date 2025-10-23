@@ -13,13 +13,6 @@
         </header>
 
         <div class="artigo-content">
-            <div class="img-principal">
-                <img src="/images/dg/dg3.png" alt="Calendário FAM" loading="lazy">
-            </div>
-
-            <div class="artigo-texto">
-                <p>Projeto de calendário desenvolvido para a FAM - Faculdade de Americana.</p>
-            </div>
 
             <div class="galeria-imagens">
                 <img src="/images/dg/dg3.5.png" alt="Calendário FAM - Detalhes" loading="lazy">

@@ -13,14 +13,7 @@
         </header>
 
         <div class="artigo-content">
-            <div class="img-principal">
-                <img src="/images/i/i4.png" alt="Ilustração Mangá" loading="lazy">
-            </div>
-
-            <div class="artigo-texto">
-                <p>Ilustração digital com influência de estilo mangá.</p>
-            </div>
-
+      
             <div class="galeria-imagens">
                 <img src="/images/i/i4.5.png" alt="Ilustração Mangá - Detalhes" loading="lazy">
             </div>

@@ -14,9 +14,7 @@
         </header>
 
         <div class="artigo-content">
-            <div class="img-principal">
-                <img src="/images/fe/templeteemail.png" alt="Templates de E-mail" loading="lazy">
-            </div>
+      
 
             <div class="artigo-texto">
                 <p>Templates de e-mail desenvolvidos para comunicação interna e assinatura profissional.</p>

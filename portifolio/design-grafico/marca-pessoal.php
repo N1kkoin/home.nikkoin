@@ -13,13 +13,6 @@
         </header>
 
         <div class="artigo-content">
-            <div class="img-principal">
-                <img src="/images/dg/dg4.png" alt="Marca Pessoal NH" loading="lazy">
-            </div>
-
-            <div class="artigo-texto">
-                <p>Desenvolvimento da marca pessoal NH.</p>
-            </div>
 
             <div class="galeria-imagens">
                 <img src="/images/dg/NH_marca.png" alt="Marca NH - Detalhes" loading="lazy">
