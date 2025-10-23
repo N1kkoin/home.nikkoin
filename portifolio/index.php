@@ -22,34 +22,40 @@
                 <h2 data-link="/portifolio#design-grafico"><i class="fa-solid fa-link"></i> Design Gráfico</h2>
             </div>
             <div class="portfolio-container">
+                  <!-- FERAM -->
+                <div class="portfolio-item">
+                    <a href="/portifolio/design-grafico/feram.php">
+                        <img src="/images/dg/feram/Feram1.webp" alt="FERAM" class="portfolio-image">
+                    </a>
+                </div>
                 <!-- Coworking FAM -->
                 <div class="portfolio-item">
                     <a href="/portifolio/design-grafico/coworking.php">
-                        <img src="/images/dg/coworking/coworkingfam.png" alt="Coworking Shopping Park City 2023" class="portfolio-image" loading="lazy">
+                        <img src="/images/dg/coworking/coworkingfam.png" alt="Coworking Shopping Park City 2023" class="portfolio-image">
                     </a>
                 </div>
                 <!-- Super Trunfo de Memes -->
                 <div class="portfolio-item">
                     <a href="/portifolio/design-grafico/trunfo-memes.php">
-                        <img src="/images/dg/trunfomeme/dg2.png" alt="Super Trunfo de Memes 2022" class="portfolio-image" loading="lazy">
+                        <img src="/images/dg/trunfomeme/dg2.png" alt="Super Trunfo de Memes 2022" class="portfolio-image">
                     </a>
                 </div>
                 <!-- Calendário FAM -->
                 <div class="portfolio-item">
                     <a href="/portifolio/design-grafico/calendario.php">
-                        <img src="/images/dg/dg3.png" alt="Calendário FAM" class="portfolio-image" loading="lazy">
+                        <img src="/images/dg/dg3.png" alt="Calendário FAM" class="portfolio-image">
                     </a>
                 </div>
                 <!-- Mapa FAM -->
                 <div class="portfolio-item">
                     <a href="/portifolio/design-grafico/mapa-fam.php">
-                        <img src="/images/dg/dg5.png" alt="Mapa FAM" class="portfolio-image" loading="lazy">
+                        <img src="/images/dg/dg5.png" alt="Mapa FAM" class="portfolio-image">
                     </a>
                 </div>
                 <!-- Marca Pessoal -->
                 <div class="portfolio-item">
                     <a href="/portifolio/design-grafico/marca-pessoal.php">
-                        <img src="/images/dg/dg4.png" alt="Marca Pessoal NH" class="portfolio-image" loading="lazy">
+                        <img src="/images/dg/dg4.png" alt="Marca Pessoal NH" class="portfolio-image">
                     </a>
                 </div>
             </div>
