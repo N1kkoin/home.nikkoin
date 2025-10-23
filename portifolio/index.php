@@ -71,6 +71,12 @@
                         <img src="/images/fe/seja_veloz/sejavelozimg.png" alt="Seja Veloz" class="portfolio-image" loading="lazy">
                     </a>
                 </div>
+                   <!-- Vestribular FAM -->
+                <div class="portfolio-item">
+                    <a target="_blank" href="https://vestibularfam.com.br/">
+                        <img src="/images/fe/VV2026.1_Portal_Portal_1200x628.png" alt="Vestribular FAM" class="portfolio-image" loading="lazy">
+                    </a>
+                </div>
                 <!-- Hospital Veterinário FAM -->
                 <div class="portfolio-item">
                     <a target="_blank" href="https://hospitalveterinariofam.com.br/">
