@@ -25,7 +25,7 @@
                   <!-- FERAM -->
                 <div class="portfolio-item">
                     <a href="/portifolio/design-grafico/feram.php">
-                        <img src="/images/dg/feram/Feram1.webp" alt="FERAM" class="portfolio-image">
+                        <img src="/images/dg/feram/Feram1.webp?v=1.4" alt="FERAM" class="portfolio-image">
                     </a>
                 </div>
                 <!-- Coworking FAM -->
