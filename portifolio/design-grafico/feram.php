@@ -15,11 +15,11 @@
         <div class="artigo-content">
 
             <div class="galeria-imagens">
-                <img src="/images/dg/feram/Feram1.webp" alt="FERAM - Detalhes" loading="lazy">
-                <img src="/images/dg/feram/Feram2.webp" alt="FERAM - Detalhes" loading="lazy">
-                <img src="/images/dg/feram/Feram3.webp" alt="FERAM - Detalhes" loading="lazy">
-                <img src="/images/dg/feram/Feram4.webp" alt="FERAM - Detalhes" loading="lazy">
-                <img src="/images/dg/feram/Feram5.webp" alt="FERAM - Detalhes" loading="lazy">
+                <img src="/images/dg/feram/Feram1.webp?v=1.4" alt="FERAM - Detalhes">
+                <img src="/images/dg/feram/Feram2.webp?v=1.4" alt="FERAM - Detalhes" loading="lazy">
+                <img src="/images/dg/feram/Feram3.webp?v=1.4" alt="FERAM - Detalhes" loading="lazy">
+                <img src="/images/dg/feram/Feram4.webp?v=1.4" alt="FERAM - Detalhes" loading="lazy">
+                <img src="/images/dg/feram/Feram5.webp?v=1.4" alt="FERAM - Detalhes" loading="lazy">
             </div>
 
             <div class="artigo-navegacao">

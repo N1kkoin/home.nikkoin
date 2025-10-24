@@ -11,7 +11,7 @@ $nav_links_html = '
     <a target="_blank" href="https://games.nikkoin.art/" class="' . '">Games</a>
 ';
 
-$versao = '1.3';
+$versao = '1.4';
 ?>
 
 <!DOCTYPE html>
